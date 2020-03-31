@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 20:09:54 by calpha            #+#    #+#             */
-/*   Updated: 2020/03/31 14:27:58 by semen            ###   ########.fr       */
+/*   Created: 2020/03/31 14:26:34 by semen             #+#    #+#             */
+/*   Updated: 2020/03/31 14:33:11 by semen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main (int ac, char *av[])
+void sorting(int ac, char *av[])
 {
-	if (validation(ac, av) == 0)
-	{
-		ft_putstr("Error\n");
+	int i;
+	int j;
+	int *fill_int;
+
+	i = 0;
+	j = 1;
+	if (!(fill_int = (int *)malloc(sizeof(int) * (ac - 1))))
 		exit(0);
+	while (j < ac)
+	{
+		fill_int[i] = ft_atoi(av[j]);
+		j++;
+		i++;
 	}
-	sorting(ac, av);
-	return (0);
+	i = 0;
+	while (i < ac - 1)
+	{
+		printf("%d\n", fill_int[i]);
+		i++;
+	}
 }
