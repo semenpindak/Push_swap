@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 20:09:54 by calpha            #+#    #+#             */
-/*   Updated: 2020/04/23 19:59:50 by semen            ###   ########.fr       */
+/*   Created: 2020/04/08 20:06:44 by semen             #+#    #+#             */
+/*   Updated: 2020/04/08 20:06:46 by semen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int ac, char *av[])
+static int	checking_quantity(t_number *list)
 {
-	t_number *list_a;
-	t_number *list_b;
+	int n;
 
-	list_b = NULL;
-	if (validation(ac, av) == 0)
+	n = 0;
+	while(list)
 	{
-		ft_putstr("Error\n");
-		exit(0);
+		list = list->next;
+		n++;
+		if (n > 1)
+			return (1);
 	}
-	list_a = create_stack_a(ac, av);
-	timsort(list_a, list_b);
 	return (0);
+}
+
+int			sa(t_number *list)
+{
+	int tmp_current;
+	int tmp_next;
+
+	if ((checking_quantity(list)) == 0)
+		return (0);
+	tmp_current = list->n;
+	list = list -> next;
+	tmp_next = list->n;
+	list->n = tmp_current;
+	list = list->prev;
+	list->n = tmp_next;
+	ft_putstr("sa\n");
+	return (1);
 }
