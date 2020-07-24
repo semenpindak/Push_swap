@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   show_me_b.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 16:27:47 by semen             #+#    #+#             */
-/*   Updated: 2020/05/02 16:28:34 by semen            ###   ########.fr       */
+/*   Updated: 2020/07/22 14:50:18 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	show_me_b(t_number **list_b)
 {
 	int n;
 
-    n = count(list_b);
+	n = count(list_b);
 	printf("n = %d ", n);
 	printf("stack_b: ");
     while (n--)
