@@ -4,7 +4,8 @@ SRCS =	main.c\
 		validation.c\
 		create_stack_a.c\
 		timsort.c\
-		merge_sort.c\
+		insertion_sort_first.c\
+		merge_sort_first.c\
 		insertion_sort_regular.c\
 		sa.c sb.c ss.c\
 		pa.c pb.c\
@@ -20,6 +21,7 @@ SRCS =	main.c\
 		count_step_in_b.c\
 		count_step_in_b_for_struct.c\
 		count_step_in_b_for_struct_three.c\
+		count_step_in_b_for_struct_three_regular.c\
 		find_min_steps_from_a_to_b.c\
 		find_min_steps_from_a_to_b_three.c\
 		find_min_steps_from_a_to_b_three_regular.c

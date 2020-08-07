@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_sort_regular.c                           :+:      :+:    :+:   */
+/*   insertion_sort_first.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/22 14:47:12 by oem               #+#    #+#             */
-/*   Updated: 2020/07/29 18:08:52 by oem              ###   ########.fr       */
+/*   Created: 2020/07/25 18:57:22 by oem               #+#    #+#             */
+/*   Updated: 2020/07/25 18:57:35 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void search_struct_to_move(t_number **list_a, int *step_a, int *step_b, i
     }
 }
 
-void insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
+void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
 {
     int i;
 
@@ -48,13 +48,13 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
         quantity--;
         if (*list_b == NULL)
         {
-            // rra_three(&list_a);
             pb_three(&list_a, &list_b);
             show_me_two(list_a, list_b);
+            // i++;
         }
         // printf("do\n");
         // show_me_two(list_a, list_b);
-        find_min_steps_from_a_to_b_three_regular(list_a, list_b);
+        find_min_steps_from_a_to_b_three(list_a, list_b);
         // printf("posle\n");
         // show_me_two(list_a, list_b);
         search_struct_to_move(list_a, &step_a, &step_b, &logic_a, &logic_b);
@@ -85,7 +85,7 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
                     i++;
                 }
                 q--;
-                usleep(3000000);
+                usleep(300000);
                 // show_me_two(list_a, list_b);
             }
         }
@@ -104,7 +104,7 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
                 i++;
             }
             step_a--;
-            usleep(3000000);
+            usleep(300000);
             // show_me_two(list_a, list_b);
         }
         while(step_b)
@@ -122,12 +122,12 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
                 i++;
             }
             step_b--;
-            usleep(3000000);
+            usleep(300000);
             // show_me_two(list_a, list_b);
         }
         pb_three(&list_a, &list_b);
         // i++;
-        usleep(3000000);
+        usleep(300000);
         show_me_two(list_a, list_b);
 
         if (quantity == 1)

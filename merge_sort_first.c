@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   merge_sort.c                                       :+:      :+:    :+:   */
+/*   merge_sort_first.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 00:01:01 by semen             #+#    #+#             */
-/*   Updated: 2020/05/04 10:10:02 by semen            ###   ########.fr       */
+/*   Updated: 2020/07/25 19:14:02 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ static int find_max_number(t_number **list_b, int *rotation_logic)
 }
 
 
-void	merge_sort(t_number **list_a, t_number **list_b)
+void	merge_sort_first(t_number **list_a, t_number **list_b)
 {
     int x;
     int step;
@@ -135,40 +135,38 @@ void	merge_sort(t_number **list_a, t_number **list_b)
     int n;
 
     x = check_stack_a_one(list_a);
-    printf("x = %d\n", x);
-    printf("%d\n", (*list_b)->n);
+    // printf("x = %d\n", x);
+    // printf("%d\n", (*list_b)->n);
 	if (x == 0)
         step = find_max_number(list_b, &rotation_logic);
-    printf("z = %d, r = %d\n", step, rotation_logic);
+    // printf("z = %d, r = %d\n", step, rotation_logic);
     while(step)
+    {
+        if (rotation_logic == 0)
         {
-            if (rotation_logic == 0)
-            {
-                ra_three(&list_b);
-                show_me_two(list_a, list_b);
-                // i++;
-            }
-            else
-            {
-                rra_three(&list_b);
-                show_me_two(list_a, list_b);
-                // i++;
-            }
-            step--;
-            usleep(3000000);
+            ra_three(&list_b);
             show_me_two(list_a, list_b);
+                // i++;
         }
-
-        n = count_list(list_b);
-        //  printf("n = %d\n", n);
-        //  show_me_two(list_a, list_b);
-        while (n)
+        else
         {
-            pa_three(&list_a, &list_b);
-            usleep(1000000);
+            rra_three(&list_b);
             show_me_two(list_a, list_b);
-            n--;
+                // i++;
         }
+        step--;
+        usleep(3000000);
+        show_me_two(list_a, list_b);
+    }
 
-
+    n = count_list(list_b);
+    //  printf("n = %d\n", n);
+    //  show_me_two(list_a, list_b);
+    while (n)
+    {
+        pa_three(&list_a, &list_b);
+        usleep(1000000);
+        show_me_two(list_a, list_b);
+        n--;
+    }
 }

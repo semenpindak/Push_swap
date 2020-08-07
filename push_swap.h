@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/07/24 21:43:21 by oem              ###   ########.fr       */
+/*   Updated: 2020/07/25 19:01:24 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int					validation(int ac, char *av[]);
 t_number			*create_stack_a(int ac, char *av[]);
 
 void				timsort(t_number *list_a, t_number *list_b);
-void				merge_sort(t_number **list_a, t_number **list_b);
-
+void				insertion_sort_first(t_number **list_a, t_number **list_b, int quantity);
 void				insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity);
+void				merge_sort_first(t_number **list_a, t_number **list_b);
 
 int					sa(t_number *list);
 int					sb(t_number *list);
@@ -73,12 +73,11 @@ int					find_median_number(t_number *list_a);
 int					count_step_in_b(t_number *list_a, t_number *list_b, int *logic);
 void				count_step_in_b_for_struct(t_number *list_a, t_number *list_b);
 void				count_step_in_b_for_struct_three(t_number **list_a, t_number **list_b);
-
-void				find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list_b);
-
+void				count_step_in_b_for_struct_three_regular(t_number **list_a, t_number **list_b);
 
 void				find_min_steps_from_a_to_b(t_number *list_a, t_number *list_b);
 void				find_min_steps_from_a_to_b_three(t_number **list_a, t_number **list_b);
+void				find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list_b);
 
 
 #endif
