@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   insertion_sort_first.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/25 18:57:22 by oem               #+#    #+#             */
-/*   Updated: 2020/07/25 18:57:35 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/11 14:49:58 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void search_struct_to_move(t_number **list_a, int *step_a, int *step_b, i
     }
 }
 
-void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
+void insertion_sort_first(t_number **list_a, t_number **list_b)
 {
     int i;
 
@@ -45,7 +45,7 @@ void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
     // int n;
     while (*list_a)
     {
-        quantity--;
+        // quantity--;
         if (*list_b == NULL)
         {
             pb_three(&list_a, &list_b);
@@ -130,8 +130,8 @@ void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
         usleep(300000);
         show_me_two(list_a, list_b);
 
-        if (quantity == 1)
-            break;
+        // if (quantity == 1)
+        //     break;
     }
     // printf("insert_sort count operation = %d\n", i);
 }

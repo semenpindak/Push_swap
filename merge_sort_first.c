@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   merge_sort_first.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 00:01:01 by semen             #+#    #+#             */
-/*   Updated: 2020/07/25 19:14:02 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/07 16:28:57 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,8 @@ static int find_max_number(t_number **list_b, int *rotation_logic)
 
 void	merge_sort_first(t_number **list_a, t_number **list_b)
 {
-    int x;
-    int step;
+    int x = 0;
+    int step = 0;
     int rotation_logic;
     int n;
 

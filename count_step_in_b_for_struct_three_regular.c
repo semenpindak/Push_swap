@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   count_step_in_b_for_struct_three_regular.c         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 12:23:17 by semen             #+#    #+#             */
-/*   Updated: 2020/07/29 18:20:40 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/14 20:10:03 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,20 +104,20 @@ static int find_max_number_left(t_number **list_b, int *i)
     int n;
 
     max = (*list_b)->n;
-    count = 0;
+    count = 1;
     n = (*list_b)->n;
     while(*list_b)
     {
         if ((*list_b)->prev != NULL)
-            *list_b = (*list_b)->prev;
-        if ((*list_b)->n > max)
         {
-            max = (*list_b)->n;
-            *i = count;
+            *list_b = (*list_b)->prev;
+            count++;
         }
-        count++;
+        if ((*list_b)->n >= max)
+            max = (*list_b)->n;
         if (n == (*list_b)->n)
             break;
+        *i = count;
     }
     // printf("find_max_number_left = %d\n", max);
     return (max);
@@ -178,17 +178,17 @@ static int count_to_range_right(t_number **list_b, int max, int min, int **c)
     // show_me_b(list_b);
     while (*list_b)
     {
-        printf("\n(*list_b)->n = %d, max = %d, min = %d, count r= %d\n", (*list_b)->n, max, min, count);
+        // printf("\n(*list_b)->n = %d, max = %d, min = %d, count r= %d\n", (*list_b)->n, max, min, count);
         if (max == (*list_b)->n)
         {
             if (min == check_next_number_right(list_b))
             {
-                printf("\n1 count r= %d\n", count);
+                // printf("\n1 count r= %d\n", count);
                 return (count);
             }
             if (min == check_next_number_right_add(list_b))
             {
-                printf("\n2 count r= %d\n", count);
+                // printf("\n2 count r= %d\n", count);
                 return (count);
             }
         }
@@ -237,26 +237,27 @@ static int find_max_number_right(t_number **list_b, int *i)
 {
     int max;
     int count;
+    int n;
 
     max = (*list_b)->n;
     count = 1;
-    int n = (*list_b)->n;
+    n = (*list_b)->n;
     while(*list_b)
     {
+        if ((*list_b)->n >= max)
+        {
+            max = (*list_b)->n;
+            *i = count;
+        }
         if ((*list_b)->next != NULL)
         {
             *list_b = (*list_b)->next;
             count++;
         }
-        if ((*list_b)->n > max)
-        {
-            max = (*list_b)->n;
-            *i = ++count;
-        }
         if (n == (*list_b)->n)
             break;
     }
-    // printf("find_max_number_right = %d\n", max);
+    // printf("i mr = %d\n", *i);
     return (max);
 }
 
@@ -290,11 +291,12 @@ static int find_min_number_right(t_number **list_b, int *i)
 
 static int step_left(t_number **list_a, t_number **list_b)
 {
+
     int a;
     int i;
     int x;
     int y;
-    int c;
+    int c = 0;
 
     a = (*list_a)->n;
     x = 0;
@@ -304,22 +306,26 @@ static int step_left(t_number **list_a, t_number **list_b)
     if (a < (x = find_min_number_left(list_b, &i)))
         return (i);
     y = find_middle_number_left(list_a, list_b, &c);
+    // printf("2.l_do____%d\n", (*list_b)->n);
+    // printf("2.l_c=____%d\n", c);
     while (c)
     {
         *list_b = (*list_b)->next;
         c--;
     }
+    // printf("2.l_posle_%d\n", (*list_b)->n);
     // printf("\nstep_left = %d\n", y);
     return (y);
 }
 
 static int step_right(t_number **list_a, t_number **list_b)
 {
+
     int a;
     int i;
     int x;
     int y;
-    int c;
+    int c = 0;
 
     a = (*list_a)->n;
     x = 0;
@@ -330,23 +336,33 @@ static int step_right(t_number **list_a, t_number **list_b)
         return (i);
 
     y = find_middle_number_right(list_a, list_b, &c);
+    // printf("2.r_do____%d\n", (*list_b)->n);
+    // printf("2.r_c=____%d\n", c);
     while (c)
     {
         *list_b = (*list_b)->prev;
         c--;
     }
+    // printf("2.r_posle_%d\n", (*list_b)->n);
     // printf("\nstep_right = %d\n", y);
     return (y);
 }
 
 void count_step_in_b_for_struct_three_regular(t_number **list_a, t_number **list_b)
 {
+    // printf("1.l_do____%d\n", (*list_b)->n);
     (*list_a)->rb = step_left(list_a, list_b);
-    // printf("c = 1\n");
+    // printf("1.l_posle_%d\n", (*list_b)->n);
+    // printf("posle left\n");
     // show_me_two(list_a, list_b);
 
+
+    // printf("do right\n");
+    // show_me_two(list_a, list_b);
+    // printf("1.r_do____%d\n", (*list_b)->n);
     (*list_a)->lb = step_right(list_a, list_b);
-    // printf("c = 2\n");
+    // printf("1.r_posle_%d\n", (*list_b)->n);
+    // printf("posle right\n");
     // show_me_two(list_a, list_b);
 }
 

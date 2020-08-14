@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   timsort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/31 14:26:34 by semen             #+#    #+#             */
-/*   Updated: 2020/07/25 22:01:35 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/11 14:40:00 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int count_list(t_number *list_a)
-{
-	int num;
-	num = list_a->n;
-	int count;
+// static int count_list(t_number *list_a)
+// {
+// 	int num;
+// 	num = list_a->n;
+// 	int count;
 
-	count = 0;
-	while (list_a)
-	{
-		if (list_a->next != NULL)
-			list_a = list_a->next;
-		count++;
-		if (num == list_a->n)
-			break;
-	}
-	return (count);
-}
+// 	count = 0;
+// 	while (list_a)
+// 	{
+// 		if (list_a->next != NULL)
+// 			list_a = list_a->next;
+// 		count++;
+// 		if (num == list_a->n)
+// 			break;
+// 	}
+// 	return (count);
+// }
 
 void change_status_one(t_number *list_b)
 {
@@ -63,29 +63,35 @@ void timsort(t_number *list_a, t_number *list_b)
     // rrb(&list_b);
     // rrr(&list_a, &list_b);
 
-    int q = 0;
-    int n = 0;
-    int quantity = 0;
+    //  ДЕЛЕЖКА СТЕКА
 
-    if ((n = count_list(list_a)) <= 100)
-        q = 2;
-    else
-        q = 5;
+    // int q = 0;
+    // int n = 0;
+    // int quantity = 0;
 
-    if (n % q == 0)
-        quantity = n / q;
-    else
-        quantity = (n - 1) / q;
+    // if ((n = count_list(list_a)) <= 100)
+    //     q = 2;
+    // else
+    //     q = 5;
 
-    printf("quantity = %d\n", quantity);
+    // if (n % q == 0)
+    //     quantity = n / q;
+    // else
+    //     quantity = (n - 1) / q;
+
+    // printf("quantity = %d\n", quantity);
+
+    //  ДЕЛЕЖКА СТЕКА
+
     // find_median_number(list_a);
 
-    // insertion_sort_first(&list_a, &list_b, quantity);
+    // insertion_sort_first(&list_a, &list_b);
     // change_status_one(list_b);
     // merge_sort_first(&list_a, &list_b);
 
-    insertion_sort_regular(&list_a, &list_b, quantity);
-    change_status_one(list_b);
+    insertion_sort_regular(&list_a, &list_b);
+
+    // change_status_one(list_b);
 
 
     // insertion_sort(&list_a, &list_b, quantity);

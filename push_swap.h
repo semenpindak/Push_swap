@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/07/25 19:01:24 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/09 16:01:39 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int					validation(int ac, char *av[]);
 t_number			*create_stack_a(int ac, char *av[]);
 
 void				timsort(t_number *list_a, t_number *list_b);
-void				insertion_sort_first(t_number **list_a, t_number **list_b, int quantity);
-void				insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity);
+void				insertion_sort_first(t_number **list_a, t_number **list_b);
+void				insertion_sort_regular(t_number **list_a, t_number **list_b);
 void				merge_sort_first(t_number **list_a, t_number **list_b);
 
 int					sa(t_number *list);
