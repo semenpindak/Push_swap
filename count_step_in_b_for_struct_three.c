@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   count_step_in_b_for_struct_three.c                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 12:23:17 by semen             #+#    #+#             */
-/*   Updated: 2020/05/03 23:46:43 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/15 20:18:26 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -267,7 +267,7 @@ static int step_left(t_number **list_a, t_number **list_b)
     int i;
     int x;
     int y;
-    int c;
+    int c = 0;
 
     a = (*list_a)->n;
     x = 0;
@@ -291,7 +291,7 @@ static int step_right(t_number **list_a, t_number **list_b)
     int i;
     int x;
     int y;
-    int c;
+    int c = 0;
 
     a = (*list_a)->n;
     x = 0;

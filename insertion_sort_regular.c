@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 14:47:12 by oem               #+#    #+#             */
-/*   Updated: 2020/08/14 19:33:21 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/15 20:28:17 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void search_struct_to_move(t_number **list_a, int *step_a, int *step_b, i
     }
 }
 
-void insertion_sort_regular(t_number **list_a, t_number **list_b)
+int insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
 {
     int i;
 
@@ -42,15 +42,16 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b)
     int logic_a = 0;
     int logic_b = 0;
 
-    // int n;
     while (*list_a)
     {
-        // quantity--;
+        quantity--;
         if (*list_b == NULL)
         {
-            // rra_three(&list_a);
+            rra_three(&list_a);
             pb_three(&list_a, &list_b);
             show_me_two(list_a, list_b);
+            usleep(500000);
+            i++;
         }
         // printf("DO find_min_steps\n");
         // show_me_two(list_a, list_b);
@@ -85,7 +86,7 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b)
                     i++;
                 }
                 q--;
-                usleep(10000);
+                // usleep(500000);
                 // show_me_two(list_a, list_b);
             }
         }
@@ -104,7 +105,7 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b)
                 i++;
             }
             step_a--;
-            usleep(10000);
+            // usleep(500000);
             // show_me_two(list_a, list_b);
         }
         while(step_b)
@@ -122,16 +123,16 @@ void insertion_sort_regular(t_number **list_a, t_number **list_b)
                 i++;
             }
             step_b--;
-            usleep(10000);
+            // usleep(500000);
             // show_me_two(list_a, list_b);
         }
         pb_three(&list_a, &list_b);
-        // i++;
-        usleep(10000);
+        i++;
         show_me_two(list_a, list_b);
+        // usleep(500000);
 
-        // if (quantity == 1)
-            // break;
+        if (quantity == 1)
+            break;
     }
-    // printf("insert_sort count operation = %d\n", i);
+    return(i);
 }

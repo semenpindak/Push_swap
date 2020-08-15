@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 21:31:15 by oem               #+#    #+#             */
-/*   Updated: 2020/08/14 16:45:52 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/15 19:17:25 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,18 +126,18 @@ void	find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list
 
 			fill_struct_resulting_values(list_a);
 
-				printf("n = %3d | ", (*list_a)->n);
-				printf("ra = %3d ", (*list_a)->ra);
-				printf("la = %3d ", (*list_a)->la);
-				printf("step_a = %3d ", (*list_a)->step_a);
-				printf("logic_a = %3d |", (*list_a)->logic_a);
-				printf("rb = %3d ", (*list_a)->rb);
-				printf("lb = %3d ", (*list_a)->lb);
-				printf("step_b = %3d ", (*list_a)->step_b);
-				printf("logic_b = %3d |", (*list_a)->logic_b);
-				printf("sum_steps = %3d ", (*list_a)->sum_steps);
-				printf("status = %3d ", (*list_a)->status);
-				printf("(*list_b)->n = %3d\n", (*list_b)->n);
+				// printf("n = %3d | ", (*list_a)->n);
+				// printf("ra = %3d ", (*list_a)->ra);
+				// printf("la = %3d ", (*list_a)->la);
+				// printf("step_a = %3d ", (*list_a)->step_a);
+				// printf("logic_a = %3d |", (*list_a)->logic_a);
+				// printf("rb = %3d ", (*list_a)->rb);
+				// printf("lb = %3d ", (*list_a)->lb);
+				// printf("step_b = %3d ", (*list_a)->step_b);
+				// printf("logic_b = %3d |", (*list_a)->logic_b);
+				// printf("sum_steps = %3d ", (*list_a)->sum_steps);
+				// printf("status = %3d ", (*list_a)->status);
+				// printf("(*list_b)->n = %3d\n", (*list_b)->n);
 
 			*list_a = (*list_a)->next;
 			n--;

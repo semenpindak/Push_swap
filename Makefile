@@ -6,7 +6,10 @@ SRCS =	main.c\
 		timsort.c\
 		insertion_sort_first.c\
 		merge_sort_first.c\
+		centering_stack_first.c\
 		insertion_sort_regular.c\
+		centering_stack_regular.c\
+		merge_sort_regular.c\
 		sa.c sb.c ss.c\
 		pa.c pb.c\
 		ra.c rb.c rr.c\
@@ -17,7 +20,6 @@ SRCS =	main.c\
 		show_me.c\
 		show_me_two.c\
 		show_me_b.c\
-		find_median_number.c\
 		count_step_in_b.c\
 		count_step_in_b_for_struct.c\
 		count_step_in_b_for_struct_three.c\
