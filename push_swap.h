@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/15 17:50:59 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/18 06:40:48 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ int					merge_sort_regular(t_number **list_a, t_number **list_b);
 
 int					centering_stack_first(t_number **list_a, t_number **list_b);
 int					centering_stack_regular(t_number **list_a, t_number **list_b);
+int					centering_stack_regular_a(t_number **list_a, t_number **list_b);
+
+int					pb_when_stack_b_null(t_number ***list_a, t_number ***list_b);
 
 int					sa(t_number *list);
 int					sb(t_number *list);
@@ -69,8 +72,12 @@ void				rra_three(t_number ***list_a);
 void				rrb_three(t_number ***list_b);
 void				rrr_three(t_number ***list_a, t_number ***list_b);
 
+void				ra_four(t_number ****list_a);
+void				rra_four(t_number ****list_a);
+
 void				show_me(t_number *list_a, t_number *list_b); //helper function
 void				show_me_two(t_number **list_a, t_number **list_b); //helper function
+void				show_me_three(t_number ***list_a, t_number ***list_b); //helper function
 void				show_me_b(t_number **list_b);
 
 int					count_step_in_b(t_number *list_a, t_number *list_b, int *logic);

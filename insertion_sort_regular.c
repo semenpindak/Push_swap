@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 14:47:12 by oem               #+#    #+#             */
-/*   Updated: 2020/08/15 20:28:17 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/18 06:39:57 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,13 @@ int insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
 
     while (*list_a)
     {
+        // printf("\nquantity = %d\n", quantity);
+        // usleep(600000);
         quantity--;
         if (*list_b == NULL)
         {
-            rra_three(&list_a);
+            i += pb_when_stack_b_null(&list_a, &list_b);
             pb_three(&list_a, &list_b);
-            show_me_two(list_a, list_b);
-            usleep(500000);
-            i++;
         }
         // printf("DO find_min_steps\n");
         // show_me_two(list_a, list_b);

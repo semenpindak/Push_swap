@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa_three.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:23:18 by semen             #+#    #+#             */
-/*   Updated: 2020/05/03 08:37:04 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/20 18:22:16 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,6 @@ void	pa_three(t_number ***list_a, t_number ***list_b)
         }
         if (**list_a == **list_b)
           **list_b = NULL;
-        ft_putstr("pa\n");
+        printf("pa\n");
     }
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra_three.c                                         :+:      :+:    :+:   */
+/*   rra_four.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 00:31:04 by semen             #+#    #+#             */
-/*   Updated: 2020/08/20 18:22:43 by calpha           ###   ########.fr       */
+/*   Created: 2020/08/18 06:29:18 by calpha            #+#    #+#             */
+/*   Updated: 2020/08/18 06:30:03 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra_three(t_number ***list_a)
+void	rra_four(t_number ****list_a)
 {
-	if ((**list_a)->next != NULL)
+	if ((***list_a)->prev != NULL)
 	{
-		**list_a = (**list_a)->next;
-		printf("ra\n");
+		***list_a = (***list_a)->prev;
+		ft_putstr("rra\n");
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 00:01:01 by semen             #+#    #+#             */
-/*   Updated: 2020/08/15 20:28:06 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/17 15:45:22 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	merge_sort_first(t_number **list_a, t_number **list_b)
     {
         pa_three(&list_a, &list_b);
         show_me_two(list_a, list_b);
-        // usleep(500000);
+        // usleep(100000);
         i++;
         n--;
     }

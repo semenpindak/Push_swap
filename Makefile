@@ -9,7 +9,9 @@ SRCS =	main.c\
 		centering_stack_first.c\
 		insertion_sort_regular.c\
 		centering_stack_regular.c\
+		centering_stack_regular_a.c\
 		merge_sort_regular.c\
+		pb_when_stack_b_null.c\
 		sa.c sb.c ss.c\
 		pa.c pb.c\
 		ra.c rb.c rr.c\
@@ -17,8 +19,10 @@ SRCS =	main.c\
 		pa_three.c pb_three.c\
 		ra_three.c rb_three.c rr_three.c\
 		rra_three.c rrb_three.c rrr_three.c\
+		ra_four.c rra_four.c\
 		show_me.c\
 		show_me_two.c\
+		show_me_three.c\
 		show_me_b.c\
 		count_step_in_b.c\
 		count_step_in_b_for_struct.c\
