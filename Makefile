@@ -6,10 +6,12 @@ SRCS =	main.c\
 		timsort.c\
 		insertion_sort_first.c\
 		merge_sort_first.c\
+		sorting_upten_num.c\
 		centering_stack_first.c\
 		insertion_sort_regular.c\
 		centering_stack_regular.c\
 		centering_stack_regular_a.c\
+		centering_stack_a.c\
 		merge_sort_regular.c\
 		pb_when_stack_b_null.c\
 		sa.c sb.c ss.c\
@@ -30,7 +32,10 @@ SRCS =	main.c\
 		count_step_in_b_for_struct_three_regular.c\
 		find_min_steps_from_a_to_b.c\
 		find_min_steps_from_a_to_b_three.c\
-		find_min_steps_from_a_to_b_three_regular.c
+		find_min_steps_from_a_to_b_three_regular.c\
+		count_list.c\
+		count_list_two.c\
+		count_list_three.c
 OBJ = $(SRCS:c=o)
 
 .PHONY: all clean fclean re

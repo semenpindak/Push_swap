@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 21:31:15 by oem               #+#    #+#             */
-/*   Updated: 2020/08/15 19:17:25 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/24 19:47:12 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,23 @@ static void	record_value_in_stack_a(t_number ***list_a)
 	}
 }
 
-static int count_list(t_number **list_a)
-{
-	int num;
-	num = (*list_a)->n;
-	int count;
+// static int count_list_two(t_number **list_a)
+// {
+// 	int num;
+// 	num = (*list_a)->n;
+// 	int count;
 
-	count = 0;
-	while (*list_a)
-	{
-		if ((*list_a)->next != NULL)
-			*list_a = (*list_a)->next;
-		count++;
-		if (num == (*list_a)->n)
-			break;
-	}
-	return (count);
-}
+// 	count = 0;
+// 	while (*list_a)
+// 	{
+// 		if ((*list_a)->next != NULL)
+// 			*list_a = (*list_a)->next;
+// 		count++;
+// 		if (num == (*list_a)->n)
+// 			break;
+// 	}
+// 	return (count);
+// }
 
 static void	fill_struct_resulting_values(t_number **list_a)
 {
@@ -106,7 +106,7 @@ void	find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list
 	// printf("f = yes\n");
 	record_value_in_stack_a(&list_a);
 	// printf("f = yes\n");
-	n = count_list(list_a);
+	n = count_list_two(list_a);
 	// printf("f = yes\n");
 
 	// show_me_two(list_a, list_b);

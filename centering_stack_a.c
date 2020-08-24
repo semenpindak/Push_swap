@@ -1,80 +1,72 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   centering_stack_first.c                            :+:      :+:    :+:   */
+/*   centering_stack_a.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/15 17:00:18 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/24 21:05:07 by calpha           ###   ########.fr       */
+/*   Created: 2020/08/24 15:56:39 by calpha            #+#    #+#             */
+/*   Updated: 2020/08/24 21:02:46 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	find_max_number_left(t_number **list_b, int *i)
+static void	find_min_number_left(t_number **list_a, int *i)
 {
-	int max;
+	int min;
 	int count;
 	int n;
 
-	max = (*list_b)->n;
+	min = (*list_a)->n;
 	count = 0;
-	n = (*list_b)->n;
-	while (*list_b)
+	n = (*list_a)->n;
+	while (*list_a)
 	{
-		if ((*list_b)->prev != NULL)
+		if ((*list_a)->n < min)
 		{
-			*list_b = (*list_b)->prev;
-			count++;
-		}
-		if ((*list_b)->n > max)
-		{
-			max = (*list_b)->n;
+			min = (*list_a)->n;
 			*i = count;
 		}
-		if (n == (*list_b)->n)
+		*list_a = (*list_a)->prev;
+		count++;
+		if (n == (*list_a)->n)
 			break ;
 	}
-	return (max);
 }
 
-static int	find_max_number_right(t_number **list_b, int *i)
+static void	find_min_number_right(t_number **list_a, int *i)
 {
-	int max;
+	int min;
 	int count;
 	int n;
 
-	max = (*list_b)->n;
+	min = (*list_a)->n;
 	count = 0;
-	n = (*list_b)->n;
-	while (*list_b)
+	n = (*list_a)->n;
+	while (*list_a)
 	{
-		if ((*list_b)->next != NULL)
+		if ((*list_a)->n < min)
 		{
-			*list_b = (*list_b)->next;
-			count++;
-		}
-		if ((*list_b)->n > max)
-		{
-			max = (*list_b)->n;
+			min = (*list_a)->n;
 			*i = count;
 		}
-		if (n == (*list_b)->n)
+		*list_a = (*list_a)->next;
+		count++;
+		if (n == (*list_a)->n)
 			break ;
 	}
-	return (max);
 }
 
-static int	find_max_number(t_number **list_b, int *rotation_logic)
+static int	find_min_number(t_number **list_a, int *rotation_logic)
 {
 	int a;
 	int b;
 
 	a = 0;
 	b = 0;
-	find_max_number_left(list_b, &a);
-	find_max_number_right(list_b, &b);
+	find_min_number_left(list_a, &a);
+	find_min_number_right(list_a, &b);
 	if (a < b)
 	{
 		*rotation_logic = 1;
@@ -88,7 +80,7 @@ static int	find_max_number(t_number **list_b, int *rotation_logic)
 	return (-1);
 }
 
-int			centering_stack_first(t_number **list_a, t_number **list_b)
+int			centering_stack_a(t_number **list_a, t_number **list_b)
 {
 	int i;
 	int step;
@@ -96,26 +88,22 @@ int			centering_stack_first(t_number **list_a, t_number **list_b)
 
 	i = 0;
 	rotation_logic = 0;
-	step = find_max_number(list_b, &rotation_logic);
-
-	// printf("step = %d\n", step);
-	// usleep(3000000);
+	step = find_min_number(list_a, &rotation_logic);
 	while (step)
 	{
 		if (rotation_logic == 0)
 		{
-			ra_three(&list_b);
+			ra_three(&list_a);
 			show_me_two(list_a, list_b);
 			i++;
 		}
 		else
 		{
-			rra_three(&list_b);
+			rra_three(&list_a);
 			show_me_two(list_a, list_b);
 			i++;
 		}
 		step--;
-		show_me_two(list_a, list_b);
 	}
 	return (i);
 }

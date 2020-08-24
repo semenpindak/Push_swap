@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/18 06:40:48 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/24 20:28:15 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,12 @@ int					insertion_sort_regular(t_number **list_a, t_number **list_b, int quantit
 int					merge_sort_first(t_number **list_a, t_number **list_b);
 int					merge_sort_regular(t_number **list_a, t_number **list_b);
 
+void				sorting_upten_num(t_number *list_a, t_number *list_b);
+
 int					centering_stack_first(t_number **list_a, t_number **list_b);
 int					centering_stack_regular(t_number **list_a, t_number **list_b);
 int					centering_stack_regular_a(t_number **list_a, t_number **list_b);
+int					centering_stack_a(t_number **list_a, t_number **list_b);
 
 int					pb_when_stack_b_null(t_number ***list_a, t_number ***list_b);
 
@@ -75,9 +78,9 @@ void				rrr_three(t_number ***list_a, t_number ***list_b);
 void				ra_four(t_number ****list_a);
 void				rra_four(t_number ****list_a);
 
-void				show_me(t_number *list_a, t_number *list_b); //helper function
-void				show_me_two(t_number **list_a, t_number **list_b); //helper function
-void				show_me_three(t_number ***list_a, t_number ***list_b); //helper function
+void				show_me(t_number *list_a, t_number *list_b);
+void				show_me_two(t_number **list_a, t_number **list_b);
+void				show_me_three(t_number ***list_a, t_number ***list_b);
 void				show_me_b(t_number **list_b);
 
 int					count_step_in_b(t_number *list_a, t_number *list_b, int *logic);
@@ -89,5 +92,7 @@ void				find_min_steps_from_a_to_b(t_number *list_a, t_number *list_b);
 void				find_min_steps_from_a_to_b_three(t_number **list_a, t_number **list_b);
 void				find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list_b);
 
-
+int					count_list(t_number *list_a);
+int					count_list_two(t_number **list_a);
+int					count_list_three(t_number ***list_a);
 #endif

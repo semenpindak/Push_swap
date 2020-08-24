@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_stack_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 20:13:26 by semen             #+#    #+#             */
-/*   Updated: 2020/04/23 20:23:44 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/24 19:19:24 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static t_number	*get_last(t_number *head)
 	return (head);
 }
 
-static void			push_ring(t_number *head, int j, char *av[])
+static void		push_ring(t_number *head, int j, char *av[])
 {
 	t_number	*last;
 	t_number	*tmp;
@@ -36,7 +36,7 @@ static void			push_ring(t_number *head, int j, char *av[])
 	head->prev = tmp;
 }
 
-static void			push_back(t_number *head, int j, char *av[])
+static void		push_back(t_number *head, int j, char *av[])
 {
 	t_number	*last;
 	t_number	*tmp;
@@ -50,7 +50,7 @@ static void			push_back(t_number *head, int j, char *av[])
 	last->next = tmp;
 }
 
-static void			push(t_number **head, int j, char *av[])
+static void		push(t_number **head, int j, char *av[])
 {
 	t_number	*tmp;
 
@@ -62,10 +62,10 @@ static void			push(t_number **head, int j, char *av[])
 	*head = tmp;
 }
 
-t_number *create_stack_a(int ac, char *av[])
+t_number		*create_stack_a(int ac, char *av[])
 {
-	int j;
-	t_number *list;
+	int			j;
+	t_number	*list;
 
 	j = 1;
 	while (j < ac)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_min_steps_from_a_to_b.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 23:20:29 by semen             #+#    #+#             */
-/*   Updated: 2020/04/27 00:41:07 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/24 19:20:41 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,54 +40,36 @@ void	record_value_in_stack_a(t_number **list_a)
 	}
 }
 
-static int count_list(t_number *list_a)
-{
-	int num;
-	num = list_a->n;
-	int count;
-
-	count = 0;
-	while (list_a)
-	{
-		if (list_a->next != NULL)
-			list_a = list_a->next;
-		count++;
-		if (num == list_a->n)
-			break;
-	}
-	return (count);
-}
-
 static void	fill_struct_resulting_values(t_number *list_a)
 {
 	if (list_a->ra < list_a->la)
 	{
-		list_a->step_a =  list_a->ra;
+		list_a->step_a = list_a->ra;
 		list_a->logic_a = 1;
 	}
 	else
 	{
-		list_a->step_a =  list_a->la;
+		list_a->step_a = list_a->la;
 		list_a->logic_a = 0;
 	}
 	if (list_a->ra == list_a->la)
 	{
-		list_a->step_a =  list_a->ra;
+		list_a->step_a = list_a->ra;
 		list_a->logic_a = 2;
 	}
 	if (list_a->rb < list_a->lb)
 	{
-		list_a->step_b =  list_a->rb;
+		list_a->step_b = list_a->rb;
 		list_a->logic_b = 1;
 	}
 	else
 	{
-		list_a->step_b =  list_a->lb;
+		list_a->step_b = list_a->lb;
 		list_a->logic_b = 0;
 	}
 	if (list_a->rb == list_a->lb)
 	{
-		list_a->step_b =  list_a->rb;
+		list_a->step_b = list_a->rb;
 		list_a->logic_b = 2;
 	}
 	list_a->sum_steps = list_a->step_a + list_a->step_b;
@@ -95,28 +77,11 @@ static void	fill_struct_resulting_values(t_number *list_a)
 
 void	find_min_steps_from_a_to_b(t_number *list_a, t_number *list_b)
 {
-	// int first;
 	int n;
-	// int l_el;
-	// int r_el;
 
-	// first = list_a->n;
-	// l_el = 0;
-	// r_el = 0;
 	record_value_in_stack_a(&list_a);
 	n = count_list(list_a);
-
-	// printf("\n%d\n", n);
-
-	// pb(&list_a, &list_b);
-	// pb(&list_a, &list_b);
-	// rb(&list_b);
-	// pb(&list_a, &list_b);
-
-
-	// show_me(list_a, list_b);
-	// record_value_in_stack_a(&list_a);
-	// n = 97;
+	show_me(list_a, list_b);
 	if (list_b != NULL)
 	{
 		while (n)
@@ -127,20 +92,20 @@ void	find_min_steps_from_a_to_b(t_number *list_a, t_number *list_b)
 			n--;
 		}
 	}
-	// n = 100;
-	// while(n)
-	// {
-	// 	printf("n = %3d | ", list_a->n);
-	// 	printf("ra = %3d ", list_a->ra);
-	// 	printf("la = %3d ", list_a->la);
-	// 	printf("step_a = %3d ", list_a->step_a);
-	// 	printf("logic_a = %3d |", list_a->logic_a);
-	// 	printf("rb = %3d ", list_a->rb);
-	// 	printf("lb = %3d ", list_a->lb);
-	// 	printf("step_b = %3d ", list_a->step_b);
-	// 	printf("logic_b = %3d |", list_a->logic_b);
-	// 	printf("sum_steps = %3d\n", list_a->sum_steps);
-	// 	list_a = list_a->next;
-	// 	n--;
-	// }
+	show_me(list_a, list_b);
+	while(n)
+	{
+		printf("n = %3d | ", list_a->n);
+		printf("ra = %3d ", list_a->ra);
+		printf("la = %3d ", list_a->la);
+		printf("step_a = %3d ", list_a->step_a);
+		printf("logic_a = %3d |", list_a->logic_a);
+		printf("rb = %3d ", list_a->rb);
+		printf("lb = %3d ", list_a->lb);
+		printf("step_b = %3d ", list_a->step_b);
+		printf("logic_b = %3d |", list_a->logic_b);
+		printf("sum_steps = %3d\n", list_a->sum_steps);
+		list_a = list_a->next;
+		n--;
+	}
 }
