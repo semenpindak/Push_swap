@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_upten_num.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/24 20:43:00 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/25 05:38:20 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 static int find_max_number(t_number *list_b)
 {
 	int max;
-	int count;
 	int n;
 
 	max = list_b->n;
-	count = 0;
 	n = list_b->n;
 	while(list_b)
 	{
@@ -35,11 +33,9 @@ static int find_max_number(t_number *list_b)
 static int find_min_number(t_number *list_b)
 {
 	int min;
-	int count;
 	int n;
 
 	min = list_b->n;
-	count = 0;
 	n = list_b->n;
 	while(list_b)
 	{
@@ -208,7 +204,6 @@ int centering_stack_ten(t_number **list_a, t_number **list_b, int max, int min)
 void sorting_upten_num(t_number *list_a, t_number *list_b)
 {
 	int n;
-	int count;
 	int max;
 	int min;
 	int current;
@@ -216,7 +211,6 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	int check = 0;
 	int i;
 
-	count = 0;
 	current = 0;
 	i = 0;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   centering_stack_first.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/15 17:00:18 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/24 21:05:07 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/25 06:46:03 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,25 +97,23 @@ int			centering_stack_first(t_number **list_a, t_number **list_b)
 	i = 0;
 	rotation_logic = 0;
 	step = find_max_number(list_b, &rotation_logic);
-
-	// printf("step = %d\n", step);
-	// usleep(3000000);
 	while (step)
 	{
 		if (rotation_logic == 0)
 		{
 			ra_three(&list_b);
 			show_me_two(list_a, list_b);
+			// usleep(3000000);
 			i++;
 		}
 		else
 		{
 			rra_three(&list_b);
 			show_me_two(list_a, list_b);
+			// usleep(3000000);
 			i++;
 		}
 		step--;
-		show_me_two(list_a, list_b);
 	}
 	return (i);
 }

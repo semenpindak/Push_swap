@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_min_steps_from_a_to_b_three.c                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:44:42 by semen             #+#    #+#             */
-/*   Updated: 2020/08/24 19:47:33 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/25 12:30:18 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,6 @@ static void	record_value_in_stack_a(t_number ***list_a)
 			break ;
 	}
 }
-
-// static int	count_list_two(t_number **list_a)
-// {
-// 	int num;
-// 	int count;
-
-// 	num = (*list_a)->n;
-// 	count = 0;
-// 	while (*list_a)
-// 	{
-// 		if ((*list_a)->next != NULL)
-// 			*list_a = (*list_a)->next;
-// 		count++;
-// 		if (num == (*list_a)->n)
-// 			break ;
-// 	}
-// 	return (count);
-// }
 
 static void	fill_struct_resulting_values(t_number **list_a)
 {
