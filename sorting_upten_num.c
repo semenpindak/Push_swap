@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/25 05:38:20 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/26 15:55:04 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,33 +48,6 @@ static int find_min_number(t_number *list_b)
 	return (min);
 }
 
-static int sorting_check(t_number *list_a, int min, int n)
-{
-	int current;
-
-	while (list_a)
-	{
-		if (list_a->n == min)
-			break;
-		list_a = list_a->next;
-	};
-	n--;
-	while (list_a)
-	{
-		current = list_a->n;
-		list_a = list_a->next;
-		if (current < list_a->n)
-		{
-			n--;
-			if (n == 0)
-				return (1);
-		}
-		else
-			return (0);
-	}
-	return (-1);
-}
-
 static int check_next_num(t_number *list_a, int current, int max, int min)
 {
 	list_a = list_a->next;
@@ -114,22 +87,29 @@ static int count_step_sa_right(t_number **list_a, int max, int min)
 	int count;
 	int check;
 	int current;
+	int i;
+	int flag;
 
 	n = (*list_a)->n;
 	count = 0;
 	current = 0;
+	i = 0;
+	flag = 0;
 	while (*list_a)
 	{
 		current = (*list_a)->n;
 		check = check_next_num_two(list_a, current, max, min);
-		if (check == 1)
-			return (count);
+		if (check == 1 && flag == 0)
+		{
+			i = count;
+			flag = 1;
+		}
 		*list_a = (*list_a)->next;
 		count++;
 		if (n == (*list_a)->n)
 			break;
 	}
-	return (-1);
+	return (i);
 }
 
 static int count_step_sa_left(t_number **list_a, int max, int min)
@@ -138,36 +118,46 @@ static int count_step_sa_left(t_number **list_a, int max, int min)
 	int count;
 	int check;
 	int current;
+	int i;
+	int flag;
 
 	n = (*list_a)->n;
 	count = 0;
 	current = 0;
+	i = 0;
+	flag = 0;
 	while (*list_a)
 	{
 		current = (*list_a)->n;
 		check = check_next_num_two(list_a, current, max, min);
-		if (check == 1)
-			return (count);
+		if (check == 1 && flag == 0)
+		{
+			i = count;
+			flag = 1;
+		}
 		*list_a = (*list_a)->prev;
 		count++;
 		if (n == (*list_a)->n)
 			break;
 	}
-	return (-1);
+	return (i);
 }
 
 static int rotation(t_number **list_a, int *rotation_logic, int max, int min)
 {
 	(*list_a)->ra = count_step_sa_right(list_a, max, min);
 	(*list_a)->la = count_step_sa_left(list_a, max, min);
+
+	printf("(*list_a)->ra %d, (*list_a)->la = %d\n", (*list_a)->ra, (*list_a)->la);
+
 	if ((*list_a)->ra < (*list_a)->la)
 	{
-		*rotation_logic = 1;
-		return ((*list_a)->la);
+		*rotation_logic = 0;
+		return ((*list_a)->ra);
 	}
 	else
 	{
-		*rotation_logic = 0;
+		*rotation_logic = 1;
 		return ((*list_a)->la);
 	}
 	return (-1);
@@ -181,6 +171,7 @@ int centering_stack_ten(t_number **list_a, t_number **list_b, int max, int min)
 
 	i = 0;
 	step = rotation(list_a, &rotation_logic, max, min);
+	// printf("step i = %d\n", step);
 	while (step)
 	{
 		if (rotation_logic == 0)
@@ -188,18 +179,47 @@ int centering_stack_ten(t_number **list_a, t_number **list_b, int max, int min)
 			ra_three(&list_a);
 			show_me_two(list_a, list_b);
 			i++;
+			printf("i = %d\n", i);
 		}
 		else
 		{
 			rra_three(&list_a);
 			show_me_two(list_a, list_b);
 			i++;
+			printf("i = %d\n", i);
 		}
 		step--;
 	}
+	// printf("centering_stack_ten i = %d\n", i);
 	return (i);
 }
 
+static int checking_stack_sorted(t_number *list_a, int min, int n)
+{
+	int current;
+
+	while (list_a)
+	{
+		if (list_a->n == min)
+			break;
+		list_a = list_a->next;
+	};
+	n--;
+	while (list_a)
+	{
+		current = list_a->n;
+		list_a = list_a->next;
+		if (current < list_a->n)
+		{
+			n--;
+			if (n == 0)
+				return (1);
+		}
+		else
+			return (0);
+	}
+	return (-1);
+}
 
 void sorting_upten_num(t_number *list_a, t_number *list_b)
 {
@@ -219,52 +239,41 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	max = find_max_number(list_a);
 	printf("min = %d, max = %d\n", min, max);
 
-	show_me(list_a, list_b);
+	printf("__________________\n");
 
 	while(list_a)
 	{
-		show_me(list_a, list_b);
-		current = list_a->n;
+		printf("\nnew_cycle\n");
 		i += centering_stack_ten(&list_a, &list_b, max, min);
-
-
+		printf("i = %d\n", i);
 		printf("list_a->ra = %d| list_a->la = %d\n", list_a->ra, list_a->la);
+
+
+		current = list_a->n;
 		check = check_next_num(list_a, current, max, min);
 		printf("check = %d\n", check);
 		if (check == 1)
 		{
 			sa(list_a);
+			show_me(list_a, list_b);
 			i++;
+			printf("i = %d\n", i);
 		}
-		show_me(list_a, list_b);
 
-		a = sorting_check(list_a, min, n);
+		a = checking_stack_sorted(list_a, min, n);
 		printf("sorting_check = %d\n", a);
-
 		if (a == 1)
 			break;
 
-
-		// usleep(3000000);
-		ra(&list_a);
-		i++;
-
-		show_me(list_a, list_b);
-		printf("\n");
+		// ra(&list_a);
+		// show_me(list_a, list_b);
+		// i++;
+		// printf("i = %d\n", i);
+		//
 	}
-
-
-	// while(a)
-    // {
-    //     printf("(list_a-> = status) = %d | count list = %d | list_a->n = %d \n", list_a->status, n, list_a->n);
-    //     list_a = list_a->next;
-    //     a--;
-    // }
-	// list_b = NULL;
 
 	printf("i = %d\n", i);
 	i += centering_stack_a(&list_a, &list_b);
-	show_me(list_a, list_b);
 	printf("i = %d\n", i);
 }
 

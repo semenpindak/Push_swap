@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 20:06:44 by semen             #+#    #+#             */
-/*   Updated: 2020/04/08 20:06:46 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/26 13:32:31 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int			sa(t_number *list)
 	list->n = tmp_current;
 	list = list->prev;
 	list->n = tmp_next;
-	ft_putstr("sa\n");
+	printf("sa\n");
 	return (1);
 }
