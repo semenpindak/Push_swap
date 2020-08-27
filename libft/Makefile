@@ -1,4 +1,4 @@
-PROGRAM = libft.a
+PROGRAM	= libft.a
 CFLAGS:= -Wall -Wextra -Werror
 SRCS:= ft_memchr.c	ft_putstr.c	ft_strjoin.c ft_strsplit.c\
 ft_memcmp.c	ft_putstr_fd.c ft_strlcat.c	ft_strstr.c\

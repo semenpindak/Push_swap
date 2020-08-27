@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_upten_num.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/26 15:55:04 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/27 16:33:29 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,6 @@ static int find_min_number(t_number *list_b)
 			break;
 	}
 	return (min);
-}
-
-static int check_next_num(t_number *list_a, int current, int max, int min)
-{
-	list_a = list_a->next;
-	if (current == max && list_a->n == min)
-		return (0);
-	if (list_a->n < current)
-		return(1);
-	else
-		return (0);
-	return (-1);
 }
 
 static int check_next_num_two(t_number **list_a, int current, int max, int min)
@@ -226,14 +214,10 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	int n;
 	int max;
 	int min;
-	int current;
 	int a;
-	int check = 0;
 	int i;
 
-	current = 0;
 	i = 0;
-
 	n = count_list(list_a);
 	min = find_min_number(list_a);
 	max = find_max_number(list_a);
@@ -246,32 +230,17 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 		printf("\nnew_cycle\n");
 		i += centering_stack_ten(&list_a, &list_b, max, min);
 		printf("i = %d\n", i);
-		printf("list_a->ra = %d| list_a->la = %d\n", list_a->ra, list_a->la);
 
-
-		current = list_a->n;
-		check = check_next_num(list_a, current, max, min);
-		printf("check = %d\n", check);
-		if (check == 1)
-		{
-			sa(list_a);
-			show_me(list_a, list_b);
-			i++;
-			printf("i = %d\n", i);
-		}
+		sa(list_a);
+		show_me(list_a, list_b);
+		i++;
+		printf("i = %d\n", i);
 
 		a = checking_stack_sorted(list_a, min, n);
 		printf("sorting_check = %d\n", a);
 		if (a == 1)
 			break;
-
-		// ra(&list_a);
-		// show_me(list_a, list_b);
-		// i++;
-		// printf("i = %d\n", i);
-		//
 	}
-
 	printf("i = %d\n", i);
 	i += centering_stack_a(&list_a, &list_b);
 	printf("i = %d\n", i);
