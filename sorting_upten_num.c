@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_upten_num.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/27 16:33:29 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/28 18:17:09 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -238,6 +238,7 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 
 		a = checking_stack_sorted(list_a, min, n);
 		printf("sorting_check = %d\n", a);
+		// usleep(3000000);
 		if (a == 1)
 			break;
 	}

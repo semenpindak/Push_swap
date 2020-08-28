@@ -11,7 +11,7 @@ SRC_PS		= main.c validation.c create_stack_a.c\
 			  sa.c sb.c ss.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
 			  pa_three.c pb_three.c ra_three.c rb_three.c rr_three.c rra_three.c rrb_three.c rrr_three.c\
 			  ra_four.c rra_four.c\
-			  show_me.c show_me_two.c show_me_three.c show_me_b.c\
+			  show_me.c show_me_two.c show_me_three.c\
 			  count_step_in_b.c count_step_in_b_for_struct.c count_step_in_b_for_struct_three.c\
 			  count_step_in_b_for_struct_three_regular.c\
 			  find_min_steps_from_a_to_b.c find_min_steps_from_a_to_b_three.c find_min_steps_from_a_to_b_three_regular.c\

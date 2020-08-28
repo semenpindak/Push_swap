@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/24 20:28:15 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/28 09:00:59 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ void				rra_four(t_number ****list_a);
 void				show_me(t_number *list_a, t_number *list_b);
 void				show_me_two(t_number **list_a, t_number **list_b);
 void				show_me_three(t_number ***list_a, t_number ***list_b);
-void				show_me_b(t_number **list_b);
 
 int					count_step_in_b(t_number *list_a, t_number *list_b, int *logic);
 void				count_step_in_b_for_struct(t_number *list_a, t_number *list_b);

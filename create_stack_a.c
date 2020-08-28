@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_stack_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 20:13:26 by semen             #+#    #+#             */
-/*   Updated: 2020/08/24 19:19:24 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/28 18:17:16 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,14 @@ t_number		*create_stack_a(int ac, char *av[])
 	int			j;
 	t_number	*list;
 
-	j = 1;
+	j = 0;
 	while (j < ac)
 	{
-		if (j == 1)
+		if (j == 0)
 			push(&list, j, av);
-		if (j != 1 && j != ac - 1)
+		if (j != 0 && j != ac - 1)
 			push_back(list, j, av);
-		if ((j == ac - 1) && j > 1)
+		if ((j == ac - 1) && j > 0)
 			push_ring(list, j, av);
 		j++;
 	}
