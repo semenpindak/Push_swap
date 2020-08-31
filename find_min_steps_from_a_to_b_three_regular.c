@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 21:31:15 by oem               #+#    #+#             */
-/*   Updated: 2020/08/25 12:31:31 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/30 23:11:52 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,4 @@ void	find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list
 		*list_a = (*list_a)->next;
 		n--;
 	}
-	show_me_two(list_a, list_b);
 }

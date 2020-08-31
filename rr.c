@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 06:57:13 by semen             #+#    #+#             */
-/*   Updated: 2020/04/16 12:53:23 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/29 14:43:34 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	rr(t_number **list_a, t_number **list_b)
 	{
 		*list_a = (*list_a)->next;
 		*list_b = (*list_b)->next;
-		ft_putstr("rr\n");
+		ft_printf("rr\n");
 	}
 }

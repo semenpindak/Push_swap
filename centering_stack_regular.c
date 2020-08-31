@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/15 17:07:27 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/25 06:59:38 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/31 00:14:47 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,9 +148,8 @@ static int	find_min_number_stack_a(t_number **list_a, int *rotation_logic)
 	return (-1);
 }
 
-int			centering_stack_regular(t_number **list_a, t_number **list_b)
+void			centering_stack_regular(t_number **list_a, t_number **list_b)
 {
-	int i = 0;
 	int step_a = 0;
 	int step_b = 0;
 	int rotation_logic_a;
@@ -167,19 +166,9 @@ int			centering_stack_regular(t_number **list_a, t_number **list_b)
 			while(step_a)
 			{
 				if (rotation_logic_a == 0)
-				{
 					rr_three(&list_a, &list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				else
-				{
 					rrr_three(&list_a, &list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				step_a--;
 			}
 		}
@@ -190,37 +179,17 @@ int			centering_stack_regular(t_number **list_a, t_number **list_b)
 			while(sum)
 			{
 				if (rotation_logic_a == 0)
-				{
 					rr_three(&list_a, &list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				else
-				{
 					rrr_three(&list_a, &list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				sum--;
 			}
 			while(twist)
 			{
 				if (rotation_logic_a == 0)
-				{
 					ra_three(&list_a);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				else
-				{
 					rra_three(&list_a);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				twist--;
 			}
 		}
@@ -231,37 +200,17 @@ int			centering_stack_regular(t_number **list_a, t_number **list_b)
 			while(sum)
 			{
 				if (rotation_logic_a == 0)
-				{
 					rr_three(&list_a, &list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				else
-				{
 					rrr_three(&list_a, &list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				sum--;
 			}
 			while(twist)
 			{
 				if (rotation_logic_b == 0)
-				{
 					rb_three(&list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				else
-				{
 					rrb_three(&list_b);
-					show_me_two(list_a, list_b);
-					// usleep(3000000);
-					i++;
-				}
 				twist--;
 			}
 		}
@@ -271,39 +220,18 @@ int			centering_stack_regular(t_number **list_a, t_number **list_b)
 		while(step_a)
 		{
 			if (rotation_logic_a == 0)
-			{
 				ra_three(&list_a);
-				show_me_two(list_a, list_b);
-				// usleep(1000000);
-				i++;
-			}
 			else
-			{
 				rra_three(&list_a);
-				show_me_two(list_a, list_b);
-				// usleep(1000000);
-				i++;
-			}
 			step_a--;
 		}
 		while(step_b)
 		{
 			if (rotation_logic_b == 0)
-			{
 				rb_three(&list_b);
-				show_me_two(list_a, list_b);
-				// usleep(1000000);
-				i++;
-			}
 			else
-			{
 				rrb_three(&list_b);
-				show_me_two(list_a, list_b);
-				// usleep(1000000);
-				i++;
-			}
 		step_b--;
 		}
 	}
-	return (i);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 19:01:30 by semen             #+#    #+#             */
-/*   Updated: 2020/04/11 07:13:40 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/29 14:42:53 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ int			ss(t_number *list_a, t_number *list_b)
 	list_b->n = tmp_current;
 	list_b = list_b->prev;
 	list_b->n = tmp_next;
-	ft_putstr("ss\n");
+	ft_printf("ss\n");
 	return (1);
 }

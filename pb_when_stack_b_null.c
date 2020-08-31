@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/18 05:28:19 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/25 19:11:36 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/31 00:24:25 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,31 +80,18 @@ static int	find_number_status_null(t_number ***list_a, int *rotation_logic)
 	return (-1);
 }
 
-int			pb_when_stack_b_null(t_number ***list_a, t_number ***list_b)
+void			pb_when_stack_b_null(t_number ***list_a)
 {
-	int i;
 	int step;
 	int rotation_logic;
 
-	i = 0;
 	step = find_number_status_null(list_a, &rotation_logic);
 	while (step)
 	{
 		if (rotation_logic == 0)
-		{
 			ra_four(&list_a);
-			show_me_three(list_a, list_b);
-			// usleep(100000);
-			i++;
-		}
 		else
-		{
 			rra_four(&list_a);
-			show_me_three(list_a, list_b);
-			// usleep(100000);
-			i++;
-		}
 		step--;
 	}
-	return (i);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ra_three.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:31:04 by semen             #+#    #+#             */
-/*   Updated: 2020/08/20 18:22:43 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/29 14:44:19 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ra_three(t_number ***list_a)
 	if ((**list_a)->next != NULL)
 	{
 		**list_a = (**list_a)->next;
-		printf("ra\n");
+		ft_printf("ra\n");
 	}
 }

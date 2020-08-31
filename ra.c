@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 06:46:07 by semen             #+#    #+#             */
-/*   Updated: 2020/08/26 13:32:44 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/29 14:43:19 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ra(t_number **list_a)
 	if ((*list_a)->next != NULL)
 	{
 		*list_a = (*list_a)->next;
-		printf("ra\n");
+		ft_printf("ra\n");
 	}
 }

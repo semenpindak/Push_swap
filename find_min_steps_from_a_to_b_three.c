@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:44:42 by semen             #+#    #+#             */
-/*   Updated: 2020/08/25 12:30:18 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/30 23:07:21 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,4 @@ void		find_min_steps_from_a_to_b_three(t_number **list_a, t_number **list_b)
 		*list_a = (*list_a)->next;
 		n--;
 	}
-	show_me_two(list_a, list_b);
 }

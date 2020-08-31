@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 05:38:32 by calpha            #+#    #+#             */
-/*   Updated: 2019/11/04 13:32:03 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/29 19:17:08 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	razrad(int m)
 	return (j);
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(long long int n)
 {
 	int		i;
 	int		r;

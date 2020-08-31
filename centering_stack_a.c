@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   centering_stack_a.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 15:56:39 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/24 21:02:46 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/30 19:29:25 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static void	find_min_number_left(t_number **list_a, int *i)
 			min = (*list_a)->n;
 			*i = count;
 		}
-		*list_a = (*list_a)->prev;
+		if ((*list_a)->prev != NULL)
+			*list_a = (*list_a)->prev;
 		count++;
 		if (n == (*list_a)->n)
 			break ;
@@ -51,7 +52,8 @@ static void	find_min_number_right(t_number **list_a, int *i)
 			min = (*list_a)->n;
 			*i = count;
 		}
-		*list_a = (*list_a)->next;
+		if ((*list_a)->next != NULL)
+			*list_a = (*list_a)->next;
 		count++;
 		if (n == (*list_a)->n)
 			break ;
@@ -80,30 +82,19 @@ static int	find_min_number(t_number **list_a, int *rotation_logic)
 	return (-1);
 }
 
-int			centering_stack_a(t_number **list_a, t_number **list_b)
+void			centering_stack_a(t_number **list_a)
 {
-	int i;
 	int step;
 	int rotation_logic;
 
-	i = 0;
 	rotation_logic = 0;
 	step = find_min_number(list_a, &rotation_logic);
 	while (step)
 	{
 		if (rotation_logic == 0)
-		{
 			ra_three(&list_a);
-			show_me_two(list_a, list_b);
-			i++;
-		}
 		else
-		{
 			rra_three(&list_a);
-			show_me_two(list_a, list_b);
-			i++;
-		}
 		step--;
 	}
-	return (i);
 }

@@ -20,8 +20,7 @@ OBJ = $(SRCS:c=o)
 
 all: $(PROGRAM)
 $(PROGRAM): $(OBJ)
-	ar rc $(PROGRAM) $^
-	ranlib $(PROGRAM)
+	ar rcs $(PROGRAM) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -g -MD -c $<

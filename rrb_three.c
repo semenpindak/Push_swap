@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrb_three.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:36:42 by semen             #+#    #+#             */
-/*   Updated: 2020/04/27 00:37:10 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/29 14:44:50 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	rrb_three(t_number ***list_b)
 	if ((**list_b)->prev != NULL)
 	{
 		**list_b = (**list_b)->prev;
-		ft_putstr("rrb\n");
+		ft_printf("rrb\n");
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:06:34 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/25 11:37:07 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/31 00:20:27 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,30 +104,18 @@ static int	find_min_number(t_number **list_a, int *rotation_logic)
 	return (-1);
 }
 
-int			centering_stack_regular_a(t_number **list_a, t_number **list_b)
+void			centering_stack_regular_a(t_number **list_a)
 {
-	int i = 0;
 	int step = 0;
 	int rotation_logic;
 
 	step = find_min_number(list_a, &rotation_logic);
-	while(step)
+	while (step)
 	{
 		if (rotation_logic == 0)
-		{
 			ra_three(&list_a);
-			show_me_two(list_a, list_b);
-			// usleep(100000);
-			i++;
-		}
 		else
-		{
 			rra_three(&list_a);
-			show_me_two(list_a, list_b);
-			// usleep(100000);
-			i++;
-		}
 		step--;
 	}
-	return (i);
 }

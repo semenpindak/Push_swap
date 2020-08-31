@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 19:50:23 by semen             #+#    #+#             */
-/*   Updated: 2020/08/25 18:58:31 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/29 14:43:13 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ void		pb(t_number **list_a, t_number **list_b)
 		}
 		if (*list_b == *list_a)
 			*list_a = NULL;
-		ft_putstr("pb\n");
+		ft_printf("pb\n");
 	}
 }

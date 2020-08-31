@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 07:00:11 by semen             #+#    #+#             */
-/*   Updated: 2020/04/16 12:56:14 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/29 14:43:41 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	rra(t_number **list_a)
 	if ((*list_a)->prev != NULL)
 	{
 		*list_a = (*list_a)->prev;
-		ft_putstr("rra\n");
+		ft_printf("rra\n");
 	}
 }

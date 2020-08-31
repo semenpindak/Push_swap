@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rra_four.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/18 06:29:18 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/18 06:30:03 by calpha           ###   ########.fr       */
+/*   Updated: 2020/08/29 14:45:15 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	rra_four(t_number ****list_a)
 	if ((***list_a)->prev != NULL)
 	{
 		***list_a = (***list_a)->prev;
-		ft_putstr("rra\n");
+		ft_printf("rra\n");
 	}
 }

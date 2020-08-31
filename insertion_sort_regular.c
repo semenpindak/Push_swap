@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 14:47:12 by oem               #+#    #+#             */
-/*   Updated: 2020/08/25 06:37:39 by oem              ###   ########.fr       */
+/*   Updated: 2020/08/31 00:20:53 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,8 @@ static void search_struct_to_move(t_number **list_a, int *step_a, int *step_b, i
     }
 }
 
-int insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
+void insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
 {
-    int i;
-
-    i = 0;
     int step_a = 0;
     int step_b = 0;
     int logic_a = 0;
@@ -44,23 +41,14 @@ int insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
 
     while (*list_a)
     {
-        // printf("\nquantity = %d\n", quantity);
-        // usleep(600000);
         quantity--;
         if (*list_b == NULL)
         {
-            i += pb_when_stack_b_null(&list_a, &list_b);
+            pb_when_stack_b_null(&list_a);
             pb_three(&list_a, &list_b);
         }
-        // printf("DO find_min_steps\n");
-        // show_me_two(list_a, list_b);
         find_min_steps_from_a_to_b_three_regular(list_a, list_b);
-        // printf("POSLE find_min_steps\n");
-        // show_me_two(list_a, list_b);
         search_struct_to_move(list_a, &step_a, &step_b, &logic_a, &logic_b);
-
-        // c = count_step_in_b(list_a, list_b, &logic);
-
         if ((logic_a == 0 && logic_b == 0) || (logic_a == 1 && logic_b == 1))
         {
             int zn;
@@ -73,65 +61,30 @@ int insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity)
             while(q)
             {
                 if (logic_a == 0)
-                {
                     rr_three(&list_a, &list_b);
-                    show_me_two(list_a, list_b);
-                    i++;
-                }
                 else
-                {
                     rrr_three(&list_a, &list_b);
-                    show_me_two(list_a, list_b);
-                    i++;
-                }
                 q--;
-                // usleep(500000);
-                // show_me_two(list_a, list_b);
             }
         }
         while(step_a)
         {
             if (logic_a == 0)
-            {
                 ra_three(&list_a);
-                show_me_two(list_a, list_b);
-                i++;
-            }
             else
-            {
                 rra_three(&list_a);
-                show_me_two(list_a, list_b);
-                i++;
-            }
             step_a--;
-            // usleep(500000);
-            // show_me_two(list_a, list_b);
         }
         while(step_b)
         {
             if (logic_b == 0)
-            {
                 rb_three(&list_b);
-                show_me_two(list_a, list_b);
-                i++;
-            }
             else
-            {
                 rrb_three(&list_b);
-                show_me_two(list_a, list_b);
-                i++;
-            }
             step_b--;
-            // usleep(500000);
-            // show_me_two(list_a, list_b);
         }
         pb_three(&list_a, &list_b);
-        i++;
-        show_me_two(list_a, list_b);
-        // usleep(500000);
-
         if (quantity == 1)
             break;
     }
-    return(i);
 }

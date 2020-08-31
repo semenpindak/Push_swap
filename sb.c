@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semen <semen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 20:06:44 by semen             #+#    #+#             */
-/*   Updated: 2020/04/08 20:08:57 by semen            ###   ########.fr       */
+/*   Updated: 2020/08/29 14:42:33 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int			sb(t_number *list)
 	list->n = tmp_current;
 	list = list->prev;
 	list->n = tmp_next;
-	ft_putstr("sb\n");
+	ft_printf("sb\n");
 	return (1);
 }

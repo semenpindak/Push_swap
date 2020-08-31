@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/28 09:00:59 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/01 00:26:41 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include "libft/libft.h"
+# include "ft_printf/ft_printf.h"
 
 typedef struct		s_number
 {
@@ -39,19 +40,19 @@ int					validation(int ac, char *av[]);
 t_number			*create_stack_a(int ac, char *av[]);
 
 void				timsort(t_number *list_a, t_number *list_b);
-int					insertion_sort_first(t_number **list_a, t_number **list_b, int quantity);
-int					insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity);
-int					merge_sort_first(t_number **list_a, t_number **list_b);
-int					merge_sort_regular(t_number **list_a, t_number **list_b);
+void				insertion_sort_first(t_number **list_a, t_number **list_b, int quantity);
+void				insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity);
+void				merge_sort_first(t_number **list_a, t_number **list_b);
+void				merge_sort_regular(t_number **list_a, t_number **list_b);
 
-void				sorting_upten_num(t_number *list_a, t_number *list_b);
+void				sorting_upten_num(t_number *list_a);
 
-int					centering_stack_first(t_number **list_a, t_number **list_b);
-int					centering_stack_regular(t_number **list_a, t_number **list_b);
-int					centering_stack_regular_a(t_number **list_a, t_number **list_b);
-int					centering_stack_a(t_number **list_a, t_number **list_b);
+void				centering_stack_first(t_number **list_b);
+void				centering_stack_regular(t_number **list_a, t_number **list_b);
+void				centering_stack_regular_a(t_number **list_a);
+void				centering_stack_a(t_number **list_a);
 
-int					pb_when_stack_b_null(t_number ***list_a, t_number ***list_b);
+void				pb_when_stack_b_null(t_number ***list_a);
 
 int					sa(t_number *list);
 int					sb(t_number *list);
@@ -94,4 +95,29 @@ void				find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **l
 int					count_list(t_number *list_a);
 int					count_list_two(t_number **list_a);
 int					count_list_three(t_number ***list_a);
+
+char				**parser(int ac, char *av[], int *ret);
+
+void				timsort_kv(t_number *list_a, t_number *list_b);
+int					insertion_sort_first_kv(t_number **list_a, t_number **list_b, int quantity);
+int					insertion_sort_regular_kv(t_number **list_a, t_number **list_b, int quantity, int i);
+int					merge_sort_first_kv(t_number **list_a, t_number **list_b, int i);
+int					merge_sort_regular_kv(t_number **list_a, t_number **list_b, int i);
+int					centering_stack_first_kv(t_number **list_a, t_number **list_b, int i);
+int					centering_stack_regular_kv(t_number **list_a, t_number **list_b, int i);
+int					centering_stack_regular_a_kv(t_number **list_a, t_number **list_b, int i);
+int					pb_when_stack_b_null_kv(t_number ***list_a, t_number ***list_b, int i);
+
+void				sorting_upten_num_kv(t_number *list_a, t_number *list_b);
+void				centering_stack_a_kv(t_number **list_a, t_number **list_b, int i);
+
+int					sa_checker(t_number *list);
+void				pa_checker(t_number **list_a, t_number **list_b);
+void				pb_checker(t_number **list_a, t_number **list_b);
+void				ra_checker(t_number **list_a);
+void				rb_checker(t_number **list_b);
+void				rr_checker(t_number **list_a, t_number **list_b);
+void				rra_checker(t_number **list_a);
+void				rrb_checker(t_number **list_b);
+void				rrr_checker(t_number **list_a, t_number **list_b);
 #endif
