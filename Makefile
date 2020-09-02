@@ -19,7 +19,7 @@ SRC_PS		= push_swap.c validation.c create_stack_a.c\
 			  count_list.c count_list_two.c count_list_three.c parser.c\
 			  timsort_kv.c insertion_sort_first_kv.c insertion_sort_regular_kv.c merge_sort_first_kv.c merge_sort_regular_kv.c\
 			  centering_stack_first_kv.c centering_stack_regular_kv.c centering_stack_regular_a_kv.c pb_when_stack_b_null_kv.c\
-			  insertion_sort_finish.c count_step_in_a.c
+			  insertion_sort_finish.c insertion_sort_finish_kv.c count_step_in_a.c
 SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c\
 			  sa.c sb.c ss.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
 			  sa_checker.c pa_checker.c pb_checker.c ra_checker.c rb_checker.c rr_checker.c\

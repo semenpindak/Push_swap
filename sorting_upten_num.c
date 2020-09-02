@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_upten_num.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 12:43:22 by oem              ###   ########.fr       */
+/*   Created: 2020/09/02 20:01:43 by calpha            #+#    #+#             */
+/*   Updated: 2020/09/02 20:38:00 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,13 +156,11 @@ static int rotation(t_number **list_a, int *rotation_logic, int max, int min)
 	return (-1);
 }
 
-int centering_stack_ten(t_number **list_a, int max, int min)
+static void centering_stack_ten(t_number **list_a, int max, int min)
 {
-	int i;
 	int step;
 	int rotation_logic;
 
-	i = 0;
 	step = rotation(list_a, &rotation_logic, max, min);
 	while (step)
 	{
@@ -172,7 +170,6 @@ int centering_stack_ten(t_number **list_a, int max, int min)
 			rra_three(&list_a);
 		step--;
 	}
-	return (i);
 }
 
 static int checking_stack_sorted(t_number *list_a, int min, int n)
@@ -190,7 +187,7 @@ static int checking_stack_sorted(t_number *list_a, int min, int n)
 	while (list_a)
 	{
 		current = list_a->n;
-		if (list_a->next != NULL)
+		if (list_a->prev != NULL)
 			list_a = list_a->next;
 		if (current < list_a->n)
 		{
@@ -216,7 +213,9 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	int max;
 	int min;
 	int a;
+	int i;
 
+	i = 0;
 	start(&list_a, &list_b);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
@@ -224,10 +223,15 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	while(list_a)
 	{
 		centering_stack_ten(&list_a, max, min);
-		sa(list_a);
+
+
+		a = checking_stack_sorted(list_a, min, n);
+		if (a == 0)
+			sa(list_a);
 		a = checking_stack_sorted(list_a, min, n);
 		if (a == 1)
 			break;
 	}
+	insertion_sort_finish(&list_a, &list_b);
 	centering_stack_a(&list_a);
 }

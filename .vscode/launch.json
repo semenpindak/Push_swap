@@ -11,7 +11,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "/Users/calpha/desktop/Push_swap/push_swap",
-			"args": ["1", "5", "2", "4", "3"
+			"args": ["6", "2", "1", "4", "5"
 			],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",

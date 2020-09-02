@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_upten_num_kv.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 13:18:35 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 20:11:15 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -248,18 +248,23 @@ void sorting_upten_num_kv(t_number *list_a, t_number *list_b)
 	{
 		i = centering_stack_ten(&list_a, &list_b, max, min, i);
 
-		ft_printf("exec ");
-		sa(list_a);
-		i++;
-		ft_printf("move = %d\n", i);
-		show_me(list_a, list_b);
-		usleep(3000000);
-		// system("clear");
+
+		a = checking_stack_sorted(list_a, min, n);
+		if (a == 0)
+		{
+			ft_printf("exec ");
+			sa(list_a);
+			i++;
+			ft_printf("move = %d\n", i);
+			show_me(list_a, list_b);
+			usleep(3000000);
+			system("clear");
+		}
 
 		a = checking_stack_sorted(list_a, min, n);
 		if (a == 1)
 			break;
 	}
-	insertion_sort_finish(&list_a, &list_b);
-	// centering_stack_a_kv(&list_a, &list_b, i);
+	i = insertion_sort_finish_kv(&list_a, &list_b, i);
+	centering_stack_a_kv(&list_a, &list_b, i);
 }

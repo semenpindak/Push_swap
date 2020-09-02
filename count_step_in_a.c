@@ -3,253 +3,178 @@
 /*                                                        :::      ::::::::   */
 /*   count_step_in_a.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 13:15:01 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 13:20:15 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 20:41:47 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	check_next_number_left(t_number **list_b)
+static int	find_max_number_left(t_number **list_a, int *i) //complete
 {
-	int a;
-
-	a = 0;
-	*list_b = (*list_b)->prev;
-	a = (*list_b)->n;
-	*list_b = (*list_b)->next;
-	return (a);
-}
-
-static int	check_next_number_left_add(t_number **list_b)
-{
-	int a;
-
-	a = 0;
-	*list_b = (*list_b)->next;
-	a = (*list_b)->n;
-	*list_b = (*list_b)->prev;
-	return (a);
-}
-
-static int	count_to_range_left(t_number **list_b, int max, int min, int **c)
-{
+	int max;
 	int count;
+	int n;
 
+	max = (*list_a)->n;
 	count = 0;
-	while (*list_b)
+	n = (*list_a)->n;
+	while (*list_a)
 	{
-		if (max == (*list_b)->n)
+		if ((*list_a)->prev != NULL)
+			*list_a = (*list_a)->prev;
+		if ((*list_a)->n >= max)
 		{
-			if (min == check_next_number_left(list_b))
-				return (count);
-			if (min == check_next_number_left_add(list_b))
-				return (count);
+			max = (*list_a)->n;
+			*i = count;
 		}
-		*list_b = (*list_b)->prev;
+		if (n == (*list_a)->n)
+			break ;
 		count++;
-		**c = count;
 	}
-	return (-1);
-}
-
-static int	find_middle_number_left(t_number **list_a, t_number **list_b, int *c)
-{
-	int min;
-	int max;
-	int middle;
-	int n;
-
-	min = -2147483647;
-	max = 2147483647;
-	middle = (*list_a)->n;
-	n = (*list_b)->n;
-	while (*list_b)
-	{
-		if ((*list_b)->n > middle && (*list_b)->n < max)
-			max = (*list_b)->n;
-		if ((*list_b)->n > min && (*list_b)->n < middle)
-			min = (*list_b)->n;
-		*list_b = (*list_b)->prev;
-		if (n == (*list_b)->n)
-			break ;
-	}
-	return (count_to_range_left(list_b, max, min, &c));
-}
-
-static int	find_max_number_left(t_number **list_b, int *i)
-{
-	int max;
-	int count;
-	int n;
-
-	max = (*list_b)->n;
-	count = 1;
-	n = (*list_b)->n;
-	while (*list_b)
-	{
-		if ((*list_b)->prev != NULL)
-		{
-			*list_b = (*list_b)->prev;
-			count++;
-		}
-		if ((*list_b)->n >= max)
-			max = (*list_b)->n;
-		if (n == (*list_b)->n)
-			break ;
-		*i = count;
-	}
+	printf("max = %d, *i = %d\n", max, *i);
 	return (max);
 }
 
-static int	find_min_number_left(t_number **list_b, int *i)
+static int	find_min_number_left(t_number **list_a, int *i) //comlete
 {
 	int min;
 	int count;
 	int n;
 
-	min = (*list_b)->n;
-	count = 0;
-	n = (*list_b)->n;
-	while (*list_b)
+	min = (*list_a)->n;
+	count = 1;
+	n = (*list_a)->n;
+	while (*list_a)
 	{
-		if ((*list_b)->prev != NULL)
+		if ((*list_a)->prev != NULL)
+			*list_a = (*list_a)->prev;
+		if ((*list_a)->n <= min)
 		{
-			*list_b = (*list_b)->prev;
-			count++;
-		}
-		if ((*list_b)->n < min)
-		{
-			min = (*list_b)->n;
+			min = (*list_a)->n;
 			*i = count;
 		}
-		if (n == (*list_b)->n)
+		if (n == (*list_a)->n)
 			break ;
+		count++;
 	}
+	printf("min = %d, *i = %d\n", min, *i);
 	return (min);
 }
 
-static int	check_next_number_right(t_number **list_b)
+static int	find_middle_number_left(t_number **list_a, t_number **list_b) //complete
 {
-	int a;
-
-	a = 0;
-	*list_b = (*list_b)->next;
-	a = (*list_b)->n;
-	*list_b = (*list_b)->prev;
-	return (a);
-}
-
-static int	check_next_number_right_add(t_number **list_b)
-{
-	int a;
-
-	a = 0;
-	*list_b = (*list_b)->prev;
-	a = (*list_b)->n;
-	*list_b = (*list_b)->next;
-	return (a);
-}
-
-static int	count_to_range_right(t_number **list_b, int max, int min, int **c)
-{
-	int count;
-
-	count = 0;
-	while (*list_b)
-	{
-		if (max == (*list_b)->n)
-		{
-			if (min == check_next_number_right(list_b))
-				return (count);
-			if (min == check_next_number_right_add(list_b))
-				return (count);
-		}
-		*list_b = (*list_b)->next;
-		count++;
-		**c = count;
-	}
-	return (-1);
-}
-
-static int	find_middle_number_right(t_number **list_a, t_number **list_b, int *c)
-{
-	int min;
 	int max;
 	int middle;
 	int n;
+	int i;
+	int count;
 
-	min = -2147483647;
 	max = 2147483647;
-	middle = (*list_a)->n;
-	n = (*list_b)->n;
+	middle = (*list_b)->n;
+	n = (*list_a)->n;
+	count = 0;
 	while (*list_b)
 	{
-		if ((*list_b)->n < max && (*list_b)->n > middle)
-			max = (*list_b)->n;
-		if ((*list_b)->n > min && (*list_b)->n < middle)
-			min = (*list_b)->n;
-		*list_b = (*list_b)->next;
-		if (n == (*list_b)->n)
+		if ((*list_a)->n > middle && (*list_a)->n < max)
+		{
+			max = (*list_a)->n;
+			i = count;
+		}
+		*list_a = (*list_a)->prev;
+		if (n == (*list_a)->n)
 			break ;
+		count++;
 	}
-	return (count_to_range_right(list_b, max, min, &c));
+	printf("middle: max = %d, i = %d\n", max, i);
+	return (i);
 }
 
-static int	find_max_number_right(t_number **list_b, int *i)
+static int	find_max_number_right(t_number **list_a, int *i)
 {
 	int max;
 	int count;
 	int n;
 
-	max = (*list_b)->n;
+	max = (*list_a)->n;
 	count = 1;
-	n = (*list_b)->n;
-	while (*list_b)
+	n = (*list_a)->n;
+	while (*list_a)
 	{
-		if ((*list_b)->n >= max)
+		if ((*list_a)->n >= max)
 		{
-			max = (*list_b)->n;
+			max = (*list_a)->n;
 			*i = count;
 		}
-		if ((*list_b)->next != NULL)
+		if ((*list_a)->next != NULL)
 		{
-			*list_b = (*list_b)->next;
+			*list_a = (*list_a)->next;
 			count++;
 		}
-		if (n == (*list_b)->n)
+		if (n == (*list_a)->n)
 			break ;
 	}
+	printf("\n");
+	printf("max = %d, *i = %d\n", max, *i);
 	return (max);
 }
 
-static int	find_min_number_right(t_number **list_b, int *i)
+static int	find_min_number_right(t_number **list_a, int *i)
 {
 	int min;
 	int count;
 	int n;
 
-	min = (*list_b)->n;
+	min = (*list_a)->n;
 	count = 0;
-	n = (*list_b)->n;
-	while (list_b)
+	n = (*list_a)->n;
+	while (list_a)
 	{
-		if ((*list_b)->next != NULL)
+		if ((*list_a)->next != NULL)
 		{
-			*list_b = (*list_b)->next;
+			*list_a = (*list_a)->next;
 			count++;
 		}
-		if ((*list_b)->n < min)
+		if ((*list_a)->n < min)
 		{
-			min = (*list_b)->n;
+			min = (*list_a)->n;
 			*i = count;
 		}
-		if (n == (*list_b)->n)
+		if (n == (*list_a)->n)
 			break ;
 	}
+	printf("min = %d, *i = %d\n", min, *i);
 	return (min);
+}
+
+static int	find_middle_number_right(t_number **list_a, t_number **list_b)
+{
+	int max;
+	int middle;
+	int n;
+	int i;
+	int count;
+
+	max = 2147483647;
+	middle = (*list_b)->n;
+	n = (*list_a)->n;
+	count = 0;
+	while (*list_a)
+	{
+		if ((*list_a)->n > middle && (*list_a)->n < max)
+		{
+			max = (*list_a)->n;
+			i = count;
+		}
+		*list_a = (*list_a)->next;
+		if (n == (*list_a)->n)
+			break ;
+		count++;
+	}
+	printf("middle: max = %d, i = %d\n", max, i);
+	return (i);
 }
 
 static int	step_left(t_number **list_a, t_number **list_b)
@@ -258,22 +183,15 @@ static int	step_left(t_number **list_a, t_number **list_b)
 	int i;
 	int x;
 	int y;
-	int c;
 
-	a = (*list_a)->n;
+	a = (*list_b)->n;
 	i = 0;
 	x = 0;
-	c = 0;
-	if (a > (x = find_max_number_left(list_b, &i)))
+	if (a > (x = find_max_number_left(list_a, &i)))
 		return (i);
-	if (a < (x = find_min_number_left(list_b, &i)))
+	if (a < (x = find_min_number_left(list_a, &i)))
 		return (i);
-	y = find_middle_number_left(list_a, list_b, &c);
-	while (c)
-	{
-		*list_b = (*list_b)->next;
-		c--;
-	}
+	y = find_middle_number_left(list_a, list_b);
 	return (y);
 }
 
@@ -282,23 +200,16 @@ static int	step_right(t_number **list_a, t_number **list_b)
 	int a;
 	int i;
 	int x;
-	int y;
-	int c;
+	int y = 0;
 
 	a = (*list_a)->n;
 	i = 0;
 	x = 0;
-	c = 0;
-	if (a > (x = find_max_number_right(list_b, &i)))
+	if (a > (x = find_max_number_right(list_a, &i)))
 		return (i);
-	if (a < (x = find_min_number_right(list_b, &i)))
+	if (a < (x = find_min_number_right(list_a, &i)))
 		return (i);
-	y = find_middle_number_right(list_a, list_b, &c);
-	while (c)
-	{
-		*list_b = (*list_b)->prev;
-		c--;
-	}
+	y = find_middle_number_right(list_a, list_b);
 	return (y);
 }
 

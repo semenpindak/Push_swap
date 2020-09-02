@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_sort_finish.c                            :+:      :+:    :+:   */
+/*   insertion_sort_finish_kv.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/02 12:45:08 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 20:37:29 by calpha           ###   ########.fr       */
+/*   Created: 2020/09/02 20:10:58 by calpha            #+#    #+#             */
+/*   Updated: 2020/09/02 20:11:25 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int rotation(t_number **list_b)
 	return (0);
 }
 
-void insertion_sort_finish(t_number **list_a, t_number **list_b)
+int insertion_sort_finish_kv(t_number **list_a, t_number **list_b, int i)
 {
     int step;
 
@@ -35,18 +35,35 @@ void insertion_sort_finish(t_number **list_a, t_number **list_b)
     while (*list_b)
     {
         count_step_in_a(list_a, list_b);
-		ft_printf("(*list_b)->rb = %d, (*list_b)->lb = %d", (*list_b)->rb, (*list_b)->lb);
         step = rotation(list_b);
-		ft_printf("step = %d", step);
-		usleep(10000000);
         while (step)
 	    {
 		    if ((*list_b)->logic_a == 0)
+		    {
+                ft_printf("exec ");
                 ra_three(&list_a);
+                ft_printf("move = %d\n", ++i);
+                show_me_two(list_a, list_b);
+                usleep(3000000);
+                system("clear");
+		    }
 		    else
+		    {
+                ft_printf("exec ");
                 rra_three(&list_a);
+                ft_printf("move = %d\n", ++i);
+                show_me_two(list_a, list_b);
+                usleep(3000000);
+                system("clear");
+		    }
 		    step--;
 	    }
+        ft_printf("exec ");
         pa_three(&list_a, &list_b);
+        ft_printf("move = %d\n", ++i);
+        show_me_two(list_a, list_b);
+        usleep(3000000);
+        system("clear");
     }
+    return (i);
 }

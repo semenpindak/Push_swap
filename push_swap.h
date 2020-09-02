@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 13:19:57 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 20:37:42 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ int					pb_when_stack_b_null_kv(t_number ***list_a, t_number ***list_b, int i);
 void				sorting_upten_num_kv(t_number *list_a, t_number *list_b);
 int					centering_stack_a_kv(t_number **list_a, t_number **list_b, int i);
 void				insertion_sort_finish(t_number **list_a, t_number **list_b);
+int					insertion_sort_finish_kv(t_number **list_a, t_number **list_b, int i);
 
 int					sa_checker(t_number *list);
 void				pa_checker(t_number **list_a, t_number **list_b);
