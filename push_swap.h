@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/01 00:26:41 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 13:19:57 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void				insertion_sort_regular(t_number **list_a, t_number **list_b, int quantit
 void				merge_sort_first(t_number **list_a, t_number **list_b);
 void				merge_sort_regular(t_number **list_a, t_number **list_b);
 
-void				sorting_upten_num(t_number *list_a);
+void				sorting_upten_num(t_number *list_a, t_number *list_b);
 
 void				centering_stack_first(t_number **list_b);
 void				centering_stack_regular(t_number **list_a, t_number **list_b);
@@ -84,6 +84,7 @@ void				show_me_two(t_number **list_a, t_number **list_b);
 void				show_me_three(t_number ***list_a, t_number ***list_b);
 
 int					count_step_in_b(t_number *list_a, t_number *list_b, int *logic);
+void				count_step_in_a(t_number **list_a, t_number **list_b);
 void				count_step_in_b_for_struct(t_number *list_a, t_number *list_b);
 void				count_step_in_b_for_struct_three(t_number **list_a, t_number **list_b);
 void				count_step_in_b_for_struct_three_regular(t_number **list_a, t_number **list_b);
@@ -109,7 +110,8 @@ int					centering_stack_regular_a_kv(t_number **list_a, t_number **list_b, int i
 int					pb_when_stack_b_null_kv(t_number ***list_a, t_number ***list_b, int i);
 
 void				sorting_upten_num_kv(t_number *list_a, t_number *list_b);
-void				centering_stack_a_kv(t_number **list_a, t_number **list_b, int i);
+int					centering_stack_a_kv(t_number **list_a, t_number **list_b, int i);
+void				insertion_sort_finish(t_number **list_a, t_number **list_b);
 
 int					sa_checker(t_number *list);
 void				pa_checker(t_number **list_a, t_number **list_b);

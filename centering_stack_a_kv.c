@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 15:56:39 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/30 21:33:43 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 12:16:54 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static int	find_min_number(t_number **list_a, int *rotation_logic)
 	return (-1);
 }
 
-void			centering_stack_a_kv(t_number **list_a, t_number **list_b, int i)
+int			centering_stack_a_kv(t_number **list_a, t_number **list_b, int i)
 {
 	int step;
 	int rotation_logic;
@@ -98,6 +98,7 @@ void			centering_stack_a_kv(t_number **list_a, t_number **list_b, int i)
 			ft_printf("move = %d\n", ++i);
 			show_me_two(list_a, list_b);
 			usleep(3000000);
+			system("clear");
 		}
 		else
 		{
@@ -106,7 +107,9 @@ void			centering_stack_a_kv(t_number **list_a, t_number **list_b, int i)
 			ft_printf("move = %d\n", ++i);
 			show_me_two(list_a, list_b);
 			usleep(3000000);
+			system("clear");
 		}
 		step--;
 	}
+	return (i);
 }

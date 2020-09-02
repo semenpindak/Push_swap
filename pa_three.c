@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:23:18 by semen             #+#    #+#             */
-/*   Updated: 2020/08/29 14:44:03 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 12:12:30 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ static void	link_removal_a(t_number ***list_a, t_number ***list_b, t_number **li
 	next = (**list_b)->next;
 	prev = (**list_b)->prev;
 	*list_b_tmp = **list_b;
-	**list_b = (**list_b)->prev;
+	if ((**list_b)->prev != NULL)
+		**list_b = (**list_b)->prev;
 	(**list_b)->next = next;
-	**list_b = (**list_b)->next;
+	if ((**list_b)->next != NULL)
+		**list_b = (**list_b)->next;
 	(**list_b)->prev = prev;
 	*tmp_tmp = *list_b_tmp;
 	*list_b_tmp = **list_a;

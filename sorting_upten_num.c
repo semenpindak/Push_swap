@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/30 19:37:08 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 12:43:22 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,13 +204,20 @@ static int checking_stack_sorted(t_number *list_a, int min, int n)
 	return (-1);
 }
 
-void sorting_upten_num(t_number *list_a)
+static void start(t_number **list_a, t_number **list_b)
+{
+	if (*list_b == NULL)
+		pb_three(&list_a, &list_b);
+}
+
+void sorting_upten_num(t_number *list_a, t_number *list_b)
 {
 	int n;
 	int max;
 	int min;
 	int a;
 
+	start(&list_a, &list_b);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
 	max = find_max_number(list_a);

@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/30 18:19:39 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 13:18:35 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,6 +216,21 @@ static int checking_stack_sorted(t_number *list_a, int min, int n)
 	return (-1);
 }
 
+static int start(t_number **list_a, t_number **list_b, int i)
+{
+	if (*list_b == NULL)
+	{
+		ft_printf("exec ");
+		pb_three(&list_a, &list_b);
+		i++;
+		ft_printf("move = %d\n", i);
+		show_me_two(list_a, list_b);
+		usleep(3000000);
+		system("clear");
+	}
+	return (i);
+}
+
 void sorting_upten_num_kv(t_number *list_a, t_number *list_b)
 {
 	int n;
@@ -225,6 +240,7 @@ void sorting_upten_num_kv(t_number *list_a, t_number *list_b)
 	int i;
 
 	i = 0;
+	i = start(&list_a, &list_b, i);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
 	max = find_max_number(list_a);
@@ -238,11 +254,12 @@ void sorting_upten_num_kv(t_number *list_a, t_number *list_b)
 		ft_printf("move = %d\n", i);
 		show_me(list_a, list_b);
 		usleep(3000000);
-		system("clear");
+		// system("clear");
 
 		a = checking_stack_sorted(list_a, min, n);
 		if (a == 1)
 			break;
 	}
-	centering_stack_a_kv(&list_a, &list_b, i);
+	insertion_sort_finish(&list_a, &list_b);
+	// centering_stack_a_kv(&list_a, &list_b, i);
 }

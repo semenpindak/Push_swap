@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 12:07:42 by oem               #+#    #+#             */
-/*   Updated: 2020/09/01 01:00:04 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 11:49:30 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ int	main(int ac, char *av[])
 	int min;
 	int ret;
 	char *buff;
-	int i = 0;
 
 	list_b = NULL;
 	if (ac == 1 || ac == 2)
@@ -148,7 +147,6 @@ int	main(int ac, char *av[])
 				rrb_checker(&list_b);
 			if (ft_strcmp(buff, "rrr") == 0)
 				rrr_checker(&list_a, &list_b);
-			ft_printf("i = %d\n", ++i);
 			free(buff);
 		}
 		if (checking_stack_sorted(list_a, min, n) == 1)
