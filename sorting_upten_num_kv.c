@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 16:04:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 20:11:15 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/02 23:05:30 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -267,4 +267,5 @@ void sorting_upten_num_kv(t_number *list_a, t_number *list_b)
 	}
 	i = insertion_sort_finish_kv(&list_a, &list_b, i);
 	centering_stack_a_kv(&list_a, &list_b, i);
+
 }

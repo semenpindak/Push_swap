@@ -23,7 +23,7 @@ SRC_PS		= push_swap.c validation.c create_stack_a.c\
 SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c\
 			  sa.c sb.c ss.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
 			  sa_checker.c pa_checker.c pb_checker.c ra_checker.c rb_checker.c rr_checker.c\
-			  rra_checker.c rrb_checker.c rrr_checker.c
+			  rra_checker.c rrb_checker.c rrr_checker.c show_me.c
 
 OBJ_PS		= $(SRC_PS:c=o)
 OBJ_CH		= $(SRC_CH:c=o)

@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 20:10:58 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 20:11:25 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/02 22:34:38 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int insertion_sort_finish_kv(t_number **list_a, t_number **list_b, int i)
         step = rotation(list_b);
         while (step)
 	    {
-		    if ((*list_b)->logic_a == 0)
+		    if ((*list_b)->logic_a == 1)
 		    {
                 ft_printf("exec ");
                 ra_three(&list_a);

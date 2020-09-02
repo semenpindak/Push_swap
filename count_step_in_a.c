@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 13:15:01 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 20:41:47 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/02 22:51:16 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ static int	find_max_number_left(t_number **list_a, int *i) //complete
 			break ;
 		count++;
 	}
-	printf("max = %d, *i = %d\n", max, *i);
+	// printf("max = %d, *i = %d\n", max, *i);
+	// usleep(3000000);
 	return (max);
 }
 
@@ -45,13 +46,13 @@ static int	find_min_number_left(t_number **list_a, int *i) //comlete
 	int n;
 
 	min = (*list_a)->n;
-	count = 1;
+	count = 0;
 	n = (*list_a)->n;
 	while (*list_a)
 	{
 		if ((*list_a)->prev != NULL)
 			*list_a = (*list_a)->prev;
-		if ((*list_a)->n <= min)
+		if ((*list_a)->n < min)
 		{
 			min = (*list_a)->n;
 			*i = count;
@@ -60,7 +61,8 @@ static int	find_min_number_left(t_number **list_a, int *i) //comlete
 			break ;
 		count++;
 	}
-	printf("min = %d, *i = %d\n", min, *i);
+	// printf("min = %d, *i = %d\n", min, *i);
+	// usleep(3000000);
 	return (min);
 }
 
@@ -88,7 +90,7 @@ static int	find_middle_number_left(t_number **list_a, t_number **list_b) //compl
 			break ;
 		count++;
 	}
-	printf("middle: max = %d, i = %d\n", max, i);
+	// printf("middle: max = %d, i = %d\n", max, i);
 	return (i);
 }
 
@@ -116,8 +118,8 @@ static int	find_max_number_right(t_number **list_a, int *i)
 		if (n == (*list_a)->n)
 			break ;
 	}
-	printf("\n");
-	printf("max = %d, *i = %d\n", max, *i);
+	// printf("\n");
+	// printf("max = %d, *i = %d\n", max, *i);
 	return (max);
 }
 
@@ -145,7 +147,7 @@ static int	find_min_number_right(t_number **list_a, int *i)
 		if (n == (*list_a)->n)
 			break ;
 	}
-	printf("min = %d, *i = %d\n", min, *i);
+	// printf("min = %d, *i = %d\n", min, *i);
 	return (min);
 }
 
@@ -173,7 +175,7 @@ static int	find_middle_number_right(t_number **list_a, t_number **list_b)
 			break ;
 		count++;
 	}
-	printf("middle: max = %d, i = %d\n", max, i);
+	// printf("middle: max = %d, i = %d\n", max, i);
 	return (i);
 }
 
@@ -202,7 +204,7 @@ static int	step_right(t_number **list_a, t_number **list_b)
 	int x;
 	int y = 0;
 
-	a = (*list_a)->n;
+	a = (*list_b)->n;
 	i = 0;
 	x = 0;
 	if (a > (x = find_max_number_right(list_a, &i)))

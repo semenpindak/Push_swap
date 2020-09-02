@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 12:45:08 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 20:37:29 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/02 22:49:57 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,24 +29,28 @@ static int rotation(t_number **list_b)
 
 void insertion_sort_finish(t_number **list_a, t_number **list_b)
 {
-    int step;
+	int step;
 
-    step = 0;
-    while (*list_b)
-    {
-        count_step_in_a(list_a, list_b);
-		ft_printf("(*list_b)->rb = %d, (*list_b)->lb = %d", (*list_b)->rb, (*list_b)->lb);
-        step = rotation(list_b);
-		ft_printf("step = %d", step);
-		usleep(10000000);
-        while (step)
-	    {
-		    if ((*list_b)->logic_a == 0)
-                ra_three(&list_a);
-		    else
-                rra_three(&list_a);
-		    step--;
-	    }
-        pa_three(&list_a, &list_b);
-    }
+	step = 0;
+
+		// show_me_two(list_a, list_b);
+		count_step_in_a(list_a, list_b);
+		// ft_printf("(*list_b)->rb = %d, (*list_b)->lb = %d\n", (*list_b)->rb, (*list_b)->lb);
+		step = rotation(list_b);
+		while (step)
+		{
+			if ((*list_b)->logic_a == 1)
+			{
+				ra_three(&list_a);
+				// show_me_two(list_a, list_b);
+			}
+			else
+			{
+				rra_three(&list_a);
+				// show_me_two(list_a, list_b);
+			}
+			step--;
+		}
+		pa_three(&list_a, &list_b);
+		// show_me_two(list_a, list_b);
 }

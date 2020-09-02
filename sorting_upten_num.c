@@ -6,7 +6,7 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 20:01:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 20:38:00 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/02 22:50:05 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,11 +219,11 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	start(&list_a, &list_b);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
+	// printf("min = %d", min);
 	max = find_max_number(list_a);
 	while(list_a)
 	{
 		centering_stack_ten(&list_a, max, min);
-
 
 		a = checking_stack_sorted(list_a, min, n);
 		if (a == 0)
@@ -234,4 +234,5 @@ void sorting_upten_num(t_number *list_a, t_number *list_b)
 	}
 	insertion_sort_finish(&list_a, &list_b);
 	centering_stack_a(&list_a);
+	// show_me(list_a, list_b);
 }

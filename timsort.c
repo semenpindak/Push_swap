@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   timsort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/31 14:26:34 by semen             #+#    #+#             */
-/*   Updated: 2020/08/31 00:19:18 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/02 23:47:44 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,5 @@ void		timsort(t_number *list_a, t_number *list_b)
 		merge_sort_regular(&list_a, &list_b);
 	}
 	centering_stack_regular_a(&list_a);
+	show_me(list_a, list_b);
 }
