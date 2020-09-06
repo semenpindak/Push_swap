@@ -6,16 +6,16 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:23:18 by semen             #+#    #+#             */
-/*   Updated: 2020/09/02 12:12:30 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/04 01:28:29 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	link_removal_a(t_number ***list_a, t_number ***list_b, t_number **list_b_tmp, t_number **tmp_tmp)
+static void	link_removal_a(t_num ***list_a, t_num ***list_b, t_num **list_b_tmp, t_num **tmp_tmp)
 {
-	t_number *next;
-	t_number *prev;
+	t_num *next;
+	t_num *prev;
 
 	next = (**list_b)->next;
 	prev = (**list_b)->prev;
@@ -31,10 +31,10 @@ static void	link_removal_a(t_number ***list_a, t_number ***list_b, t_number **li
 	**list_a = *tmp_tmp;
 }
 
-void		pa_three(t_number ***list_a, t_number ***list_b)
+void		pa_three(t_num ***list_a, t_num ***list_b, t_key *bonus)
 {
-	t_number *list_b_tmp;
-	t_number *tmp_tmp;
+	t_num *list_b_tmp;
+	t_num *tmp_tmp;
 
 	if (**list_b)
 	{
@@ -74,6 +74,7 @@ void		pa_three(t_number ***list_a, t_number ***list_b)
 		}
 		if (**list_a == **list_b)
 			**list_b = NULL;
-		ft_printf("pa\n");
+		if (bonus->print == 1)
+			ft_printf("pa\n");
 	}
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_min_steps_from_a_to_b_three_regular.c         :+:      :+:    :+:   */
+/*   find_min_steps_regular.c         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 21:31:15 by oem               #+#    #+#             */
-/*   Updated: 2020/08/30 23:11:52 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/04 10:16:53 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	record_value_in_stack_a(t_number ***list_a)
+static void	record_value_in_stack_a(t_num ***list_a)
 {
 	int num;
 	num = (**list_a)->n;
@@ -46,7 +46,7 @@ static void	record_value_in_stack_a(t_number ***list_a)
 	}
 }
 
-static void	fill_struct_resulting_values(t_number **list_a)
+static void	fill_struct_resulting_values(t_num **list_a)
 {
 	if ((*list_a)->ra < (*list_a)->la)
 	{
@@ -81,7 +81,7 @@ static void	fill_struct_resulting_values(t_number **list_a)
 	(*list_a)->sum_steps = (*list_a)->step_a + (*list_a)->step_b;
 }
 
-void	find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list_b)
+void	find_min_steps_regular(t_num **list_a, t_num **list_b)
 {
 	int n;
 
@@ -89,7 +89,7 @@ void	find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list
 	n = count_list_two(list_a);
 	while (n)
 	{
-		count_step_in_b_for_struct_three_regular(list_a, list_b);
+		count_step_in_b_regular(list_a, list_b);
 		fill_struct_resulting_values(list_a);
 		// printf("n = %3d | ", (*list_a)->n);
 		// printf("ra = %3d ", (*list_a)->ra);

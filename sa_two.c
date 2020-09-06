@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra_checker.c                                       :+:      :+:    :+:   */
+/*   sa_two.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/01 00:19:19 by oem               #+#    #+#             */
-/*   Updated: 2020/09/01 00:20:52 by oem              ###   ########.fr       */
+/*   Created: 2020/09/05 10:05:43 by oem               #+#    #+#             */
+/*   Updated: 2020/09/05 10:09:22 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra_checker(t_number **list_a)
+void	sa_two(t_num **list, t_key *bonus)
 {
-	if ((*list_a)->next != NULL)
+	int tmp_current;
+	int tmp_next;
+	int n;
+
+	n = count_list_two(list);
+	if (n > 1)
 	{
-		*list_a = (*list_a)->next;
+		tmp_current = (*list)->n;
+		(*list) = (*list)->next;
+		tmp_next = (*list)->n;
+		(*list)->n = tmp_current;
+		(*list) = (*list)->prev;
+		(*list)->n = tmp_next;
+		if (bonus->print == 1)
+			ft_printf("sa\n");
 	}
 }

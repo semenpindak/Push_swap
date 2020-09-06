@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 14:06:33 by semen             #+#    #+#             */
-/*   Updated: 2020/08/29 10:39:12 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/05 23:49:23 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,64 +32,48 @@ static int	check_arg_number(int ac, char *av[])
 	return (1);
 }
 
-// static int	check_min_number(int ac, char *av[])
-// {
-// 	int n;
-// 	int i;
-// 	int j;
-// 	char *check_int;
-
-// 	n = 1;
-// 	i = 0;
-// 	j = 0;
-// 	check_int = "2147483647";
-// 	while (n < ac)
-// 	{
-// 		if (((ft_strlen(av[n]) > 10) && av[n][0] != '-') || ((ft_strlen(av[n]) > 11) && av[n][0] == '-'))
-// 			return (0);
-// 		if (((ft_strlen(av[n]) == 10) && av[n][0] != '-') || ((ft_strlen(av[n]) == 11) && av[n][0] == '-'))
-// 		{
-// 			if(av[n][0] == '-')
-// 				i++;
-// 			while (av[n][i] != '\0')
-// 			{
-// 				if (av[n][i] > check_int[j])
-// 					return (0);
-// 				i++;
-// 				j++;
-// 			}
-// 		}
-// 		n++;
-// 	}
-// 	return (1);
-// }
-
-static int	check_min_max_number(int ac, char *av[])
+static int	check_length_min_max(char *av[], int n)
 {
-	int n;
 	int i;
 	int j;
 	char *check_int;
 
-	n = 0;
 	i = 0;
 	j = 0;
-	check_int = "2147483647";
+	if(av[n][0] == '-')
+	{
+		i++;
+		check_int = "2147483648";
+	}
+	else
+		check_int = "2147483647";
+	while (av[n][i] != '\0')
+	{
+		if (av[n][i] > check_int[j])
+		{
+			free(check_int);
+			return (0);
+		}
+		i++;
+		j++;
+	}
+	free(check_int);
+	return (1);
+}
+
+static int	check_min_max_number(int ac, char *av[])
+{
+	int n;
+
+	n = 0;
 	while (n < ac)
 	{
 		if (((ft_strlen(av[n]) > 10) && av[n][0] != '-') || ((ft_strlen(av[n]) > 11) && av[n][0] == '-'))
 			return (0);
 		if (((ft_strlen(av[n]) == 10) && av[n][0] != '-') || ((ft_strlen(av[n]) == 11) && av[n][0] == '-'))
 		{
-			if(av[n][0] == '-')
-				i++;
-			while (av[n][i] != '\0')
-			{
-				if (av[n][i] > check_int[j])
-					return (0);
-				i++;
-				j++;
-			}
+			if (check_length_min_max(av, n) == 0)
+				return (0);
 		}
 		n++;
 	}

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   centering_stack_first.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 23:40:44 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 23:47:20 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/04 09:45:51 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	find_max_number_left(t_number **list_b, int *i)
+static int	find_max_number_left(t_num **list_b, int *i)
 {
 	int max;
 	int count;
@@ -39,7 +39,7 @@ static int	find_max_number_left(t_number **list_b, int *i)
 	return (max);
 }
 
-static int	find_max_number_right(t_number **list_b, int *i)
+static int	find_max_number_right(t_num **list_b, int *i)
 {
 	int max;
 	int count;
@@ -66,7 +66,7 @@ static int	find_max_number_right(t_number **list_b, int *i)
 	return (max);
 }
 
-static int	find_max_number(t_number **list_b, int *rotation_logic)
+static int	find_max_number(t_num **list_b, int *rotation_logic)
 {
 	int a;
 	int b;
@@ -88,22 +88,26 @@ static int	find_max_number(t_number **list_b, int *rotation_logic)
 	return (-1);
 }
 
-void			centering_stack_first(t_number **list_b)
+void			centering_stack_first(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	int step;
 	int rotation_logic;
 
 	rotation_logic = 0;
 	step = find_max_number(list_b, &rotation_logic);
-	// printf("step = %d\n", step);
 
-	// usleep(3000000);
 	while (step)
 	{
 		if (rotation_logic == 0)
-			rb_three(&list_b);
+		{
+			rb_three(&list_b, bonus);
+			debug_print_two(list_a, list_b, bonus);
+		}
 		else
-			rrb_three(&list_b);
+		{
+			rrb_three(&list_b, bonus);
+			debug_print_two(list_a, list_b, bonus);
+		}
 		step--;
 	}
 }

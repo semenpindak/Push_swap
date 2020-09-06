@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_min_steps_from_a_to_b_three.c                 :+:      :+:    :+:   */
+/*   find_min_steps_first.c                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:44:42 by semen             #+#    #+#             */
-/*   Updated: 2020/08/30 23:07:21 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/04 15:50:42 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	record_value_in_stack_a(t_number ***list_a)
+static void	record_value_in_stack_a(t_num ***list_a)
 {
 	int num;
 	int count;
@@ -40,7 +40,7 @@ static void	record_value_in_stack_a(t_number ***list_a)
 	}
 }
 
-static void	fill_struct_resulting_values(t_number **list_a)
+static void	fill_struct_resulting_values(t_num **list_a)
 {
 	if ((*list_a)->ra < (*list_a)->la)
 	{
@@ -75,7 +75,7 @@ static void	fill_struct_resulting_values(t_number **list_a)
 	(*list_a)->sum_steps = (*list_a)->step_a + (*list_a)->step_b;
 }
 
-void		find_min_steps_from_a_to_b_three(t_number **list_a, t_number **list_b)
+void		find_min_steps_first(t_num **list_a, t_num **list_b)
 {
 	int n;
 
@@ -83,19 +83,8 @@ void		find_min_steps_from_a_to_b_three(t_number **list_a, t_number **list_b)
 	n = count_list_two(list_a);
 	while (n)
 	{
-		count_step_in_b_for_struct_three(list_a, list_b);
+		count_step_in_b_first(list_a, list_b);
 		fill_struct_resulting_values(list_a);
-		/* printf("n = %3d | ", (*list_a)->n); */
-		/* printf("ra = %3d ", (*list_a)->ra); */
-		/* printf("la = %3d ", (*list_a)->la); */
-		/* printf("step_a = %3d ", (*list_a)->step_a); */
-		/* printf("logic_a = %3d |", (*list_a)->logic_a); */
-		/* printf("rb = %3d ", (*list_a)->rb); */
-		/* printf("lb = %3d ", (*list_a)->lb); */
-		/* printf("step_b = %3d ", (*list_a)->step_b); */
-		/* printf("logic_b = %3d |", (*list_a)->logic_b); */
-		/* printf("sum_steps = %3d ", (*list_a)->sum_steps); */
-		/* printf("(*list_b)->n = %3d\n", (*list_b)->n); */
 		*list_a = (*list_a)->next;
 		n--;
 	}

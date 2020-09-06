@@ -6,13 +6,13 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 19:01:30 by semen             #+#    #+#             */
-/*   Updated: 2020/08/29 14:42:53 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	checking_quantity(t_number *list_a, t_number *list_b)
+static int	checking_quantity(t_num *list_a, t_num *list_b)
 {
 	int n;
 
@@ -39,7 +39,7 @@ static int	checking_quantity(t_number *list_a, t_number *list_b)
 	return (1);
 }
 
-int			ss(t_number *list_a, t_number *list_b)
+int			ss(t_num *list_a, t_num *list_b)
 {
 	int tmp_current;
 	int tmp_next;

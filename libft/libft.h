@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 18:09:28 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/29 19:17:32 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/03 21:52:46 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct		s_node
 {
 	int				fd;
 	char			*buff;
-	struct	s_node	*next;
+	struct s_node	*next;
 }					t_node;
 
 void				*ft_memset(void *b, int c, size_t len);
@@ -88,16 +88,11 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
-void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
 int					ft_strcasecmp(const char *s1, const char *s2);
-size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 char				*ft_itoa_base(int value, int base);
 int					ft_atoi_base(char *str, char *base);
 char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
+
 int					get_next_line(const int fd, char **line);
 #endif

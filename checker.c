@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 12:07:42 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 23:49:47 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/06 16:15:24 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	find_min_number(t_number *list_b)
+static int	find_min_number(t_num *list_b)
 {
 	int min;
 	int n;
@@ -31,9 +31,12 @@ static int	find_min_number(t_number *list_b)
 	return (min);
 }
 
-static int	checking_stack_sorted(t_number *list_a, int min, int n)
+static int	checking_stack_sorted(t_num *list_a, int min, int n)
 {
 	int current;
+
+	if (count_list(list_a) != n)
+		return (0);
 
 	current = list_a->n;
 	while (list_a)
@@ -63,96 +66,132 @@ static int	checking_stack_sorted(t_number *list_a, int min, int n)
 	return (-1);
 }
 
-static int check_space(char av[])
+static	void create_list_bonus(t_key **bonus)
+{
+	t_key *tmp;
+
+	tmp = (t_key *)malloc(sizeof(t_key));
+	tmp->key = 0;
+	tmp->i = 0;
+	tmp->print = 0;
+	*bonus = tmp;
+}
+
+void reading_commands(t_num **list_a, t_num **list_b, t_key *bonus)
+{
+	char *buff;
+
+	while (get_next_line(0, &buff) > 0)
+	{
+		if (ft_strcmp(buff, "sa") == 0)
+			sa_two(list_a, bonus);
+		if (ft_strcmp(buff, "pa") == 0)
+			pa_three(&list_a, &list_b, bonus);
+		if (ft_strcmp(buff, "pb") == 0)
+			pb_three(&list_a, &list_b, bonus);
+		if (ft_strcmp(buff, "ra") == 0)
+			ra_three(&list_a, bonus);
+		if (ft_strcmp(buff, "rb") == 0)
+			rb_three(&list_b, bonus);
+		if (ft_strcmp(buff, "rr") == 0)
+			rr_three(&list_a, &list_b, bonus);
+		if (ft_strcmp(buff, "rra") == 0)
+			rra_three(&list_a, bonus);
+		if (ft_strcmp(buff, "rrb") == 0)
+			rrb_three(&list_b, bonus);
+		if (ft_strcmp(buff, "rrr") == 0)
+			rrr_three(&list_a, &list_b, bonus);
+		free(buff);
+	}
+}
+
+static void clear_array(int ac, char **ar)
 {
 	int i;
 
 	i = 0;
-	while (av[i] != '\0')
+	while (i < ac)
 	{
-		if (av[i] != ' ')
-			return (1);
+		free(ar[i]);
 		i++;
 	}
-	return (0);
+	free(ar);
 }
 
-static void	when_one_parameter(int ac, char *av[])
+static void	when_one_parameter(int ac, char **ar)
 {
-	if (ac == 1 || (ac == 2 && ft_strcmp(av[1], "\0") == 0))
+	if (ac == 0)
 	{
 		printf("Enter more than one parameter\n");
 		exit (0);
 	}
-	if (ac == 2 && check_space(av[1]) == 0)
+	if (ac == 1)
 	{
-		printf("Enter more than one parameter\n");
+		clear_array(ac, ar);
 		exit (0);
 	}
+}
+
+static void	free_list(t_num *list_a, t_key *bonus)
+{
+	int n;
+
+	n = count_list(list_a);
+	n--;
+	while (n)
+	{
+		free(list_a->prev);
+		if (n == 1)
+			break ;
+		list_a = list_a->next;
+		n--;
+	}
+	free(list_a);
+	free(bonus);
 }
 
 int	main(int ac, char *av[])
 {
-	t_number *list_a;
-	t_number *list_b;
+	t_num *list_a;
+	t_num *list_b;
+	t_key *bonus;
+	char **ar;
 	int n;
 	int min;
-	int ret;
-	char *buff;
 
 	list_b = NULL;
-	if (ac == 1 || ac == 2)
-		when_one_parameter(ac, av);
+	ar = parser(ac, av, &ac);
 
-	av = parser(ac, av, &ac);
-
-	if (validation(ac, av) == 0)
-	{
-		ft_putstr("Error\n");
-		exit (0);
-	}
-	if (ac == 1)
-		exit (0);
-
-	list_a = create_stack_a(ac, av);
-
-	n = count_list(list_a);
-
-	min = find_min_number(list_a);
-
-	if (checking_stack_sorted(list_a, min, n) == 1)
-		exit (0);
+	// int a = 0;
+	// while(a < ac)
+	// {
+	// 	printf("av[%d] = %s\n", a, ar[a]);
+	// 	a++;
+	// }
+	// printf("ac = %d\n", ac);
 
 	if (ac == 0 || ac == 1)
-		return (0);
+		when_one_parameter(ac, ar);
+
+	if (validation(ac, ar) == 0)
+	{
+		ft_putstr("Error\n");
+		clear_array(ac, ar);
+		exit (0);
+	}
+	create_list_bonus(&bonus);
+	list_a = create_stack_a(ac, ar);
+	clear_array(ac, ar);
+	n = count_list(list_a);
+	min = find_min_number(list_a);
 	if (ac > 1)
 	{
-		while ((ret = get_next_line(0, &buff)) > 0)
-		{
-			if (ft_strcmp(buff, "sa") == 0)
-				sa_checker(list_a);
-			if (ft_strcmp(buff, "pa") == 0)
-				pa_checker(&list_a, &list_b);
-			if (ft_strcmp(buff, "pb") == 0)
-				pb_checker(&list_a, &list_b);
-			if (ft_strcmp(buff, "ra") == 0)
-				ra_checker(&list_a);
-			if (ft_strcmp(buff, "rb") == 0)
-				rb_checker(&list_b);
-			if (ft_strcmp(buff, "rr") == 0)
-				rr_checker(&list_a, &list_b);
-			if (ft_strcmp(buff, "rra") == 0)
-				rra_checker(&list_a);
-			if (ft_strcmp(buff, "rrb") == 0)
-				rrb_checker(&list_b);
-			if (ft_strcmp(buff, "rrr") == 0)
-				rrr_checker(&list_a, &list_b);
-			free(buff);
-		}
+		reading_commands(&list_a, &list_b, bonus);
 		if (checking_stack_sorted(list_a, min, n) == 1)
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
 	}
+	free_list(list_a, bonus);
 	return (0);
 }

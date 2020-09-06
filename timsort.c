@@ -3,80 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   timsort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/31 14:26:34 by semen             #+#    #+#             */
-/*   Updated: 2020/09/02 23:47:44 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/05 14:55:37 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	change_status_one(t_number *list_b)
-{
-	int num;
-	num = list_b->n;
-	int count = 0;
-
-	while (list_b)
-	{
-		list_b->status = 1;
-		count++;
-		list_b = list_b->next;
-		if (num == list_b->n)
-			break;
-	}
-}
-
-static int	calculation_quantity(int count_assist, int n)
+static int	calculation_piece(int count, int n)
 {
 	int q;
-	int quantity;
+	int d;
 	int ret;
 
 	q = 0;
-	quantity = 0;
+	d = 0;
 	ret = 0;
-	if (n <= 100)
-		q = 2;
-	else
-		q = 5;
-	quantity = n / q;
-	if (count_assist < q)
-		return (quantity);
+	q = (n <= 100) ? 2 : 5;
+	d = n / q;
+	if (count < q)
+		return (d);
 	else
 	{
-		count_assist--;
-		ret = n - count_assist * quantity;
+		count--;
+		ret = n - count * d;
 		return (ret);
 	}
 	return (-1);
 }
 
-void		timsort(t_number *list_a, t_number *list_b)
+void		timsort(t_num *list_a, t_num *list_b, t_key *bonus)
 {
 	int n;
 	int q;
-	int quantity;
-	int count_assist;
+	int d;
+	int count;
 
-	count_assist = 1;
+	count = 1;
 	n = count_list(list_a);
 	q = (n <= 100) ? 2 : 5;
-	quantity = calculation_quantity(count_assist, n);
-	insertion_sort_first(&list_a, &list_b, quantity);
-	change_status_one(list_b);
-	centering_stack_first(&list_b);
-	merge_sort_first(&list_a, &list_b);
+	d = calculation_piece(count, n);
+	insertsort_first(&list_a, &list_b, d, bonus);
+	centering_stack_first(&list_a, &list_b, bonus);
+	mergesort_first(&list_a, &list_b, bonus);
 	while(--q)
 	{
-		count_assist++;
-		quantity = calculation_quantity(count_assist, n);
-		insertion_sort_regular(&list_a, &list_b, quantity);
-		change_status_one(list_b);
-		centering_stack_regular(&list_a, &list_b);
-		merge_sort_regular(&list_a, &list_b);
+		count++;
+		d = calculation_piece(count, n);
+		insertsort_regular(&list_a, &list_b, d, bonus);
+		centering_stack_regular(&list_a, &list_b, bonus);
+		mergesort_regular(&list_a, &list_b, bonus);
 	}
-	centering_stack_regular_a(&list_a);
-	show_me(list_a, list_b);
+	centering_stack_finish(&list_a, &list_b, bonus);
 }

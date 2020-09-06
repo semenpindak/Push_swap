@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   count_step_in_a.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 13:15:01 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 22:51:16 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/06 12:04:35 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	find_max_number_left(t_number **list_a, int *i) //complete
+static int	find_max_number_left(t_num **list_a, int *i) //complete
 {
 	int max;
 	int count;
@@ -39,14 +39,14 @@ static int	find_max_number_left(t_number **list_a, int *i) //complete
 	return (max);
 }
 
-static int	find_min_number_left(t_number **list_a, int *i) //comlete
+static int	find_min_number_left(t_num **list_a, int *i) //comlete
 {
 	int min;
 	int count;
 	int n;
 
 	min = (*list_a)->n;
-	count = 0;
+	count = 1;
 	n = (*list_a)->n;
 	while (*list_a)
 	{
@@ -66,7 +66,7 @@ static int	find_min_number_left(t_number **list_a, int *i) //comlete
 	return (min);
 }
 
-static int	find_middle_number_left(t_number **list_a, t_number **list_b) //complete
+static int	find_middle_number_left(t_num **list_a, t_num **list_b) //complete
 {
 	int max;
 	int middle;
@@ -94,7 +94,7 @@ static int	find_middle_number_left(t_number **list_a, t_number **list_b) //compl
 	return (i);
 }
 
-static int	find_max_number_right(t_number **list_a, int *i)
+static int	find_max_number_right(t_num **list_a, int *i)
 {
 	int max;
 	int count;
@@ -123,7 +123,7 @@ static int	find_max_number_right(t_number **list_a, int *i)
 	return (max);
 }
 
-static int	find_min_number_right(t_number **list_a, int *i)
+static int	find_min_number_right(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -151,7 +151,7 @@ static int	find_min_number_right(t_number **list_a, int *i)
 	return (min);
 }
 
-static int	find_middle_number_right(t_number **list_a, t_number **list_b)
+static int	find_middle_number_right(t_num **list_a, t_num **list_b)
 {
 	int max;
 	int middle;
@@ -179,7 +179,7 @@ static int	find_middle_number_right(t_number **list_a, t_number **list_b)
 	return (i);
 }
 
-static int	step_left(t_number **list_a, t_number **list_b)
+static int	step_left(t_num **list_a, t_num **list_b)
 {
 	int a;
 	int i;
@@ -197,7 +197,7 @@ static int	step_left(t_number **list_a, t_number **list_b)
 	return (y);
 }
 
-static int	step_right(t_number **list_a, t_number **list_b)
+static int	step_right(t_num **list_a, t_num **list_b)
 {
 	int a;
 	int i;
@@ -215,7 +215,7 @@ static int	step_right(t_number **list_a, t_number **list_b)
 	return (y);
 }
 
-void		count_step_in_a(t_number **list_a, t_number **list_b)
+void		count_step_in_a(t_num **list_a, t_num **list_b)
 {
 	(*list_b)->rb = step_left(list_a, list_b);
 	(*list_b)->lb = step_right(list_a, list_b);

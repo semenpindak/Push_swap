@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   centering_stack_regular_a_kv.c                     :+:      :+:    :+:   */
+/*   centering_stack_finish.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/30 20:40:10 by oem               #+#    #+#             */
-/*   Updated: 2020/08/31 00:02:22 by oem              ###   ########.fr       */
+/*   Created: 2020/08/24 15:56:39 by calpha            #+#    #+#             */
+/*   Updated: 2020/09/04 09:44:37 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	find_min_number_left(t_number **list_a, int *i)
+static void	find_min_number_left(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -23,31 +23,20 @@ static int	find_min_number_left(t_number **list_a, int *i)
 	n = (*list_a)->n;
 	while (*list_a)
 	{
-		if ((*list_a)->status == 1)
+		if ((*list_a)->n < min)
 		{
-			if ((*list_a)->n < min)
-			{
-				min = (*list_a)->n;
-				*i = count;
-			}
-			if ((*list_a)->next != NULL)
-			{
-				*list_a = (*list_a)->prev;
-				count++;
-			}
+			min = (*list_a)->n;
+			*i = count;
 		}
-		else
-		{
+		if ((*list_a)->prev != NULL)
 			*list_a = (*list_a)->prev;
-			count++;
-		}
+		count++;
 		if (n == (*list_a)->n)
 			break ;
 	}
-	return (min);
 }
 
-static int	find_min_number_right(t_number **list_a, int *i)
+static void	find_min_number_right(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -58,31 +47,20 @@ static int	find_min_number_right(t_number **list_a, int *i)
 	n = (*list_a)->n;
 	while (*list_a)
 	{
-		if ((*list_a)->status == 1)
+		if ((*list_a)->n < min)
 		{
-			if ((*list_a)->n < min)
-			{
-				min = (*list_a)->n;
-				*i = count;
-			}
-			if ((*list_a)->next != NULL)
-			{
-				*list_a = (*list_a)->next;
-				count++;
-			}
+			min = (*list_a)->n;
+			*i = count;
 		}
-		else
-		{
+		if ((*list_a)->next != NULL)
 			*list_a = (*list_a)->next;
-			count++;
-		}
+		count++;
 		if (n == (*list_a)->n)
 			break ;
 	}
-	return (min);
 }
 
-static int	find_min_number(t_number **list_a, int *rotation_logic)
+static int	find_min_number(t_num **list_a, int *rotation_logic)
 {
 	int a;
 	int b;
@@ -104,35 +82,25 @@ static int	find_min_number(t_number **list_a, int *rotation_logic)
 	return (-1);
 }
 
-int			centering_stack_regular_a_kv(t_number **list_a, t_number **list_b, int i)
+void			centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	int step = 0;
+	int step;
 	int rotation_logic;
 
+	rotation_logic = 0;
 	step = find_min_number(list_a, &rotation_logic);
-	while(step)
+	while (step)
 	{
 		if (rotation_logic == 0)
 		{
-			system("clear");
-			ft_printf("exec ");
-			ra_three(&list_a);
-			i++;
-			ft_printf("move = %d\n", i);
-			show_me_two(list_a, list_b);
-			usleep(3000000);
+			ra_three(&list_a, bonus);
+			debug_print_two(list_a, list_b, bonus);
 		}
 		else
 		{
-			system("clear");
-			ft_printf("exec ");
-			rra_three(&list_a);
-			i++;
-			ft_printf("move = %d\n", i);
-			show_me_two(list_a, list_b);
-			usleep(3000000);
+			rra_three(&list_a, bonus);
+			debug_print_two(list_a, list_b, bonus);
 		}
 		step--;
 	}
-	return (i);
 }

@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa_checker.c                                       :+:      :+:    :+:   */
+/*   debug_print_two.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/01 00:12:10 by oem               #+#    #+#             */
-/*   Updated: 2020/09/01 00:12:39 by oem              ###   ########.fr       */
+/*   Created: 2020/09/03 19:51:48 by oem               #+#    #+#             */
+/*   Updated: 2020/09/06 09:51:09 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	checking_quantity(t_number *list)
+void	debug_print_two(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	int n;
+	int i;
 
-	n = 0;
-	while(list)
+	i = bonus->i;
+	if (bonus->key == 1)
 	{
-		list = list->next;
-		n++;
-		if (n > 1)
-			return (1);
+		ft_printf("move = %d\n", ++i);
+		show_me_two(list_a, list_b, bonus);
+		// usleep(1000000);
+		// system("clear");
 	}
-	return (0);
-}
-
-int			sa_checker(t_number *list)
-{
-	int tmp_current;
-	int tmp_next;
-
-	if ((checking_quantity(list)) == 0)
-		return (0);
-	tmp_current = list->n;
-	list = list -> next;
-	tmp_next = list->n;
-	list->n = tmp_current;
-	list = list->prev;
-	list->n = tmp_next;
-	return (1);
+	if (bonus->key == 2)
+	{
+		ft_printf("move = %d\n", ++i);
+		show_me_two(list_a, list_b, bonus);
+		// usleep(1000000);
+		// system("clear");
+	}
+	bonus->i = i;
 }

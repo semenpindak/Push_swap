@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_step_in_b_for_struct_three_regular.c         :+:      :+:    :+:   */
+/*   count_step_in_b_first.c                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 12:23:17 by semen             #+#    #+#             */
-/*   Updated: 2020/08/25 15:43:29 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	check_next_number_left(t_number **list_b)
+static int	check_next_number_left(t_num **list_b)
 {
 	int a;
 
@@ -23,7 +23,7 @@ static int	check_next_number_left(t_number **list_b)
 	return (a);
 }
 
-static int	check_next_number_left_add(t_number **list_b)
+static int	check_next_number_left_add(t_num **list_b)
 {
 	int a;
 
@@ -34,13 +34,18 @@ static int	check_next_number_left_add(t_number **list_b)
 	return (a);
 }
 
-static int	count_to_range_left(t_number **list_b, int max, int min, int **c)
+static int	count_to_range_left(t_num **list_b, int max, int min, int **c)
 {
 	int count;
+	int i;
 
 	count = 0;
+	i = 0;
 	while (*list_b)
 	{
+		*list_b = (*list_b)->prev;
+		i++;
+		**c = i;
 		if (max == (*list_b)->n)
 		{
 			if (min == check_next_number_left(list_b))
@@ -48,14 +53,12 @@ static int	count_to_range_left(t_number **list_b, int max, int min, int **c)
 			if (min == check_next_number_left_add(list_b))
 				return (count);
 		}
-		*list_b = (*list_b)->prev;
 		count++;
-		**c = count;
 	}
 	return (-1);
 }
 
-static int	find_middle_number_left(t_number **list_a, t_number **list_b, int *c)
+static int	find_middle_number_left(t_num **list_a, t_num **list_b, int *c)
 {
 	int min;
 	int max;
@@ -68,7 +71,7 @@ static int	find_middle_number_left(t_number **list_a, t_number **list_b, int *c)
 	n = (*list_b)->n;
 	while (*list_b)
 	{
-		if ((*list_b)->n > middle && (*list_b)->n < max)
+		if ((*list_b)->n < max && (*list_b)->n > middle)
 			max = (*list_b)->n;
 		if ((*list_b)->n > min && (*list_b)->n < middle)
 			min = (*list_b)->n;
@@ -79,14 +82,14 @@ static int	find_middle_number_left(t_number **list_a, t_number **list_b, int *c)
 	return (count_to_range_left(list_b, max, min, &c));
 }
 
-static int	find_max_number_left(t_number **list_b, int *i)
+static int	find_max_number_left(t_num **list_b, int *i)
 {
 	int max;
 	int count;
 	int n;
 
 	max = (*list_b)->n;
-	count = 1;
+	count = 0;
 	n = (*list_b)->n;
 	while (*list_b)
 	{
@@ -95,16 +98,18 @@ static int	find_max_number_left(t_number **list_b, int *i)
 			*list_b = (*list_b)->prev;
 			count++;
 		}
-		if ((*list_b)->n >= max)
+		if ((*list_b)->n > max)
+		{
 			max = (*list_b)->n;
+			*i = count;
+		}
 		if (n == (*list_b)->n)
 			break ;
-		*i = count;
 	}
 	return (max);
 }
 
-static int	find_min_number_left(t_number **list_b, int *i)
+static int	find_min_number_left(t_num **list_b, int *i)
 {
 	int min;
 	int count;
@@ -115,15 +120,15 @@ static int	find_min_number_left(t_number **list_b, int *i)
 	n = (*list_b)->n;
 	while (*list_b)
 	{
+		if ((*list_b)->n < min)
+		{
+			min = (*list_b)->n;
+			*i = --count;
+		}
 		if ((*list_b)->prev != NULL)
 		{
 			*list_b = (*list_b)->prev;
 			count++;
-		}
-		if ((*list_b)->n < min)
-		{
-			min = (*list_b)->n;
-			*i = count;
 		}
 		if (n == (*list_b)->n)
 			break ;
@@ -131,7 +136,7 @@ static int	find_min_number_left(t_number **list_b, int *i)
 	return (min);
 }
 
-static int	check_next_number_right(t_number **list_b)
+static int	check_next_number_right(t_num **list_b)
 {
 	int a;
 
@@ -142,7 +147,7 @@ static int	check_next_number_right(t_number **list_b)
 	return (a);
 }
 
-static int	check_next_number_right_add(t_number **list_b)
+static int	check_next_number_right_add(t_num **list_b)
 {
 	int a;
 
@@ -153,7 +158,7 @@ static int	check_next_number_right_add(t_number **list_b)
 	return (a);
 }
 
-static int	count_to_range_right(t_number **list_b, int max, int min, int **c)
+static int	count_to_range_right(t_num **list_b, int max, int min, int **c)
 {
 	int count;
 
@@ -163,7 +168,7 @@ static int	count_to_range_right(t_number **list_b, int max, int min, int **c)
 		if (max == (*list_b)->n)
 		{
 			if (min == check_next_number_right(list_b))
-				return (count);
+				return (++count);
 			if (min == check_next_number_right_add(list_b))
 				return (count);
 		}
@@ -174,7 +179,7 @@ static int	count_to_range_right(t_number **list_b, int max, int min, int **c)
 	return (-1);
 }
 
-static int	find_middle_number_right(t_number **list_a, t_number **list_b, int *c)
+static int	find_middle_number_right(t_num **list_a, t_num **list_b, int *c)
 {
 	int min;
 	int max;
@@ -193,31 +198,31 @@ static int	find_middle_number_right(t_number **list_a, t_number **list_b, int *c
 			min = (*list_b)->n;
 		*list_b = (*list_b)->next;
 		if (n == (*list_b)->n)
-			break ;
+			break;
 	}
 	return (count_to_range_right(list_b, max, min, &c));
 }
 
-static int	find_max_number_right(t_number **list_b, int *i)
+static int	find_max_number_right(t_num **list_b, int *i)
 {
 	int max;
 	int count;
 	int n;
 
 	max = (*list_b)->n;
-	count = 1;
+	count = 0;
 	n = (*list_b)->n;
 	while (*list_b)
 	{
-		if ((*list_b)->n >= max)
-		{
-			max = (*list_b)->n;
-			*i = count;
-		}
 		if ((*list_b)->next != NULL)
 		{
 			*list_b = (*list_b)->next;
 			count++;
+		}
+		if ((*list_b)->n > max)
+		{
+			max = (*list_b)->n;
+			*i = count;
 		}
 		if (n == (*list_b)->n)
 			break ;
@@ -225,7 +230,7 @@ static int	find_max_number_right(t_number **list_b, int *i)
 	return (max);
 }
 
-static int	find_min_number_right(t_number **list_b, int *i)
+static int	find_min_number_right(t_num **list_b, int *i)
 {
 	int min;
 	int count;
@@ -236,23 +241,21 @@ static int	find_min_number_right(t_number **list_b, int *i)
 	n = (*list_b)->n;
 	while (list_b)
 	{
-		if ((*list_b)->next != NULL)
-		{
-			*list_b = (*list_b)->next;
-			count++;
-		}
+		count++;
 		if ((*list_b)->n < min)
 		{
 			min = (*list_b)->n;
 			*i = count;
 		}
+		if ((*list_b)->next != NULL)
+			*list_b = (*list_b)->next;
 		if (n == (*list_b)->n)
 			break ;
 	}
 	return (min);
 }
 
-static int	step_left(t_number **list_a, t_number **list_b)
+static int	step_left(t_num **list_a, t_num **list_b)
 {
 	int a;
 	int i;
@@ -277,7 +280,7 @@ static int	step_left(t_number **list_a, t_number **list_b)
 	return (y);
 }
 
-static int	step_right(t_number **list_a, t_number **list_b)
+static int	step_right(t_num **list_a, t_num **list_b)
 {
 	int a;
 	int i;
@@ -293,6 +296,7 @@ static int	step_right(t_number **list_a, t_number **list_b)
 		return (i);
 	if (a < (x = find_min_number_right(list_b, &i)))
 		return (i);
+
 	y = find_middle_number_right(list_a, list_b, &c);
 	while (c)
 	{
@@ -302,9 +306,9 @@ static int	step_right(t_number **list_a, t_number **list_b)
 	return (y);
 }
 
-void		count_step_in_b_for_struct_three_regular(t_number **list_a, t_number **list_b)
+void		count_step_in_b_first(t_num **list_a, t_num **list_b)
 {
-	(*list_a)->rb = step_left(list_a, list_b);
-	(*list_a)->lb = step_right(list_a, list_b);
+    (*list_a)->rb = step_left(list_a, list_b);
+    (*list_a)->lb = step_right(list_a, list_b);
 }
 

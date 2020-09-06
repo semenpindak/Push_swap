@@ -4,26 +4,20 @@ PRINTF		= ft_printf/libftprintf.a
 PUSH_SWAP	= push_swap
 CHECKER		= checker
 
-SRC_PS		= push_swap.c validation.c create_stack_a.c\
-			  timsort.c insertion_sort_first.c merge_sort_first.c sorting_upten_num.c sorting_upten_num_kv.c\
-			  centering_stack_first.c insertion_sort_regular.c centering_stack_regular.c\
-			  centering_stack_regular_a.c centering_stack_a.c centering_stack_a_kv.c merge_sort_regular.c\
+SRC_PS		= push_swap.c parser.c validation.c create_stack_a.c\
+			  debug_print.c debug_print_two.c show_me.c show_me_two.c show_me_three.c\
+			  timsort.c insertsort_first.c mergesort_first.c insertsort_regular.c mergesort_regular.c\
+			  sort_ten_num.c insertion_sort_finish.c\
+			  centering_stack_first.c centering_stack_regular.c centering_stack_finish.c\
 			  pb_when_stack_b_null.c\
-			  sa.c sb.c ss.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
+			  find_min_steps_first.c find_min_steps_regular.c\
+			  count_step_in_a.c count_step_in_b_first.c count_step_in_b_regular.c\
+			  count_list.c count_list_two.c count_list_three.c\
+			  sa.c sb.c ss.c sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
 			  pa_three.c pb_three.c ra_three.c rb_three.c rr_three.c rra_three.c rrb_three.c rrr_three.c\
-			  ra_four.c rra_four.c\
-			  show_me.c show_me_two.c show_me_three.c\
-			  count_step_in_b.c count_step_in_b_for_struct.c count_step_in_b_for_struct_three.c\
-			  count_step_in_b_for_struct_three_regular.c\
-			  find_min_steps_from_a_to_b.c find_min_steps_from_a_to_b_three.c find_min_steps_from_a_to_b_three_regular.c\
-			  count_list.c count_list_two.c count_list_three.c parser.c\
-			  timsort_kv.c insertion_sort_first_kv.c insertion_sort_regular_kv.c merge_sort_first_kv.c merge_sort_regular_kv.c\
-			  centering_stack_first_kv.c centering_stack_regular_kv.c centering_stack_regular_a_kv.c pb_when_stack_b_null_kv.c\
-			  insertion_sort_finish.c insertion_sort_finish_kv.c count_step_in_a.c
-SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c\
-			  sa.c sb.c ss.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
-			  sa_checker.c pa_checker.c pb_checker.c ra_checker.c rb_checker.c rr_checker.c\
-			  rra_checker.c rrb_checker.c rrr_checker.c show_me.c
+
+SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c count_list_two.c\
+			  sa_two.c pa_three.c pb_three.c ra_three.c rb_three.c rr_three.c rra_three.c rrb_three.c rrr_three.c\
 
 OBJ_PS		= $(SRC_PS:c=o)
 OBJ_CH		= $(SRC_CH:c=o)

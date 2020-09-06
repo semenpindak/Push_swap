@@ -6,13 +6,13 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 20:13:26 by semen             #+#    #+#             */
-/*   Updated: 2020/08/28 18:17:16 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/04 17:44:55 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_number	*get_last(t_number *head)
+static t_num	*get_last(t_num *head)
 {
 	if (head == NULL)
 		return (NULL);
@@ -21,13 +21,13 @@ static t_number	*get_last(t_number *head)
 	return (head);
 }
 
-static void		push_ring(t_number *head, int j, char *av[])
+static void push_ring(t_num *head, int j, char *av[])
 {
-	t_number	*last;
-	t_number	*tmp;
+	t_num	*last;
+	t_num	*tmp;
 
 	last = get_last(head);
-	tmp = (t_number *)malloc(sizeof(t_number));
+	tmp = (t_num *)malloc(sizeof(t_num));
 	tmp->n = ft_atoi(av[j]);
 	tmp->status = 0;
 	tmp->next = head;
@@ -36,13 +36,13 @@ static void		push_ring(t_number *head, int j, char *av[])
 	head->prev = tmp;
 }
 
-static void		push_back(t_number *head, int j, char *av[])
+static void push_back(t_num *head, int j, char *av[])
 {
-	t_number	*last;
-	t_number	*tmp;
+	t_num	*last;
+	t_num	*tmp;
 
 	last = get_last(head);
-	tmp = (t_number *)malloc(sizeof(t_number));
+	tmp = (t_num *)malloc(sizeof(t_num));
 	tmp->n = ft_atoi(av[j]);
 	tmp->status = 0;
 	tmp->next = NULL;
@@ -50,11 +50,11 @@ static void		push_back(t_number *head, int j, char *av[])
 	last->next = tmp;
 }
 
-static void		push(t_number **head, int j, char *av[])
+static void push(t_num **head, int j, char *av[])
 {
-	t_number	*tmp;
+	t_num	*tmp;
 
-	tmp = (t_number *)malloc(sizeof(t_number));
+	tmp = (t_num *)malloc(sizeof(t_num));
 	tmp->n = ft_atoi(av[j]);
 	tmp->status = 0;
 	tmp->next = NULL;
@@ -62,10 +62,10 @@ static void		push(t_number **head, int j, char *av[])
 	*head = tmp;
 }
 
-t_number		*create_stack_a(int ac, char *av[])
+t_num		*create_stack_a(int ac, char *av[])
 {
-	int			j;
-	t_number	*list;
+	int		j;
+	t_num	*list;
 
 	j = 0;
 	while (j < ac)

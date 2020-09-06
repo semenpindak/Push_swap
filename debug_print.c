@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra_checker.c                                      :+:      :+:    :+:   */
+/*   debug_print.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/01 00:23:20 by oem               #+#    #+#             */
-/*   Updated: 2020/09/01 00:26:25 by oem              ###   ########.fr       */
+/*   Created: 2020/09/03 20:15:45 by oem               #+#    #+#             */
+/*   Updated: 2020/09/06 09:51:02 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rra_checker(t_number **list_a)
+void	debug_print(t_num *list_a, t_num *list_b, t_key *bonus)
 {
-	if ((*list_a)->prev != NULL)
+	int i;
+
+	i = bonus->i;
+
+	if (bonus->key == 1)
 	{
-		*list_a = (*list_a)->prev;
+		ft_printf("move = %d\n", ++i);
+		show_me(list_a, list_b, bonus);
+		// usleep(1000000);
+		// system("clear");
 	}
+	if (bonus->key == 2)
+	{
+		ft_printf("move = %d\n", ++i);
+		show_me(list_a, list_b, bonus);
+		// usleep(1000000);
+		// system("clear");
+	}
+
+	bonus->i = i;
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_sort_finish.c                            :+:      :+:    :+:   */
+/*   insertsort_finish.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 12:45:08 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 22:49:57 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/04 09:44:24 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int rotation(t_number **list_b)
+static int rotation(t_num **list_b)
 {
 	if ((*list_b)->rb < (*list_b)->lb)
 	{
@@ -27,13 +27,13 @@ static int rotation(t_number **list_b)
 	return (0);
 }
 
-void insertion_sort_finish(t_number **list_a, t_number **list_b)
+void	insertsort_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	int step;
 
 	step = 0;
-
-		// show_me_two(list_a, list_b);
+	if (*list_b != NULL)
+	{
 		count_step_in_a(list_a, list_b);
 		// ft_printf("(*list_b)->rb = %d, (*list_b)->lb = %d\n", (*list_b)->rb, (*list_b)->lb);
 		step = rotation(list_b);
@@ -41,16 +41,17 @@ void insertion_sort_finish(t_number **list_a, t_number **list_b)
 		{
 			if ((*list_b)->logic_a == 1)
 			{
-				ra_three(&list_a);
-				// show_me_two(list_a, list_b);
+				ra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
 			}
 			else
 			{
-				rra_three(&list_a);
-				// show_me_two(list_a, list_b);
+				rra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
 			}
 			step--;
 		}
-		pa_three(&list_a, &list_b);
-		// show_me_two(list_a, list_b);
+		pa_three(&list_a, &list_b, bonus);
+		debug_print_two(list_a, list_b, bonus);
+	}
 }

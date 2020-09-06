@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting_upten_num.c                                :+:      :+:    :+:   */
+/*   sort_ten_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/02 20:01:43 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 22:50:05 by calpha           ###   ########.fr       */
+/*   Created: 2020/09/03 20:11:13 by oem               #+#    #+#             */
+/*   Updated: 2020/09/06 12:06:03 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int find_max_number(t_number *list_b)
+static int find_max_number(t_num *list_b)
 {
 	int max;
 	int n;
@@ -31,7 +31,7 @@ static int find_max_number(t_number *list_b)
 	return (max);
 }
 
-static int find_min_number(t_number *list_b)
+static int find_min_number(t_num *list_b)
 {
 	int min;
 	int n;
@@ -50,7 +50,7 @@ static int find_min_number(t_number *list_b)
 	return (min);
 }
 
-static int check_next_num_two(t_number **list_a, int current, int max, int min)
+static int check_next_num_two(t_num **list_a, int current, int max, int min)
 {
 	if ((*list_a)->next != NULL)
 		*list_a = (*list_a)->next;
@@ -75,7 +75,7 @@ static int check_next_num_two(t_number **list_a, int current, int max, int min)
 	return (-1);
 }
 
-static int count_step_sa_right(t_number **list_a, int max, int min)
+static int count_step_sa_right(t_num **list_a, int max, int min)
 {
 	int n;
 	int count;
@@ -107,7 +107,7 @@ static int count_step_sa_right(t_number **list_a, int max, int min)
 	return (i);
 }
 
-static int count_step_sa_left(t_number **list_a, int max, int min)
+static int count_step_sa_left(t_num **list_a, int max, int min)
 {
 	int n;
 	int count;
@@ -139,7 +139,7 @@ static int count_step_sa_left(t_number **list_a, int max, int min)
 	return (i);
 }
 
-static int rotation(t_number **list_a, int *rotation_logic, int max, int min)
+static int rotation(t_num **list_a, int *rotation_logic, int max, int min)
 {
 	(*list_a)->ra = count_step_sa_right(list_a, max, min);
 	(*list_a)->la = count_step_sa_left(list_a, max, min);
@@ -156,7 +156,7 @@ static int rotation(t_number **list_a, int *rotation_logic, int max, int min)
 	return (-1);
 }
 
-static void centering_stack_ten(t_number **list_a, int max, int min)
+static void centering_stack_ten(t_num **list_a, t_num **list_b, int max, int min, t_key *bonus)
 {
 	int step;
 	int rotation_logic;
@@ -165,14 +165,20 @@ static void centering_stack_ten(t_number **list_a, int max, int min)
 	while (step)
 	{
 		if (rotation_logic == 0)
-			ra_three(&list_a);
+		{
+			ra_three(&list_a, bonus);
+			debug_print_two(list_a, list_b, bonus);
+		}
 		else
-			rra_three(&list_a);
+		{
+			rra_three(&list_a, bonus);
+			debug_print_two(list_a, list_b, bonus);
+		}
 		step--;
 	}
 }
 
-static int checking_stack_sorted(t_number *list_a, int min, int n)
+static int checking_stack_sorted(t_num *list_a, int min, int n)
 {
 	int current;
 
@@ -201,38 +207,38 @@ static int checking_stack_sorted(t_number *list_a, int min, int n)
 	return (-1);
 }
 
-static void start(t_number **list_a, t_number **list_b)
+static void start(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	if (*list_b == NULL)
-		pb_three(&list_a, &list_b);
+	{
+		pb_three(&list_a, &list_b, bonus);
+		(*list_b)->status = 1;
+		debug_print_two(list_a, list_b, bonus);
+	}
 }
 
-void sorting_upten_num(t_number *list_a, t_number *list_b)
+void sort_ten_num(t_num *list_a, t_num *list_b, t_key *bonus)
 {
 	int n;
 	int max;
 	int min;
-	int a;
-	int i;
 
-	i = 0;
-	start(&list_a, &list_b);
+	if (count_list(list_a) > 3)
+		start(&list_a, &list_b, bonus);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
-	// printf("min = %d", min);
 	max = find_max_number(list_a);
-	while(list_a)
+	while (list_a)
 	{
-		centering_stack_ten(&list_a, max, min);
-
-		a = checking_stack_sorted(list_a, min, n);
-		if (a == 0)
-			sa(list_a);
-		a = checking_stack_sorted(list_a, min, n);
-		if (a == 1)
-			break;
+		centering_stack_ten(&list_a, &list_b, max, min, bonus);
+		if (checking_stack_sorted(list_a, min, n) == 0)
+		{
+			sa(list_a, bonus);
+			debug_print(list_a, list_b, bonus);
+		}
+		else
+			break ;
 	}
-	insertion_sort_finish(&list_a, &list_b);
-	centering_stack_a(&list_a);
-	// show_me(list_a, list_b);
+	insertsort_finish(&list_a, &list_b, bonus);
+	centering_stack_finish(&list_a, &list_b, bonus);
 }

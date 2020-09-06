@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_sort_first.c                             :+:      :+:    :+:   */
+/*   insertsort_first.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/25 18:57:22 by oem               #+#    #+#             */
-/*   Updated: 2020/08/31 00:08:31 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void search_struct_to_move(t_number **list_a, int *step_a, int *step_b, int *logic_a, int *logic_b)
+static void search_struct_to_move(t_num **list_a, int *step_a, int *step_b, int *logic_a, int *logic_b)
 {
 	int min = 2147483647;
 	int num = (*list_a)->n;
@@ -32,7 +32,7 @@ static void search_struct_to_move(t_number **list_a, int *step_a, int *step_b, i
 	}
 }
 
-void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
+void	insertsort_first(t_num **list_a, t_num **list_b, int d, t_key *bonus)
 {
 	int step_a = 0;
 	int step_b = 0;
@@ -41,10 +41,14 @@ void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
 
 	while (*list_a)
 	{
-		quantity--;
+		d--;
 		if (*list_b == NULL)
-			pb_three(&list_a, &list_b);
-		find_min_steps_from_a_to_b_three(list_a, list_b);
+		{
+			pb_three(&list_a, &list_b, bonus);
+			(*list_b)->status = 1;
+			debug_print_two(list_a, list_b, bonus);
+		}
+		find_min_steps_first(list_a, list_b);
 		search_struct_to_move(list_a, &step_a, &step_b, &logic_a, &logic_b);
 		if ((logic_a == 0 && logic_b == 0) || (logic_a == 1 && logic_b == 1))
 		{
@@ -60,30 +64,50 @@ void insertion_sort_first(t_number **list_a, t_number **list_b, int quantity)
 			while(q)
 			{
 				if (logic_a == 0)
-					rr_three(&list_a, &list_b);
+				{
+					rr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				else
-					rrr_three(&list_a, &list_b);
+				{
+					rrr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				q--;
 			}
 		}
 		while(step_a)
 		{
 			if (logic_a == 0)
-				ra_three(&list_a);
+			{
+				ra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			else
-				rra_three(&list_a);
+			{
+				rra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			step_a--;
 		}
 		while(step_b)
 		{
 			if (logic_b == 0)
-				rb_three(&list_b);
+			{
+				rb_three(&list_b, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			else
-				rrb_three(&list_b);
+			{
+				rrb_three(&list_b, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			step_b--;
 		}
-		pb_three(&list_a, &list_b);
-		if (quantity == 1)
+		pb_three(&list_a, &list_b, bonus);
+		(*list_b)->status = 1;
+		debug_print_two(list_a, list_b, bonus);
+		if (d == 1)
 			break ;
 	}
 }

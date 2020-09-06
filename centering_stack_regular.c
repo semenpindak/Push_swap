@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   centering_stack_regular.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 20:38:32 by oem               #+#    #+#             */
-/*   Updated: 2020/09/02 23:38:18 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/04 09:47:19 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	find_min_number_left(t_number **list_b, int *i)
+static void	find_min_number_left(t_num **list_b, int *i)
 {
 	int min;
 	int count;
@@ -35,7 +35,7 @@ static void	find_min_number_left(t_number **list_b, int *i)
 	}
 }
 
-static void	find_min_number_right(t_number **list_b, int *i)
+static void	find_min_number_right(t_num **list_b, int *i)
 {
 	int min;
 	int count;
@@ -58,7 +58,7 @@ static void	find_min_number_right(t_number **list_b, int *i)
 	}
 }
 
-static int	find_min_number_stack_b(t_number **list_b, int *rotation_logic)
+static int	find_min_number_stack_b(t_num **list_b, int *rotation_logic)
 {
 	int a;
 	int b;
@@ -80,7 +80,7 @@ static int	find_min_number_stack_b(t_number **list_b, int *rotation_logic)
 	return (-1);
 }
 
-static void	find_min_number_left_stack_a(t_number **list_a, int *i)
+static void	find_min_number_left_stack_a(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -103,7 +103,7 @@ static void	find_min_number_left_stack_a(t_number **list_a, int *i)
 	}
 }
 
-static void	find_min_number_right_stack_a(t_number **list_a, int *i)
+static void	find_min_number_right_stack_a(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -126,7 +126,7 @@ static void	find_min_number_right_stack_a(t_number **list_a, int *i)
 	}
 }
 
-static int	find_min_number_stack_a(t_number **list_a, int *rotation_logic)
+static int	find_min_number_stack_a(t_num **list_a, int *rotation_logic)
 {
 	int a;
 	int b;
@@ -148,7 +148,7 @@ static int	find_min_number_stack_a(t_number **list_a, int *rotation_logic)
 	return (-1);
 }
 
-void			centering_stack_regular(t_number **list_a, t_number **list_b)
+void			centering_stack_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	int step_a = 0;
 	int step_b = 0;
@@ -166,9 +166,15 @@ void			centering_stack_regular(t_number **list_a, t_number **list_b)
 			while(step_a)
 			{
 				if (rotation_logic_a == 0)
-					rr_three(&list_a, &list_b);
+				{
+					rr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				else
-					rrr_three(&list_a, &list_b);
+				{
+					rrr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				step_a--;
 			}
 		}
@@ -179,17 +185,29 @@ void			centering_stack_regular(t_number **list_a, t_number **list_b)
 			while(sum)
 			{
 				if (rotation_logic_a == 0)
-					rr_three(&list_a, &list_b);
+				{
+					rr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				else
-					rrr_three(&list_a, &list_b);
+				{
+					rrr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				sum--;
 			}
 			while(twist)
 			{
 				if (rotation_logic_a == 0)
-					ra_three(&list_a);
+				{
+					ra_three(&list_a, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				else
-					rra_three(&list_a);
+				{
+					rra_three(&list_a, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				twist--;
 			}
 		}
@@ -200,17 +218,29 @@ void			centering_stack_regular(t_number **list_a, t_number **list_b)
 			while(sum)
 			{
 				if (rotation_logic_a == 0)
-					rr_three(&list_a, &list_b);
+				{
+					rr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				else
-					rrr_three(&list_a, &list_b);
+				{
+					rrr_three(&list_a, &list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				sum--;
 			}
 			while(twist)
 			{
 				if (rotation_logic_b == 0)
-					rb_three(&list_b);
+				{
+					rb_three(&list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				else
-					rrb_three(&list_b);
+				{
+					rrb_three(&list_b, bonus);
+					debug_print_two(list_a, list_b, bonus);
+				}
 				twist--;
 			}
 		}
@@ -220,17 +250,29 @@ void			centering_stack_regular(t_number **list_a, t_number **list_b)
 		while(step_a)
 		{
 			if (rotation_logic_a == 0)
-				ra_three(&list_a);
+			{
+				ra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			else
-				rra_three(&list_a);
+			{
+				rra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			step_a--;
 		}
 		while(step_b)
 		{
 			if (rotation_logic_b == 0)
-				rb_three(&list_b);
+			{
+				rb_three(&list_b, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 			else
-				rrb_three(&list_b);
+			{
+				rrb_three(&list_b, bonus);
+				debug_print_two(list_a, list_b, bonus);
+			}
 		step_b--;
 		}
 	}

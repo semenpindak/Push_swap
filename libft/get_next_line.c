@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 14:05:54 by calpha            #+#    #+#             */
-/*   Updated: 2020/03/01 16:47:26 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/06 16:04:46 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,20 +94,20 @@ int			get_next_line(const int fd, char **line)
 	if (fd < 0 || BUFF_SIZE < 1)
 		return (-1);
 	tmp_struct = find_and_create_new_node(fd, &head);
-	s = ft_strdup(tmp_struct->buff);
-	ft_strclr(tmp_struct->buff);
-	if (strchr(s, '\n'))
+	s = tmp_struct->buff;
+	if (ft_strchr(s, '\n'))
 		return (return_line(tmp_struct->buff, s, line, 1));
 	while ((r = read(fd, tmp_struct->buff, BUFF_SIZE)) > 0)
 	{
 		tmp = s;
 		s = ft_strjoin(tmp, tmp_struct->buff);
 		del_and_clear(&tmp, tmp_struct->buff);
-		if (strchr(s, '\n'))
+		if (ft_strchr(s, '\n'))
 			return (return_line(tmp_struct->buff, s, line, 1));
 	}
 	if (!r && ft_strlen(s) != 0)
 		return (return_line(tmp_struct->buff, s, line, 0));
 	ft_strdel(&s);
+	free(tmp_struct);
 	return (r == -1 ? -1 : 0);
 }

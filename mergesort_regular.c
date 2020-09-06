@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   merge_sort_regular_kv.c                            :+:      :+:    :+:   */
+/*   mergesort_regular.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/30 20:39:30 by oem               #+#    #+#             */
-/*   Updated: 2020/08/31 00:02:18 by oem              ###   ########.fr       */
+/*   Created: 2020/08/15 17:19:14 by calpha            #+#    #+#             */
+/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int count_list_stack_a_status(t_number **list_a)
+static int count_list_stack_a_status(t_num **list_a)
 {
 	int num;
 	int count;
@@ -30,7 +30,7 @@ static int count_list_stack_a_status(t_number **list_a)
 	return (count);
 }
 
-int	merge_sort_regular_kv(t_number **list_a, t_number **list_b, int i)
+void	mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	int n;
 	int n_stack_a = 0;
@@ -41,54 +41,29 @@ int	merge_sort_regular_kv(t_number **list_a, t_number **list_b, int i)
 	{
 		if ((*list_a)->n > (*list_b)->n)
 		{
-			ft_printf("exec ");
-			pa_three(&list_a, &list_b);
-			i++;
-			ft_printf("move = %d\n", i);
-			show_me_two(list_a, list_b);
-			usleep(3000000);
-			system("clear");
-
+			pa_three(&list_a, &list_b, bonus);
+			debug_print_two(list_a, list_b, bonus);
 			n_stack_a++;
 			n--;
 		}
 		if ((*list_b) != NULL && ((*list_b)->n > (*list_a)->n))
 		{
-			ft_printf("exec ");
-			ra_three(&list_a);
-			i++;
-			ft_printf("move = %d\n", i);
-			show_me_two(list_a, list_b);
-			usleep(3000000);
-			system("clear");
-
+			ra_three(&list_a, bonus);
+			debug_print_two(list_a, list_b, bonus);
 			n_stack_a--;
 		}
 		if (n_stack_a == 0)
 		{
 			while(n)
 			{
-				ft_printf("exec ");
-				pa_three(&list_a, &list_b);
-				i++;
-				ft_printf("move = %d\n", i);
-				show_me_two(list_a, list_b);
-				usleep(3000000);
-				system("clear");
-
-				ft_printf("exec ");
-				ra_three(&list_a);
-				i++;
-				ft_printf("move = %d\n", i);
-				show_me_two(list_a, list_b);
-				usleep(3000000);
-				system("clear");
-
+				pa_three(&list_a, &list_b, bonus);
+				debug_print_two(list_a, list_b, bonus);
+				ra_three(&list_a, bonus);
+				debug_print_two(list_a, list_b, bonus);
 				n--;
 			}
 		}
 		if (n == 0)
 			break;
 	}
-	return (i);
 }

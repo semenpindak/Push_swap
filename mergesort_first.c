@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   mergesort_first.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 15:38:07 by calpha            #+#    #+#             */
-/*   Updated: 2019/10/25 21:52:08 by calpha           ###   ########.fr       */
+/*   Created: 2020/05/04 00:01:01 by semen             #+#    #+#             */
+/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void
-					*, size_t))
+void	mergesort_first(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	if (alst && *alst && del)
+	int n;
+
+	n = count_list_two(list_b);
+	while (n)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		*alst = NULL;
+		pa_three(&list_a, &list_b, bonus);
+		debug_print_two(list_a, list_b, bonus);
+		n--;
 	}
 }

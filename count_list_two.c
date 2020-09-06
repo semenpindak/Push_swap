@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   count_list_two.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 19:41:34 by calpha            #+#    #+#             */
-/*   Updated: 2020/08/24 20:52:21 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/03 21:52:54 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int count_list_two(t_number **list_a)
+int count_list_two(t_num **list_a)
 {
 	int num;
 	int count;

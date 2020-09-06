@@ -6,17 +6,18 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 00:31:04 by semen             #+#    #+#             */
-/*   Updated: 2020/08/29 14:44:19 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/05 09:11:28 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra_three(t_number ***list_a)
+void	ra_three(t_num ***list_a, t_key *bonus)
 {
-	if ((**list_a)->next != NULL)
+	if (**list_a && (**list_a)->next != NULL)
 	{
 		**list_a = (**list_a)->next;
-		ft_printf("ra\n");
+		if (bonus->print == 1)
+			ft_printf("ra\n");
 	}
 }

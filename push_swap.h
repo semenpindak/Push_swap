@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/02 20:37:42 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/05 16:50:00 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
 
-typedef struct		s_number
+typedef struct		s_num
 {
 	int				n;
 	int				la;
@@ -32,95 +32,74 @@ typedef struct		s_number
 	int				logic_b;
 	int				sum_steps;
 	int				status;
-	struct s_number	*next;
-	struct s_number	*prev;
-}					t_number;
+	struct s_num	*next;
+	struct s_num	*prev;
+}					t_num;
 
-int					validation(int ac, char *av[]);
-t_number			*create_stack_a(int ac, char *av[]);
-
-void				timsort(t_number *list_a, t_number *list_b);
-void				insertion_sort_first(t_number **list_a, t_number **list_b, int quantity);
-void				insertion_sort_regular(t_number **list_a, t_number **list_b, int quantity);
-void				merge_sort_first(t_number **list_a, t_number **list_b);
-void				merge_sort_regular(t_number **list_a, t_number **list_b);
-
-void				sorting_upten_num(t_number *list_a, t_number *list_b);
-
-void				centering_stack_first(t_number **list_b);
-void				centering_stack_regular(t_number **list_a, t_number **list_b);
-void				centering_stack_regular_a(t_number **list_a);
-void				centering_stack_a(t_number **list_a);
-
-void				pb_when_stack_b_null(t_number ***list_a);
-
-int					sa(t_number *list);
-int					sb(t_number *list);
-int					ss(t_number *list_a, t_number *list_b);
-
-void				pa(t_number **list_a, t_number **list_b);
-void				pb(t_number **list_a, t_number **list_b);
-void				ra(t_number **list_a);
-void				rb(t_number **list_b);
-void				rr(t_number **list_a, t_number **list_b);
-void				rra(t_number **list_a);
-void				rrb(t_number **list_b);
-void				rrr(t_number **list_a, t_number **list_b);
-
-void				pa_three(t_number ***list_a, t_number ***list_b);
-void				pb_three(t_number ***list_a, t_number ***list_b);
-void				ra_three(t_number ***list_a);
-void				rb_three(t_number ***list_b);
-void				rr_three(t_number ***list_a, t_number ***list_b);
-void				rra_three(t_number ***list_a);
-void				rrb_three(t_number ***list_b);
-void				rrr_three(t_number ***list_a, t_number ***list_b);
-
-void				ra_four(t_number ****list_a);
-void				rra_four(t_number ****list_a);
-
-void				show_me(t_number *list_a, t_number *list_b);
-void				show_me_two(t_number **list_a, t_number **list_b);
-void				show_me_three(t_number ***list_a, t_number ***list_b);
-
-int					count_step_in_b(t_number *list_a, t_number *list_b, int *logic);
-void				count_step_in_a(t_number **list_a, t_number **list_b);
-void				count_step_in_b_for_struct(t_number *list_a, t_number *list_b);
-void				count_step_in_b_for_struct_three(t_number **list_a, t_number **list_b);
-void				count_step_in_b_for_struct_three_regular(t_number **list_a, t_number **list_b);
-
-void				find_min_steps_from_a_to_b(t_number *list_a, t_number *list_b);
-void				find_min_steps_from_a_to_b_three(t_number **list_a, t_number **list_b);
-void				find_min_steps_from_a_to_b_three_regular(t_number **list_a, t_number **list_b);
-
-int					count_list(t_number *list_a);
-int					count_list_two(t_number **list_a);
-int					count_list_three(t_number ***list_a);
+typedef struct		s_key
+{
+	int				key;
+	int				i;
+	int				print;
+}					t_key;
 
 char				**parser(int ac, char *av[], int *ret);
+int					validation(int ac, char *av[]);
+t_num				*create_stack_a(int ac, char *av[]);
 
-void				timsort_kv(t_number *list_a, t_number *list_b);
-int					insertion_sort_first_kv(t_number **list_a, t_number **list_b, int quantity);
-int					insertion_sort_regular_kv(t_number **list_a, t_number **list_b, int quantity, int i);
-int					merge_sort_first_kv(t_number **list_a, t_number **list_b, int i);
-int					merge_sort_regular_kv(t_number **list_a, t_number **list_b, int i);
-int					centering_stack_first_kv(t_number **list_a, t_number **list_b, int i);
-int					centering_stack_regular_kv(t_number **list_a, t_number **list_b, int i);
-int					centering_stack_regular_a_kv(t_number **list_a, t_number **list_b, int i);
-int					pb_when_stack_b_null_kv(t_number ***list_a, t_number ***list_b, int i);
+void				debug_print(t_num *list_a, t_num *list_b, t_key *bonus);
+void				debug_print_two(t_num **list_a, t_num **list_b, t_key *bonus);
 
-void				sorting_upten_num_kv(t_number *list_a, t_number *list_b);
-int					centering_stack_a_kv(t_number **list_a, t_number **list_b, int i);
-void				insertion_sort_finish(t_number **list_a, t_number **list_b);
-int					insertion_sort_finish_kv(t_number **list_a, t_number **list_b, int i);
+void				show_me(t_num *list_a, t_num *list_b, t_key *bonus);
+void				show_me_two(t_num **list_a, t_num **list_b, t_key *bonus);
+void				show_me_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
 
-int					sa_checker(t_number *list);
-void				pa_checker(t_number **list_a, t_number **list_b);
-void				pb_checker(t_number **list_a, t_number **list_b);
-void				ra_checker(t_number **list_a);
-void				rb_checker(t_number **list_b);
-void				rr_checker(t_number **list_a, t_number **list_b);
-void				rra_checker(t_number **list_a);
-void				rrb_checker(t_number **list_b);
-void				rrr_checker(t_number **list_a, t_number **list_b);
+void				timsort(t_num *list_a, t_num *list_b, t_key *bonus);
+void				insertsort_first(t_num **list_a, t_num **list_b, int d, t_key *bonus);
+void				insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus);
+void				mergesort_first(t_num **list_a, t_num **list_b, t_key *bonus);
+void				mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus);
+
+void				sort_ten_num(t_num *list_a, t_num *list_b, t_key *bonus);
+void				insertsort_finish(t_num **list_a, t_num **list_b, t_key *bonus);
+
+void				centering_stack_first(t_num **list_a, t_num **list_b, t_key *bonus);
+void				centering_stack_regular(t_num **list_a, t_num **list_b, t_key *bonus);
+void				centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus);
+
+void				pb_when_stack_b_null(t_num **list_a, t_num **list_b, t_key *bonus);
+
+void				find_min_steps_first(t_num **list_a, t_num **list_b);
+void				find_min_steps_regular(t_num **list_a, t_num **list_b);
+
+void				count_step_in_b_first(t_num **list_a, t_num **list_b);
+void				count_step_in_b_regular(t_num **list_a, t_num **list_b);
+void				count_step_in_a(t_num **list_a, t_num **list_b);
+
+int					count_list(t_num *list_a);
+int					count_list_two(t_num **list_a);
+int					count_list_three(t_num ***list_a);
+
+void				sa(t_num *list_a, t_key *bonus);
+void				sb(t_num *list);
+int					ss(t_num *list_a, t_num *list_b);
+
+void				sa_two(t_num **list_a, t_key *bonus);
+void				pa(t_num **list_a, t_num **list_b, t_key *bonus);
+void				pb(t_num **list_a, t_num **list_b, t_key *bonus);
+void				ra(t_num **list_a, t_key *bonus);
+void				rb(t_num **list_b, t_key *bonus);
+void				rr(t_num **list_a, t_num **list_b, t_key *bonus);
+void				rra(t_num **list_a, t_key *bonus);
+void				rrb(t_num **list_b, t_key *bonus);
+void				rrr(t_num **list_a, t_num **list_b, t_key *bonus);
+
+void				pa_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				pb_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				ra_three(t_num ***list_a, t_key *bonus);
+void				rb_three(t_num ***list_b, t_key *bonus);
+void				rr_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				rra_three(t_num ***list_a, t_key *bonus);
+void				rrb_three(t_num ***list_b, t_key *bonus);
+void				rrr_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
 #endif
