@@ -6,81 +6,13 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 20:38:32 by oem               #+#    #+#             */
-/*   Updated: 2020/09/04 09:47:19 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/07 12:18:41 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	find_min_number_left(t_num **list_b, int *i)
-{
-	int min;
-	int count;
-	int n;
-
-	min = 2147483647;
-	count = 0;
-	n = (*list_b)->n;
-	while (*list_b)
-	{
-		if ((*list_b)->n < min)
-		{
-			min = (*list_b)->n;
-			*i = count;
-		}
-		*list_b = (*list_b)->prev;
-		count++;
-		if (n == (*list_b)->n)
-			break ;
-	}
-}
-
-static void	find_min_number_right(t_num **list_b, int *i)
-{
-	int min;
-	int count;
-	int n;
-
-	min = 2147483647;
-	count = 0;
-	n = (*list_b)->n;
-	while (*list_b)
-	{
-		if ((*list_b)->n < min)
-		{
-			min = (*list_b)->n;
-			*i = count;
-		}
-		*list_b = (*list_b)->next;
-		count++;
-		if (n == (*list_b)->n)
-			break ;
-	}
-}
-
-static int	find_min_number_stack_b(t_num **list_b, int *rotation_logic)
-{
-	int a;
-	int b;
-
-	a = 0;
-	b = 0;
-	find_min_number_left(list_b, &a);
-	find_min_number_right(list_b, &b);
-	if (a < b)
-	{
-		*rotation_logic = 1;
-		return (a);
-	}
-	else
-	{
-		*rotation_logic = 0;
-		return (b);
-	}
-	return (-1);
-}
-
-static void	find_min_number_left_stack_a(t_num **list_a, int *i)
+static void	find_min_number_left_stack(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -103,7 +35,7 @@ static void	find_min_number_left_stack_a(t_num **list_a, int *i)
 	}
 }
 
-static void	find_min_number_right_stack_a(t_num **list_a, int *i)
+static void	find_min_number_right_stack(t_num **list_a, int *i)
 {
 	int min;
 	int count;
@@ -126,15 +58,15 @@ static void	find_min_number_right_stack_a(t_num **list_a, int *i)
 	}
 }
 
-static int	find_min_number_stack_a(t_num **list_a, int *rotation_logic)
+static int	find_min_number_stack(t_num **list_a, int *rotation_logic)
 {
 	int a;
 	int b;
 
 	a = 0;
 	b = 0;
-	find_min_number_left_stack_a(list_a, &a);
-	find_min_number_right_stack_a(list_a, &b);
+	find_min_number_left_stack(list_a, &a);
+	find_min_number_right_stack(list_a, &b);
 	if (a < b)
 	{
 		*rotation_logic = 1;
@@ -148,132 +80,35 @@ static int	find_min_number_stack_a(t_num **list_a, int *rotation_logic)
 	return (-1);
 }
 
-void			centering_stack_regular(t_num **list_a, t_num **list_b, t_key *bonus)
+void		centering_stack_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	int step_a = 0;
-	int step_b = 0;
-	int rotation_logic_a;
-	int rotation_logic_b;
-	int sum = 0;
-	int twist = 0;
+	int step_a;
+	int step_b;
+	int logic_a;
+	int logic_b;
 
-	step_a = find_min_number_stack_a(list_a, &rotation_logic_a);
-	step_b = find_min_number_stack_b(list_b, &rotation_logic_b);
-	if (rotation_logic_a == rotation_logic_b)
+	step_a = find_min_number_stack(list_a, &logic_a);
+	step_b = find_min_number_stack(list_b, &logic_b);
+	(*list_a)->step_a = step_a;
+	(*list_b)->step_b = step_b;
+	if (logic_a == logic_b)
 	{
-		if (step_a == step_b)
+		if (step_a >= step_b)
 		{
-			while(step_a)
-			{
-				if (rotation_logic_a == 0)
-				{
-					rr_three(&list_a, &list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				else
-				{
-					rrr_three(&list_a, &list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				step_a--;
-			}
-		}
-		if (step_a > step_b)
-		{
-			sum = step_b;
-			twist = step_a - step_b;
-			while(sum)
-			{
-				if (rotation_logic_a == 0)
-				{
-					rr_three(&list_a, &list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				else
-				{
-					rrr_three(&list_a, &list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				sum--;
-			}
-			while(twist)
-			{
-				if (rotation_logic_a == 0)
-				{
-					ra_three(&list_a, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				else
-				{
-					rra_three(&list_a, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				twist--;
-			}
+			joint_rotation(list_a, list_b, bonus, logic_a);
+			(*list_a)->step_a = step_a - step_b;
+			rotation_stack_a(list_a, list_b, bonus, logic_a);
 		}
 		else
 		{
-			sum = step_a;
-			twist = step_b - step_a;
-			while(sum)
-			{
-				if (rotation_logic_a == 0)
-				{
-					rr_three(&list_a, &list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				else
-				{
-					rrr_three(&list_a, &list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				sum--;
-			}
-			while(twist)
-			{
-				if (rotation_logic_b == 0)
-				{
-					rb_three(&list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				else
-				{
-					rrb_three(&list_b, bonus);
-					debug_print_two(list_a, list_b, bonus);
-				}
-				twist--;
-			}
+			joint_rotation(list_a, list_b, bonus, logic_a);
+			(*list_b)->step_b = step_b - step_a;
+			rotation_stack_b(list_a, list_b, bonus, logic_b);
 		}
 	}
 	else
 	{
-		while(step_a)
-		{
-			if (rotation_logic_a == 0)
-			{
-				ra_three(&list_a, bonus);
-				debug_print_two(list_a, list_b, bonus);
-			}
-			else
-			{
-				rra_three(&list_a, bonus);
-				debug_print_two(list_a, list_b, bonus);
-			}
-			step_a--;
-		}
-		while(step_b)
-		{
-			if (rotation_logic_b == 0)
-			{
-				rb_three(&list_b, bonus);
-				debug_print_two(list_a, list_b, bonus);
-			}
-			else
-			{
-				rrb_three(&list_b, bonus);
-				debug_print_two(list_a, list_b, bonus);
-			}
-		step_b--;
-		}
+		rotation_stack_a(list_a, list_b, bonus, logic_a);
+		rotation_stack_b(list_a, list_b, bonus, logic_b);
 	}
 }

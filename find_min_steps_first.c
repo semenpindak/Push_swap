@@ -12,30 +12,30 @@
 
 #include "push_swap.h"
 
-static void	record_value_in_stack_a(t_num ***list_a)
+static void	record_value_in_stack_a(t_num **list_a)
 {
 	int num;
 	int count;
 
-	num = (**list_a)->n;
+	num = (*list_a)->n;
 	count = 0;
-	while (**list_a)
+	while (*list_a)
 	{
-		(**list_a)->la = count;
-		if ((**list_a)->next != NULL)
-			(**list_a) = (**list_a)->next;
+		(*list_a)->la = count;
+		if ((*list_a)->next != NULL)
+			(*list_a) = (*list_a)->next;
 		count++;
-		if (num == (**list_a)->n)
+		if (num == (*list_a)->n)
 			break ;
 	}
 	count = 0;
-	while (**list_a)
+	while (*list_a)
 	{
-		(**list_a)->ra = count;
-		if ((**list_a)->prev != NULL)
-			(**list_a) = (**list_a)->prev;
+		(*list_a)->ra = count;
+		if ((*list_a)->prev != NULL)
+			(*list_a) = (*list_a)->prev;
 		count++;
-		if (num == (**list_a)->n)
+		if (num == (*list_a)->n)
 			break ;
 	}
 }
@@ -79,12 +79,24 @@ void		find_min_steps_first(t_num **list_a, t_num **list_b)
 {
 	int n;
 
-	record_value_in_stack_a(&list_a);
+	record_value_in_stack_a(list_a);
 	n = count_list_two(list_a);
 	while (n)
 	{
 		count_step_in_b_first(list_a, list_b);
 		fill_struct_resulting_values(list_a);
+		// printf("n = %3d | ", (*list_a)->n);
+		// printf("ra = %3d ", (*list_a)->ra);
+		// printf("la = %3d ", (*list_a)->la);
+		// printf("step_a = %3d ", (*list_a)->step_a);
+		// printf("logic_a = %3d |", (*list_a)->logic_a);
+		// printf("rb = %3d ", (*list_a)->rb);
+		// printf("lb = %3d ", (*list_a)->lb);
+		// printf("step_b = %3d ", (*list_a)->step_b);
+		// printf("logic_b = %3d |", (*list_a)->logic_b);
+		// printf("sum_steps = %3d ", (*list_a)->sum_steps);
+		// printf("status = %3d ", (*list_a)->status);
+		// printf("(*list_b)->n = %3d\n", (*list_b)->n);
 		*list_a = (*list_a)->next;
 		n--;
 	}

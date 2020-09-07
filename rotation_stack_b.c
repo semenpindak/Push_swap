@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_list_two.c                                   :+:      :+:    :+:   */
+/*   rotation_stack_b.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/24 19:41:34 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/07 01:35:20 by oem              ###   ########.fr       */
+/*   Created: 2020/09/07 01:00:35 by oem               #+#    #+#             */
+/*   Updated: 2020/09/07 01:01:23 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	count_list_two(t_num **list_a)
+void	rotation_stack_b(t_num **list_a, t_num **list_b, t_key *bonus, int spin)
 {
-	int num;
-	int count;
+	int step;
 
-	if (*list_a)
+	step = (*list_b)->step_b;
+	while (step)
 	{
-		num = (*list_a)->n;
-		count = 0;
-		while (*list_a)
+		if (spin == 0)
 		{
-			if ((*list_a)->next != NULL)
-				*list_a = (*list_a)->next;
-			count++;
-			if (num == (*list_a)->n)
-				break ;
+			rb_three(&list_b, bonus);
+			debug_print_two(list_a, list_b, bonus);
 		}
-		return (count);
+		else
+		{
+			rrb_three(&list_b, bonus);
+			debug_print_two(list_a, list_b, bonus);
+		}
+		step--;
 	}
-	return (0);
 }

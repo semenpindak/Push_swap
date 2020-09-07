@@ -12,24 +12,29 @@
 
 #include "push_swap.h"
 
-static void search_struct_to_move(t_num **list_a, int *step_a, int *step_b, int *logic_a, int *logic_b)
+static int search_struct_to_move(t_num **list_a, int *step_a, int *step_b, int *logic_a)
 {
-    int min = 2147483647;
-    int num = (*list_a)->n;
-    while (*list_a)
-    {
-        if ((*list_a)->sum_steps < min)
-        {
-            min = (*list_a)->sum_steps;
-            *step_a = (*list_a)->step_a;
-            *step_b = (*list_a)->step_b;
-            *logic_a = (*list_a)->logic_a;
-            *logic_b = (*list_a)->logic_b;
-        }
-        *list_a = (*list_a)->next;
-        if (num == (*list_a)->n)
-            break;
-    }
+	int logic_b;
+	int min = 2147483647;
+	int num = (*list_a)->n;
+
+	min = 2147483647;
+	num = (*list_a)->n;
+	while (*list_a)
+	{
+		if ((*list_a)->sum_steps < min)
+		{
+			min = (*list_a)->sum_steps;
+			*step_a = (*list_a)->step_a;
+			*step_b = (*list_a)->step_b;
+			*logic_a = (*list_a)->logic_a;
+			logic_b = (*list_a)->logic_b;
+		}
+		*list_a = (*list_a)->next;
+		if (num == (*list_a)->n)
+			break;
+	}
+	return (logic_b);
 }
 
 void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
@@ -41,74 +46,41 @@ void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
 
     while (*list_a)
     {
-        d--;
         if (*list_b == NULL)
         {
             pb_when_stack_b_null(list_a, list_b, bonus);
             pb_three(&list_a, &list_b, bonus);
             (*list_b)->status = 1;
             debug_print_two(list_a, list_b, bonus);
-
         }
         find_min_steps_regular(list_a, list_b);
-        search_struct_to_move(list_a, &step_a, &step_b, &logic_a, &logic_b);
-        if ((logic_a == 0 && logic_b == 0) || (logic_a == 1 && logic_b == 1))
-        {
-            int zn;
-            zn = step_a - step_b < 0 ? -(step_a - step_b) : step_a - step_b;
-            int max;
-            max = step_a > step_b ? step_a : step_b;
-            int q = max - zn;
-            step_a = step_a - q;
-            step_b = step_b - q;
-            while(q)
-            {
-                if (logic_a == 0)
-                {
-                    rr_three(&list_a, &list_b, bonus);
-                    debug_print_two(list_a, list_b, bonus);
-                }
-                else
-                {
-                    rrr_three(&list_a, &list_b, bonus);
-                    debug_print_two(list_a, list_b, bonus);
-                }
-                q--;
-            }
-        }
-        while(step_a)
-        {
-            if (logic_a == 0)
-            {
-                ra_three(&list_a, bonus);
-                debug_print_two(list_a, list_b, bonus);
-            }
-            else
-            {
-                rra_three(&list_a, bonus);
-                debug_print_two(list_a, list_b, bonus);
-
-            }
-            step_a--;
-        }
-        while(step_b)
-        {
-            if (logic_b == 0)
-            {
-                rb_three(&list_b, bonus);
-                debug_print_two(list_a, list_b, bonus);
-            }
-            else
-            {
-                rrb_three(&list_b, bonus);
-                debug_print_two(list_a, list_b, bonus);
-            }
-            step_b--;
-        }
-        pb_three(&list_a, &list_b, bonus);
-        (*list_b)->status = 1;
-        debug_print_two(list_a, list_b, bonus);
-        if (d == 1)
-            break;
+        logic_b = search_struct_to_move(list_a, &step_a, &step_b, &logic_a);
+		(*list_a)->step_a = step_a;
+		(*list_b)->step_b = step_b;
+		if (logic_a == logic_b)
+		{
+			if (step_a >= step_b)
+			{
+				joint_rotation(list_a, list_b, bonus, logic_a);
+				(*list_a)->step_a = step_a - step_b;
+				rotation_stack_a(list_a, list_b, bonus, logic_a);
+			}
+			else
+			{
+				joint_rotation(list_a, list_b, bonus, logic_a);
+				(*list_b)->step_b = step_b - step_a;
+				rotation_stack_b(list_a, list_b, bonus, logic_b);
+			}
+		}
+		else
+		{
+			rotation_stack_a(list_a, list_b, bonus, logic_a);
+			rotation_stack_b(list_a, list_b, bonus, logic_b);
+		}
+		pb_three(&list_a, &list_b, bonus);
+		(*list_b)->status = 1;
+		debug_print_two(list_a, list_b, bonus);
+		if (--d == 1)
+			break ;
     }
 }

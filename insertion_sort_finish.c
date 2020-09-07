@@ -35,7 +35,6 @@ void	insertsort_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 	if (*list_b != NULL)
 	{
 		count_step_in_a(list_a, list_b);
-		// ft_printf("(*list_b)->rb = %d, (*list_b)->lb = %d\n", (*list_b)->rb, (*list_b)->lb);
 		step = rotation(list_b);
 		while (step)
 		{

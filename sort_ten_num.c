@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 20:11:13 by oem               #+#    #+#             */
-/*   Updated: 2020/09/06 12:06:03 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/07 01:42:18 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ static int find_max_number(t_num *list_b)
 
 	max = list_b->n;
 	n = list_b->n;
-	while(list_b)
+	while (list_b)
 	{
 		if (list_b->next != NULL)
 			list_b = list_b->next;
 		if (list_b->n > max)
 			max = list_b->n;
 		if (n == list_b->n)
-			break;
+			break ;
 	}
 	return (max);
 }
@@ -38,14 +38,14 @@ static int find_min_number(t_num *list_b)
 
 	min = list_b->n;
 	n = list_b->n;
-	while(list_b)
+	while (list_b)
 	{
 		if (list_b->next != NULL)
 			list_b = list_b->next;
 		if (list_b->n < min)
 			min = list_b->n;
 		if (n == list_b->n)
-			break;
+			break ;
 	}
 	return (min);
 }
@@ -64,7 +64,7 @@ static int check_next_num_two(t_num **list_a, int current, int max, int min)
 	{
 		if ((*list_a)->prev != NULL)
 			*list_a = (*list_a)->prev;
-		return(1);
+		return (1);
 	}
 	else
 	{
@@ -102,7 +102,7 @@ static int count_step_sa_right(t_num **list_a, int max, int min)
 			*list_a = (*list_a)->next;
 		count++;
 		if (n == (*list_a)->n)
-			break;
+			break ;
 	}
 	return (i);
 }
@@ -134,7 +134,7 @@ static int count_step_sa_left(t_num **list_a, int max, int min)
 			*list_a = (*list_a)->prev;
 		count++;
 		if (n == (*list_a)->n)
-			break;
+			break ;
 	}
 	return (i);
 }
@@ -185,7 +185,7 @@ static int checking_stack_sorted(t_num *list_a, int min, int n)
 	while (list_a)
 	{
 		if (list_a->n == min)
-			break;
+			break ;
 		if (list_a->next != NULL)
 			list_a = list_a->next;
 	};

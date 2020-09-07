@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/05 16:50:00 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/07 01:53:13 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ void				find_min_steps_regular(t_num **list_a, t_num **list_b);
 void				count_step_in_b_first(t_num **list_a, t_num **list_b);
 void				count_step_in_b_regular(t_num **list_a, t_num **list_b);
 void				count_step_in_a(t_num **list_a, t_num **list_b);
+
+void				rotation_stack_a(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
+void				rotation_stack_b(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
+void				joint_rotation(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
 
 int					count_list(t_num *list_a);
 int					count_list_two(t_num **list_a);

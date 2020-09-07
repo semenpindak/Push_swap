@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mergesort_regular.c                               :+:      :+:    :+:   */
+/*   mergesort_regular.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/15 17:19:14 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
+/*   Created: 2020/09/07 01:47:40 by oem               #+#    #+#             */
+/*   Updated: 2020/09/07 01:48:15 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int count_list_stack_a_status(t_num **list_a)
 void	mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	int n;
-	int n_stack_a = 0;
+	int n_stack_a;
 
 	n = count_list_two(list_b);
 	n_stack_a = count_list_stack_a_status(list_a);
@@ -54,7 +54,7 @@ void	mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 		}
 		if (n_stack_a == 0)
 		{
-			while(n)
+			while (n)
 			{
 				pa_three(&list_a, &list_b, bonus);
 				debug_print_two(list_a, list_b, bonus);
@@ -64,6 +64,6 @@ void	mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 			}
 		}
 		if (n == 0)
-			break;
+			break ;
 	}
 }

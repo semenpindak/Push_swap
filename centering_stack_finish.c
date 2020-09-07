@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   centering_stack_finish.c                                :+:      :+:    :+:   */
+/*   centering_stack_finish.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/24 15:56:39 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/04 09:44:37 by oem              ###   ########.fr       */
+/*   Created: 2020/09/06 17:23:46 by oem               #+#    #+#             */
+/*   Updated: 2020/09/06 17:24:45 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static int	find_min_number(t_num **list_a, int *rotation_logic)
 	return (-1);
 }
 
-void			centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus)
+void		centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	int step;
 	int rotation_logic;

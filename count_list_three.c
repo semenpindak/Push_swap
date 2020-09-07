@@ -6,13 +6,13 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 19:43:56 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/03 17:24:58 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/07 01:34:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int count_list_three(t_num ***list_a)
+int	count_list_three(t_num ***list_a)
 {
 	int num;
 	int count;
@@ -27,7 +27,7 @@ int count_list_three(t_num ***list_a)
 				**list_a = (**list_a)->next;
 			count++;
 			if (num == (**list_a)->n)
-				break;
+				break ;
 		}
 		return (count);
 	}
