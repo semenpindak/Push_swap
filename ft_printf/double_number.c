@@ -6,13 +6,13 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 19:36:49 by calpha            #+#    #+#             */
-/*   Updated: 2020/02/13 15:41:16 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/08 17:21:47 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	fill_tmp_2(char *tmp_2, int i)
+static void	fill_tmp_2(char *tmp_2, int i)
 {
 	int k;
 
@@ -25,39 +25,7 @@ void	fill_tmp_2(char *tmp_2, int i)
 	}
 }
 
-static int	razrad_1(long long int m)
-{
-	int j;
-
-	j = 0;
-	while (m != 0)
-	{
-		j++;
-		m = m / 10;
-	}
-	return (j);
-}
-
-char		*ft_itoa(long long int n)
-{
-	int		i;
-	int		r;
-	char	*s;
-
-	i = razrad_1(n);
-	if (!(s = n <= 0 ? ft_strnew(++i) : ft_strnew(i)))
-		return (NULL);
-	s[0] = n >= 0 ? '0' : '-';
-	while (n != 0)
-	{
-		r = n < 0 ? -(n % 10) : n % 10;
-		s[--i] = r + '0';
-		n = n / 10;
-	}
-	return (s);
-}
-
-char	*with_zero(long long int n, long long int f, int i, int sign)
+static char	*with_zero(long long int n, long long int f, int i, int sign)
 {
 	char			*tmp;
 	char			*tmp_1;
@@ -76,7 +44,7 @@ char	*with_zero(long long int n, long long int f, int i, int sign)
 	return (s);
 }
 
-char				*no_zero(long long int n, long long int f, int sign)
+static char	*no_zero(long long int n, long long int f, int sign)
 {
 	char			*tmp;
 	char			*tmp_1;
@@ -92,13 +60,13 @@ char				*no_zero(long long int n, long long int f, int sign)
 	return (s);
 }
 
-char				*double_number(long double num)
+char		*double_number(long double num)
 {
-	long long		n;
-	long long		f;
-	long double		frac;
-	int				i;
-	int 			sign;
+	long long	n;
+	long long	f;
+	long double	frac;
+	int			i;
+	int			sign;
 
 	n = num;
 	i = 0;
@@ -106,8 +74,7 @@ char				*double_number(long double num)
 	if (num < 0 && n == 0)
 		sign = -1;
 	frac = num - (long double)n;
-	if (frac < 0)
-		frac = -(frac);
+	frac = frac < 0 ? -(frac) : frac;
 	num = frac;
 	frac = frac * 1000000000000000000;
 	f = frac;

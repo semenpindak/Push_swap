@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 14:54:54 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/08/29 19:27:49 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/08 17:18:53 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int					ft_printf_s(va_list args, t_flag *flags);
 int					ft_printf_p(va_list args, t_flag *flags);
 int					ft_printf_percent(t_flag *flags);
 
-
 int					ft_x_x(long long i, t_flag *flags);
 int					ft_init_procent(char *str, int i,
 					va_list args, t_flag *flags);
@@ -72,8 +71,6 @@ int					ft_init_num(const char *str, int i, t_flag *flags);
 
 int					ft_init_spec(char spec, va_list args, t_flag *flags);
 int					ft_o_u(int len, long long i, char *str, t_flag *flags);
-
-
 
 int					ft_o_u_four(long long i, int len_str,
 					char *str, t_flag *flags);
@@ -107,7 +104,5 @@ char				*ft_lltoa_base_x_x(unsigned long long n, int base, int x_x);
 size_t				ft_atoi_pres(const char *s, int i);
 size_t				ft_countdigit(unsigned long long n, int base, size_t count);
 
-
 int					ft_write(unsigned char str);
-
 #endif
