@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 17:23:46 by oem               #+#    #+#             */
-/*   Updated: 2020/09/06 17:24:45 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,12 +93,12 @@ void		centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 	{
 		if (rotation_logic == 0)
 		{
-			ra_three(&list_a, bonus);
+			ra(&list_a, bonus);
 			debug_print_two(list_a, list_b, bonus);
 		}
 		else
 		{
-			rra_three(&list_a, bonus);
+			rra(&list_a, bonus);
 			debug_print_two(list_a, list_b, bonus);
 		}
 		step--;

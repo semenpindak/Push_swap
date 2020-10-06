@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/07 01:53:13 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 15:12:24 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,25 +85,13 @@ int					count_list_two(t_num **list_a);
 int					count_list_three(t_num ***list_a);
 
 void				sa(t_num *list_a, t_key *bonus);
-void				sb(t_num *list);
-int					ss(t_num *list_a, t_num *list_b);
-
 void				sa_two(t_num **list_a, t_key *bonus);
-void				pa(t_num **list_a, t_num **list_b, t_key *bonus);
-void				pb(t_num **list_a, t_num **list_b, t_key *bonus);
-void				ra(t_num **list_a, t_key *bonus);
-void				rb(t_num **list_b, t_key *bonus);
-void				rr(t_num **list_a, t_num **list_b, t_key *bonus);
-void				rra(t_num **list_a, t_key *bonus);
-void				rrb(t_num **list_b, t_key *bonus);
-void				rrr(t_num **list_a, t_num **list_b, t_key *bonus);
-
-void				pa_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
-void				pb_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
-void				ra_three(t_num ***list_a, t_key *bonus);
-void				rb_three(t_num ***list_b, t_key *bonus);
-void				rr_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
-void				rra_three(t_num ***list_a, t_key *bonus);
-void				rrb_three(t_num ***list_b, t_key *bonus);
-void				rrr_three(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				pa(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				pb(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				ra(t_num ***list_a, t_key *bonus);
+void				rb(t_num ***list_b, t_key *bonus);
+void				rr(t_num ***list_a, t_num ***list_b, t_key *bonus);
+void				rra(t_num ***list_a, t_key *bonus);
+void				rrb(t_num ***list_b, t_key *bonus);
+void				rrr(t_num ***list_a, t_num ***list_b, t_key *bonus);
 #endif

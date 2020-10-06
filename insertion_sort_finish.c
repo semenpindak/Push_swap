@@ -40,17 +40,17 @@ void	insertsort_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 		{
 			if ((*list_b)->logic_a == 1)
 			{
-				ra_three(&list_a, bonus);
+				ra(&list_a, bonus);
 				debug_print_two(list_a, list_b, bonus);
 			}
 			else
 			{
-				rra_three(&list_a, bonus);
+				rra(&list_a, bonus);
 				debug_print_two(list_a, list_b, bonus);
 			}
 			step--;
 		}
-		pa_three(&list_a, &list_b, bonus);
+		pa(&list_a, &list_b, bonus);
 		debug_print_two(list_a, list_b, bonus);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 01:05:08 by oem               #+#    #+#             */
-/*   Updated: 2020/09/07 01:06:06 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ void	joint_rotation(t_num **list_a, t_num **list_b, t_key *bonus, int spin)
 	{
 		if (spin == 0)
 		{
-			rr_three(&list_a, &list_b, bonus);
+			rr(&list_a, &list_b, bonus);
 			debug_print_two(list_a, list_b, bonus);
 		}
 		else
 		{
-			rrr_three(&list_a, &list_b, bonus);
+			rrr(&list_a, &list_b, bonus);
 			debug_print_two(list_a, list_b, bonus);
 		}
 		step--;

@@ -19,7 +19,7 @@ void	mergesort_first(t_num **list_a, t_num **list_b, t_key *bonus)
 	n = count_list_two(list_b);
 	while (n)
 	{
-		pa_three(&list_a, &list_b, bonus);
+		pa(&list_a, &list_b, bonus);
 		debug_print_two(list_a, list_b, bonus);
 		n--;
 	}

@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 12:07:42 by oem               #+#    #+#             */
-/*   Updated: 2020/09/06 17:17:52 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,21 +86,21 @@ void reading_commands(t_num **list_a, t_num **list_b, t_key *bonus)
 		if (ft_strcmp(buff, "sa") == 0)
 			sa_two(list_a, bonus);
 		if (ft_strcmp(buff, "pa") == 0)
-			pa_three(&list_a, &list_b, bonus);
+			pa(&list_a, &list_b, bonus);
 		if (ft_strcmp(buff, "pb") == 0)
-			pb_three(&list_a, &list_b, bonus);
+			pb(&list_a, &list_b, bonus);
 		if (ft_strcmp(buff, "ra") == 0)
-			ra_three(&list_a, bonus);
+			ra(&list_a, bonus);
 		if (ft_strcmp(buff, "rb") == 0)
-			rb_three(&list_b, bonus);
+			rb(&list_b, bonus);
 		if (ft_strcmp(buff, "rr") == 0)
-			rr_three(&list_a, &list_b, bonus);
+			rr(&list_a, &list_b, bonus);
 		if (ft_strcmp(buff, "rra") == 0)
-			rra_three(&list_a, bonus);
+			rra(&list_a, bonus);
 		if (ft_strcmp(buff, "rrb") == 0)
-			rrb_three(&list_b, bonus);
+			rrb(&list_b, bonus);
 		if (ft_strcmp(buff, "rrr") == 0)
-			rrr_three(&list_a, &list_b, bonus);
+			rrr(&list_a, &list_b, bonus);
 		free(buff);
 	}
 }
@@ -120,16 +120,8 @@ static void clear_array(int ac, char **ar)
 
 static void	when_one_parameter(int ac, char **ar)
 {
-	if (ac == 0)
-	{
-		printf("Enter more than one parameter\n");
-		exit (0);
-	}
-	if (ac == 1)
-	{
-		clear_array(ac, ar);
-		exit (0);
-	}
+	clear_array(ac, ar);
+	exit (0);
 }
 
 static void	free_list(t_num *list_a, t_key *bonus)

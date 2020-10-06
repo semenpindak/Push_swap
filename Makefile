@@ -13,12 +13,11 @@ SRC_PS		= push_swap.c parser.c validation.c create_stack_a.c\
 			  find_min_steps_first.c find_min_steps_regular.c\
 			  count_step_in_a.c count_step_in_b_first.c count_step_in_b_regular.c\
 			  count_list.c count_list_two.c count_list_three.c\
-			  sa.c sb.c ss.c sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
-			  pa_three.c pb_three.c ra_three.c rb_three.c rr_three.c rra_three.c rrb_three.c rrr_three.c\
+			  sa.c sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
 			  rotation_stack_a.c rotation_stack_b.c joint_rotation.c\
 
 SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c count_list_two.c\
-			  sa_two.c pa_three.c pb_three.c ra_three.c rb_three.c rr_three.c rra_three.c rrb_three.c rrr_three.c\
+			  sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
 
 OBJ_PS		= $(SRC_PS:c=o)
 OBJ_CH		= $(SRC_CH:c=o)

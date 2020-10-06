@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 20:11:13 by oem               #+#    #+#             */
-/*   Updated: 2020/09/07 01:42:18 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,12 +166,12 @@ static void centering_stack_ten(t_num **list_a, t_num **list_b, int max, int min
 	{
 		if (rotation_logic == 0)
 		{
-			ra_three(&list_a, bonus);
+			ra(&list_a, bonus);
 			debug_print_two(list_a, list_b, bonus);
 		}
 		else
 		{
-			rra_three(&list_a, bonus);
+			rra(&list_a, bonus);
 			debug_print_two(list_a, list_b, bonus);
 		}
 		step--;
@@ -211,7 +211,7 @@ static void start(t_num **list_a, t_num **list_b, t_key *bonus)
 {
 	if (*list_b == NULL)
 	{
-		pb_three(&list_a, &list_b, bonus);
+		pb(&list_a, &list_b, bonus);
 		(*list_b)->status = 1;
 		debug_print_two(list_a, list_b, bonus);
 	}

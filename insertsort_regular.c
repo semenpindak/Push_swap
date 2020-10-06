@@ -49,7 +49,7 @@ void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
         if (*list_b == NULL)
         {
             pb_when_stack_b_null(list_a, list_b, bonus);
-            pb_three(&list_a, &list_b, bonus);
+            pb(&list_a, &list_b, bonus);
             (*list_b)->status = 1;
             debug_print_two(list_a, list_b, bonus);
         }
@@ -77,7 +77,7 @@ void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
 			rotation_stack_a(list_a, list_b, bonus, logic_a);
 			rotation_stack_b(list_a, list_b, bonus, logic_b);
 		}
-		pb_three(&list_a, &list_b, bonus);
+		pb(&list_a, &list_b, bonus);
 		(*list_b)->status = 1;
 		debug_print_two(list_a, list_b, bonus);
 		if (--d == 1)

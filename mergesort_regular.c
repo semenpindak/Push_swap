@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 01:47:40 by oem               #+#    #+#             */
-/*   Updated: 2020/09/07 01:48:15 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ void	mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 	{
 		if ((*list_a)->n > (*list_b)->n)
 		{
-			pa_three(&list_a, &list_b, bonus);
+			pa(&list_a, &list_b, bonus);
 			debug_print_two(list_a, list_b, bonus);
 			n_stack_a++;
 			n--;
 		}
 		if ((*list_b) != NULL && ((*list_b)->n > (*list_a)->n))
 		{
-			ra_three(&list_a, bonus);
+			ra(&list_a, bonus);
 			debug_print_two(list_a, list_b, bonus);
 			n_stack_a--;
 		}
@@ -56,9 +56,9 @@ void	mergesort_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 		{
 			while (n)
 			{
-				pa_three(&list_a, &list_b, bonus);
+				pa(&list_a, &list_b, bonus);
 				debug_print_two(list_a, list_b, bonus);
-				ra_three(&list_a, bonus);
+				ra(&list_a, bonus);
 				debug_print_two(list_a, list_b, bonus);
 				n--;
 			}

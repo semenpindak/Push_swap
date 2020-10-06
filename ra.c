@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/11 06:46:07 by semen             #+#    #+#             */
-/*   Updated: 2020/09/05 09:08:29 by oem              ###   ########.fr       */
+/*   Created: 2020/04/27 00:31:04 by semen             #+#    #+#             */
+/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_num **list_a, t_key *bonus)
+void	ra(t_num ***list_a, t_key *bonus)
 {
-	if (*list_a && (*list_a)->next != NULL)
+	if (**list_a && (**list_a)->next != NULL)
 	{
-		*list_a = (*list_a)->next;
+		**list_a = (**list_a)->next;
 		if (bonus->print == 1)
 			ft_printf("ra\n");
 	}
