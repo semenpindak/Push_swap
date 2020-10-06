@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:54 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/06 17:00:59 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 18:59:54 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,6 @@ int			main(int ac, char *av[])
 	t_num *list_b;
 	t_key *bonus;
 	char **ar;
-	// char **af;
 	int n;
 	int min;
 

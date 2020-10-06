@@ -41,7 +41,7 @@ Run `git clone --recursive https://github.com/semenpindak/Libft.git`
 
 Run `make`, an executable called `push_swap` and `checker` and should compile directly. Please submit an issue if you run into any problems.
 
-### Usage <a name="Usage"></a>
+## Usage <a name="Usage"></a>
 
 `ARG=$(random int); ./push_swap $ARG | ./checker $ARG`
 

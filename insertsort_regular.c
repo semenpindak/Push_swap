@@ -37,24 +37,24 @@ static int search_struct_to_move(t_num **list_a, int *step_a, int *step_b, int *
 	return (logic_b);
 }
 
-void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
+void	insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
 {
-    int step_a = 0;
-    int step_b = 0;
-    int logic_a = 0;
-    int logic_b = 0;
+	int step_a = 0;
+	int step_b = 0;
+	int logic_a = 0;
+	int logic_b = 0;
 
-    while (*list_a)
-    {
-        if (*list_b == NULL)
-        {
-            pb_when_stack_b_null(list_a, list_b, bonus);
-            pb(&list_a, &list_b, bonus);
-            (*list_b)->status = 1;
-            debug_print_two(list_a, list_b, bonus);
-        }
-        find_min_steps_regular(list_a, list_b);
-        logic_b = search_struct_to_move(list_a, &step_a, &step_b, &logic_a);
+	while (*list_a)
+	{
+		if (*list_b == NULL)
+		{
+			pb_when_stack_b_null(list_a, list_b, bonus);
+			pb(&list_a, &list_b, bonus);
+			(*list_b)->status = 1;
+			debug_print_two(list_a, list_b, bonus);
+		}
+		find_min_steps_regular(list_a, list_b);
+		logic_b = search_struct_to_move(list_a, &step_a, &step_b, &logic_a);
 		(*list_a)->step_a = step_a;
 		(*list_b)->step_b = step_b;
 		if (logic_a == logic_b)
@@ -82,5 +82,5 @@ void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
 		debug_print_two(list_a, list_b, bonus);
 		if (--d == 1)
 			break ;
-    }
+	}
 }

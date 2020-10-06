@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 17:23:46 by oem               #+#    #+#             */
-/*   Updated: 2020/10/06 16:48:06 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 18:52:03 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void	find_min_number_right(t_num **list_a, int *i)
 	}
 }
 
-static int	find_min_number(t_num **list_a, int *rotation_logic)
+static int	find_min_number(t_num **list_a, int *spin)
 {
 	int a;
 	int b;
@@ -71,12 +71,12 @@ static int	find_min_number(t_num **list_a, int *rotation_logic)
 	find_min_number_right(list_a, &b);
 	if (a < b)
 	{
-		*rotation_logic = 1;
+		*spin = 1;
 		return (a);
 	}
 	else
 	{
-		*rotation_logic = 0;
+		*spin = 0;
 		return (b);
 	}
 	return (-1);
@@ -84,9 +84,9 @@ static int	find_min_number(t_num **list_a, int *rotation_logic)
 
 void		centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	int rotation_logic;
+	int spin;
 
-	rotation_logic = 0;
-	(*list_a)->step_a = find_min_number(list_a, &rotation_logic);
-	rotation_stack_a(list_a, list_b, bonus, rotation_logic);
+	spin = 0;
+	(*list_a)->step_a = find_min_number(list_a, &spin);
+	rotation_stack_a(list_a, list_b, bonus, spin);
 }
