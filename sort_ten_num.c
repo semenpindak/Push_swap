@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 20:11:13 by oem               #+#    #+#             */
-/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 16:51:25 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,24 +158,10 @@ static int rotation(t_num **list_a, int *rotation_logic, int max, int min)
 
 static void centering_stack_ten(t_num **list_a, t_num **list_b, int max, int min, t_key *bonus)
 {
-	int step;
 	int rotation_logic;
 
-	step = rotation(list_a, &rotation_logic, max, min);
-	while (step)
-	{
-		if (rotation_logic == 0)
-		{
-			ra(&list_a, bonus);
-			debug_print_two(list_a, list_b, bonus);
-		}
-		else
-		{
-			rra(&list_a, bonus);
-			debug_print_two(list_a, list_b, bonus);
-		}
-		step--;
-	}
+	(*list_a)->step_a = rotation(list_a, &rotation_logic, max, min);
+	rotation_stack_a(list_a, list_b, bonus, rotation_logic);
 }
 
 static int checking_stack_sorted(t_num *list_a, int min, int n)

@@ -61,13 +61,13 @@ void    insertsort_regular(t_num **list_a, t_num **list_b, int d, t_key *bonus)
 		{
 			if (step_a >= step_b)
 			{
-				joint_rotation(list_a, list_b, bonus, logic_a);
+				rotation_both_stacks(list_a, list_b, bonus, logic_a);
 				(*list_a)->step_a = step_a - step_b;
 				rotation_stack_a(list_a, list_b, bonus, logic_a);
 			}
 			else
 			{
-				joint_rotation(list_a, list_b, bonus, logic_a);
+				rotation_both_stacks(list_a, list_b, bonus, logic_a);
 				(*list_b)->step_b = step_b - step_a;
 				rotation_stack_b(list_a, list_b, bonus, logic_b);
 			}

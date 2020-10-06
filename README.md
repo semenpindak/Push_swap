@@ -53,5 +53,5 @@ or
 
 ## License <a name="license"></a>
 
-<!-- This project is licensed under the MIT License - see the [LICENSE](https://github.com/semenpindak/FDF/blob/master/LICENSE)
-file for details. -->
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/semenpindak/Push_swap/blob/master/LICENSE)
+file for details.

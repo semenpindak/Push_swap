@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 23:40:44 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 17:24:08 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,23 +90,9 @@ static int	find_max_number(t_num **list_b, int *rotation_logic)
 
 void		centering_stack_first(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	int step;
 	int rotation_logic;
 
 	rotation_logic = 0;
-	step = find_max_number(list_b, &rotation_logic);
-	while (step)
-	{
-		if (rotation_logic == 0)
-		{
-			rb(&list_b, bonus);
-			debug_print_two(list_a, list_b, bonus);
-		}
-		else
-		{
-			rrb(&list_b, bonus);
-			debug_print_two(list_a, list_b, bonus);
-		}
-		step--;
-	}
+	(*list_b)->step_b = find_max_number(list_b, &rotation_logic);
+	rotation_stack_b(list_a, list_b, bonus, rotation_logic);
 }

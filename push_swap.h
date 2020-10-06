@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/06 15:12:24 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 17:20:36 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,13 @@ void				count_step_in_a(t_num **list_a, t_num **list_b);
 
 void				rotation_stack_a(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
 void				rotation_stack_b(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
-void				joint_rotation(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
+void				rotation_both_stacks(t_num **list_a, t_num **list_b, t_key *bonus, int spin);
 
 int					count_list(t_num *list_a);
 int					count_list_two(t_num **list_a);
 int					count_list_three(t_num ***list_a);
+
+void				free_array(int ac, char **ar);
 
 void				sa(t_num *list_a, t_key *bonus);
 void				sa_two(t_num **list_a, t_key *bonus);

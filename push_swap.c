@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:54 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/06 13:47:51 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 17:00:59 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,19 +96,6 @@ char **key_function(int ac, char *av[], int *ret)
 	return (argk);
 }
 
-static void clear_array(int ac, char **ar)
-{
-	int i;
-
-	i = 0;
-	while (i < ac)
-	{
-		free(ar[i]);
-		i++;
-	}
-	free(ar);
-}
-
 static void	free_list(t_num *list_a, t_key *bonus)
 {
 	int n;
@@ -129,7 +116,7 @@ static void	free_list(t_num *list_a, t_key *bonus)
 
 static void	when_one_parameter(int ac, char **ar)
 {
-	clear_array(ac, ar);
+	free_array(ac, ar);
 	exit (0);
 }
 
@@ -137,13 +124,12 @@ static void	when_one_parameter_key(int ac, char **ar, t_key *bonus)
 {
 	if (ac == 0)
 	{
-		printf("Enter more than one parameter\n");
 		free(bonus);
 		exit (0);
 	}
 	if (ac == 1)
 	{
-		clear_array(ac, ar);
+		free_array(ac, ar);
 		free(bonus);
 		exit (0);
 	}
@@ -194,7 +180,7 @@ int			main(int ac, char *av[])
 	if (validation(ac, ar) == 0)
 	{
 		ft_putstr("Error\n");
-		clear_array(ac, ar);
+		free_array(ac, ar);
 		free(bonus);
 		exit (0);
 	}
@@ -202,7 +188,7 @@ int			main(int ac, char *av[])
 		when_one_parameter_key(ac, ar, bonus);
 	if (!(list_a = create_stack_a(ac, ar)))
 		return (0);
-	clear_array(ac, ar);
+	free_array(ac, ar);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
 	if (checking_stack_sorted(list_a, min, n) == 1)

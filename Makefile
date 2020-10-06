@@ -14,10 +14,10 @@ SRC_PS		= push_swap.c parser.c validation.c create_stack_a.c\
 			  count_step_in_a.c count_step_in_b_first.c count_step_in_b_regular.c\
 			  count_list.c count_list_two.c count_list_three.c\
 			  sa.c sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
-			  rotation_stack_a.c rotation_stack_b.c joint_rotation.c\
+			  rotation_stack_a.c rotation_stack_b.c rotation_both_stacks.c free_array.c
 
 SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c count_list_two.c\
-			  sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c\
+			  sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c free_array.c
 
 OBJ_PS		= $(SRC_PS:c=o)
 OBJ_CH		= $(SRC_CH:c=o)

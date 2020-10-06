@@ -2747,6 +2747,3453 @@
                     "filename": "validation.c"
                 }
             ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2020-10-06 16:53:33",
+            "filesum": 397,
+            "codesum": 13225,
+            "commentsum": 1485,
+            "blanksum": 779,
+            "statistics": {
+                ".c": {
+                    "code": 5401,
+                    "comment": 1447,
+                    "blank": 655
+                },
+                ".d": {
+                    "code": 7134,
+                    "comment": 0,
+                    "blank": 0
+                },
+                "": {
+                    "code": 109,
+                    "comment": 0,
+                    "blank": 39
+                },
+                ".h": {
+                    "code": 229,
+                    "comment": 33,
+                    "blank": 41
+                },
+                ".md": {
+                    "code": 40,
+                    "comment": 5,
+                    "blank": 20
+                },
+                ".sh": {
+                    "code": 312,
+                    "comment": 0,
+                    "blank": 24
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "author"
+                },
+                {
+                    "blank": 9,
+                    "code": 72,
+                    "comment": 11,
+                    "filename": "centering_stack_finish.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "centering_stack_finish.d"
+                },
+                {
+                    "filename": "centering_stack_finish.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 92,
+                    "comment": 11,
+                    "filename": "centering_stack_first.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "centering_stack_first.d"
+                },
+                {
+                    "filename": "centering_stack_first.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 94,
+                    "comment": 11,
+                    "filename": "centering_stack_regular.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "centering_stack_regular.d"
+                },
+                {
+                    "filename": "centering_stack_regular.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "checker",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 20,
+                    "code": 151,
+                    "comment": 18,
+                    "filename": "checker.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "checker.d"
+                },
+                {
+                    "filename": "checker.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "count_list.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "count_list.d"
+                },
+                {
+                    "filename": "count_list.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "count_list_three.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "count_list_three.d"
+                },
+                {
+                    "filename": "count_list_three.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "count_list_two.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "count_list_two.d"
+                },
+                {
+                    "filename": "count_list_two.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 19,
+                    "code": 184,
+                    "comment": 23,
+                    "filename": "count_step_in_a.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "count_step_in_a.d"
+                },
+                {
+                    "filename": "count_step_in_a.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 32,
+                    "code": 271,
+                    "comment": 11,
+                    "filename": "count_step_in_b_first.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "count_step_in_b_first.d"
+                },
+                {
+                    "filename": "count_step_in_b_first.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 31,
+                    "code": 268,
+                    "comment": 11,
+                    "filename": "count_step_in_b_regular.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "count_step_in_b_regular.d"
+                },
+                {
+                    "filename": "count_step_in_b_regular.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 61,
+                    "comment": 11,
+                    "filename": "create_stack_a.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "create_stack_a.d"
+                },
+                {
+                    "filename": "create_stack_a.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "debug_print.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "debug_print.d"
+                },
+                {
+                    "filename": "debug_print.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "debug_print_two.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "debug_print_two.d"
+                },
+                {
+                    "filename": "debug_print_two.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 74,
+                    "comment": 23,
+                    "filename": "find_min_steps_first.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "find_min_steps_first.d"
+                },
+                {
+                    "filename": "find_min_steps_first.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 80,
+                    "comment": 23,
+                    "filename": "find_min_steps_regular.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "find_min_steps_regular.d"
+                },
+                {
+                    "filename": "find_min_steps_regular.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "ft_printf/author"
+                },
+                {
+                    "blank": 9,
+                    "code": 70,
+                    "comment": 11,
+                    "filename": "ft_printf/double_number.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/double_number.d"
+                },
+                {
+                    "filename": "ft_printf/double_number.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 39,
+                    "comment": 11,
+                    "filename": "ft_printf/f_with_zero.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/f_with_zero.d"
+                },
+                {
+                    "filename": "ft_printf/f_with_zero.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "ft_printf/flag_null.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/flag_null.d"
+                },
+                {
+                    "filename": "ft_printf/flag_null.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 7,
+                    "code": 98,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_analazer_flags.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_analazer_flags.d"
+                },
+                {
+                    "filename": "ft_printf/ft_analazer_flags.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 24,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_atoi_pres.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_atoi_pres.d"
+                },
+                {
+                    "filename": "ft_printf/ft_atoi_pres.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 11,
+                    "code": 106,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_d_i.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_d_i.d"
+                },
+                {
+                    "filename": "ft_printf/ft_d_i.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_init_procent.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_init_procent.d"
+                },
+                {
+                    "filename": "ft_printf/ft_init_procent.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 53,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_init_spec.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_init_spec.d"
+                },
+                {
+                    "filename": "ft_printf/ft_init_spec.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 28,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_itoa_c.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_itoa_c.d"
+                },
+                {
+                    "filename": "ft_printf/ft_itoa_c.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 24,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_itoa_frac.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_itoa_frac.d"
+                },
+                {
+                    "filename": "ft_printf/ft_itoa_frac.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 24,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_lltoa_base.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_lltoa_base.d"
+                },
+                {
+                    "filename": "ft_printf/ft_lltoa_base.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 11,
+                    "code": 117,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_o_u.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_o_u.d"
+                },
+                {
+                    "filename": "ft_printf/ft_o_u.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 109,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_print_d_i.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_print_d_i.d"
+                },
+                {
+                    "filename": "ft_printf/ft_print_d_i.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 11,
+                    "code": 116,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_print_f_one.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_print_f_one.d"
+                },
+                {
+                    "filename": "ft_printf/ft_print_f_one.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf.d"
+                },
+                {
+                    "blank": 19,
+                    "code": 78,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf.h"
+                },
+                {
+                    "filename": "ft_printf/ft_printf.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_c.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_c.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_c.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 56,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_f.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_f.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_f.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 112,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_o_u.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_o_u.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_o_u.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 90,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_p.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_p.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_p.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 7,
+                    "code": 50,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_percent.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_percent.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_percent.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 7,
+                    "code": 62,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_s.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_s.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_s.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 7,
+                    "code": 61,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_x_x.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_printf_x_x.d"
+                },
+                {
+                    "filename": "ft_printf/ft_printf_x_x.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 6,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_write.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_write.d"
+                },
+                {
+                    "filename": "ft_printf/ft_write.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 11,
+                    "code": 98,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_x_x.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_x_x.d"
+                },
+                {
+                    "filename": "ft_printf/ft_x_x.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 11,
+                    "code": 126,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_x_x_x.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/ft_x_x_x.d"
+                },
+                {
+                    "filename": "ft_printf/ft_x_x_x.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "ft_printf/libftprintf.a",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "ft_printf/Makefile"
+                },
+                {
+                    "filename": "ft_printf/printf.a",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "ft_printf/razrad.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/razrad.d"
+                },
+                {
+                    "filename": "ft_printf/razrad.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 55,
+                    "comment": 11,
+                    "filename": "ft_printf/rounding.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "ft_printf/rounding.d"
+                },
+                {
+                    "filename": "ft_printf/rounding.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 26,
+                    "comment": 11,
+                    "filename": "insertion_sort_finish.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "insertion_sort_finish.d"
+                },
+                {
+                    "filename": "insertion_sort_finish.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 69,
+                    "comment": 11,
+                    "filename": "insertsort_first.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "insertsort_first.d"
+                },
+                {
+                    "filename": "insertsort_first.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 70,
+                    "comment": 11,
+                    "filename": "insertsort_regular.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "insertsort_regular.d"
+                },
+                {
+                    "filename": "insertsort_regular.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "libft/author"
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 11,
+                    "filename": "libft/ft_atoi.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_atoi.d"
+                },
+                {
+                    "filename": "libft/ft_atoi.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 73,
+                    "comment": 11,
+                    "filename": "libft/ft_atoi_base.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_atoi_base.d"
+                },
+                {
+                    "filename": "libft/ft_atoi_base.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_bzero.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_bzero.d"
+                },
+                {
+                    "filename": "libft/ft_bzero.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 11,
+                    "filename": "libft/ft_convert_base.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_convert_base.d"
+                },
+                {
+                    "filename": "libft/ft_convert_base.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isalnum.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_isalnum.d"
+                },
+                {
+                    "filename": "libft/ft_isalnum.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isalpha.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_isalpha.d"
+                },
+                {
+                    "filename": "libft/ft_isalpha.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isascii.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_isascii.d"
+                },
+                {
+                    "filename": "libft/ft_isascii.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isdigit.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_isdigit.d"
+                },
+                {
+                    "filename": "libft/ft_isdigit.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isprint.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_isprint.d"
+                },
+                {
+                    "filename": "libft/ft_isprint.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 29,
+                    "comment": 11,
+                    "filename": "libft/ft_itoa.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_itoa.d"
+                },
+                {
+                    "filename": "libft/ft_itoa.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 38,
+                    "comment": 11,
+                    "filename": "libft/ft_itoa_base.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "libft/ft_itoa_base.d"
+                },
+                {
+                    "filename": "libft/ft_itoa_base.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_memalloc.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memalloc.d"
+                },
+                {
+                    "filename": "libft/ft_memalloc.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "libft/ft_memccpy.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memccpy.d"
+                },
+                {
+                    "filename": "libft/ft_memccpy.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 11,
+                    "filename": "libft/ft_memchr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memchr.d"
+                },
+                {
+                    "filename": "libft/ft_memchr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_memcmp.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memcmp.d"
+                },
+                {
+                    "filename": "libft/ft_memcmp.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 11,
+                    "filename": "libft/ft_memcpy.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memcpy.d"
+                },
+                {
+                    "filename": "libft/ft_memcpy.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "libft/ft_memdel.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memdel.d"
+                },
+                {
+                    "filename": "libft/ft_memdel.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "libft/ft_memmove.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memmove.d"
+                },
+                {
+                    "filename": "libft/ft_memmove.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "libft/ft_memset.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_memset.d"
+                },
+                {
+                    "filename": "libft/ft_memset.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 11,
+                    "filename": "libft/ft_putchar.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putchar.d"
+                },
+                {
+                    "filename": "libft/ft_putchar.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 11,
+                    "filename": "libft/ft_putchar_fd.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putchar_fd.d"
+                },
+                {
+                    "filename": "libft/ft_putchar_fd.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_putendl.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putendl.d"
+                },
+                {
+                    "filename": "libft/ft_putendl.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "libft/ft_putendl_fd.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putendl_fd.d"
+                },
+                {
+                    "filename": "libft/ft_putendl_fd.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 11,
+                    "filename": "libft/ft_putnbr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putnbr.d"
+                },
+                {
+                    "filename": "libft/ft_putnbr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_putnbr_fd.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putnbr_fd.d"
+                },
+                {
+                    "filename": "libft/ft_putnbr_fd.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_putstr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putstr.d"
+                },
+                {
+                    "filename": "libft/ft_putstr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_putstr_fd.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_putstr_fd.d"
+                },
+                {
+                    "filename": "libft/ft_putstr_fd.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 11,
+                    "filename": "libft/ft_strcasecmp.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strcasecmp.d"
+                },
+                {
+                    "filename": "libft/ft_strcasecmp.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strcat.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strcat.d"
+                },
+                {
+                    "filename": "libft/ft_strcat.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 11,
+                    "filename": "libft/ft_strchr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strchr.d"
+                },
+                {
+                    "filename": "libft/ft_strchr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 11,
+                    "filename": "libft/ft_strclr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strclr.d"
+                },
+                {
+                    "filename": "libft/ft_strclr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "libft/ft_strcmp.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strcmp.d"
+                },
+                {
+                    "filename": "libft/ft_strcmp.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 11,
+                    "filename": "libft/ft_strcpy.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strcpy.d"
+                },
+                {
+                    "filename": "libft/ft_strcpy.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "libft/ft_strdel.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strdel.d"
+                },
+                {
+                    "filename": "libft/ft_strdel.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "libft/ft_strdup.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strdup.d"
+                },
+                {
+                    "filename": "libft/ft_strdup.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 16,
+                    "comment": 11,
+                    "filename": "libft/ft_strequ.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strequ.d"
+                },
+                {
+                    "filename": "libft/ft_strequ.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_striter.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_striter.d"
+                },
+                {
+                    "filename": "libft/ft_striter.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 14,
+                    "comment": 11,
+                    "filename": "libft/ft_striteri.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_striteri.d"
+                },
+                {
+                    "filename": "libft/ft_striteri.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "libft/ft_strjoin.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strjoin.d"
+                },
+                {
+                    "filename": "libft/ft_strjoin.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 23,
+                    "comment": 11,
+                    "filename": "libft/ft_strlcat.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strlcat.d"
+                },
+                {
+                    "filename": "libft/ft_strlcat.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_strlen.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strlen.d"
+                },
+                {
+                    "filename": "libft/ft_strlen.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 22,
+                    "comment": 11,
+                    "filename": "libft/ft_strmap.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strmap.d"
+                },
+                {
+                    "filename": "libft/ft_strmap.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 22,
+                    "comment": 11,
+                    "filename": "libft/ft_strmapi.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strmapi.d"
+                },
+                {
+                    "filename": "libft/ft_strmapi.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_strncat.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strncat.d"
+                },
+                {
+                    "filename": "libft/ft_strncat.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 13,
+                    "comment": 11,
+                    "filename": "libft/ft_strncmp.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strncmp.d"
+                },
+                {
+                    "filename": "libft/ft_strncmp.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strncpy.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strncpy.d"
+                },
+                {
+                    "filename": "libft/ft_strncpy.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_strnequ.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strnequ.d"
+                },
+                {
+                    "filename": "libft/ft_strnequ.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_strnew.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strnew.d"
+                },
+                {
+                    "filename": "libft/ft_strnew.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 28,
+                    "comment": 11,
+                    "filename": "libft/ft_strnstr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strnstr.d"
+                },
+                {
+                    "filename": "libft/ft_strnstr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strrchr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strrchr.d"
+                },
+                {
+                    "filename": "libft/ft_strrchr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 11,
+                    "code": 95,
+                    "comment": 11,
+                    "filename": "libft/ft_strsplit.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strsplit.d"
+                },
+                {
+                    "filename": "libft/ft_strsplit.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 11,
+                    "filename": "libft/ft_strstr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strstr.d"
+                },
+                {
+                    "filename": "libft/ft_strstr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strsub.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strsub.d"
+                },
+                {
+                    "filename": "libft/ft_strsub.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "libft/ft_strtrim.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_strtrim.d"
+                },
+                {
+                    "filename": "libft/ft_strtrim.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_tolower.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_tolower.d"
+                },
+                {
+                    "filename": "libft/ft_tolower.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_toupper.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/ft_toupper.d"
+                },
+                {
+                    "filename": "libft/ft_toupper.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 92,
+                    "comment": 11,
+                    "filename": "libft/get_next_line.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "libft/get_next_line.d"
+                },
+                {
+                    "filename": "libft/get_next_line.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "libft/libft.a",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 81,
+                    "comment": 11,
+                    "filename": "libft/libft.h"
+                },
+                {
+                    "blank": 10,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "libft/Makefile"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "libft/README.md"
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "LICENSE"
+                },
+                {
+                    "blank": 16,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "Makefile"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "mergesort_first.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "mergesort_first.d"
+                },
+                {
+                    "filename": "mergesort_first.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 51,
+                    "comment": 11,
+                    "filename": "mergesort_regular.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "mergesort_regular.d"
+                },
+                {
+                    "filename": "mergesort_regular.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "norminette",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 64,
+                    "comment": 11,
+                    "filename": "pa.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "pa.d"
+                },
+                {
+                    "filename": "pa.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 78,
+                    "comment": 14,
+                    "filename": "parser.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "parser.d"
+                },
+                {
+                    "filename": "parser.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 62,
+                    "comment": 11,
+                    "filename": "pb.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "pb.d"
+                },
+                {
+                    "filename": "pb.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 83,
+                    "comment": 11,
+                    "filename": "pb_when_stack_b_null.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "pb_when_stack_b_null.d"
+                },
+                {
+                    "filename": "pb_when_stack_b_null.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "push_swap",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 20,
+                    "code": 173,
+                    "comment": 26,
+                    "filename": "push_swap.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "push_swap.d"
+                },
+                {
+                    "blank": 16,
+                    "code": 70,
+                    "comment": 11,
+                    "filename": "push_swap.h"
+                },
+                {
+                    "filename": "push_swap.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "ra.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "ra.d"
+                },
+                {
+                    "filename": "ra.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "rb.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "rb.d"
+                },
+                {
+                    "filename": "rb.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 19,
+                    "code": 38,
+                    "comment": 5,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 11,
+                    "filename": "rotation_both_stacks.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "rotation_both_stacks.d"
+                },
+                {
+                    "filename": "rotation_both_stacks.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "rotation_stack_a.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "rotation_stack_a.d"
+                },
+                {
+                    "filename": "rotation_stack_a.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "rotation_stack_b.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "rotation_stack_b.d"
+                },
+                {
+                    "filename": "rotation_stack_b.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "rr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "rr.d"
+                },
+                {
+                    "filename": "rr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "rra.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "rra.d"
+                },
+                {
+                    "filename": "rra.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "rrb.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "rrb.d"
+                },
+                {
+                    "filename": "rrb.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "rrr.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "rrr.d"
+                },
+                {
+                    "filename": "rrr.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "sa.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "sa.d"
+                },
+                {
+                    "filename": "sa.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "sa_two.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "sa_two.d"
+                },
+                {
+                    "filename": "sa_two.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 26,
+                    "comment": 11,
+                    "filename": "show_me.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "show_me.d"
+                },
+                {
+                    "filename": "show_me.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 29,
+                    "comment": 11,
+                    "filename": "show_me_three.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "show_me_three.d"
+                },
+                {
+                    "filename": "show_me_three.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 31,
+                    "comment": 11,
+                    "filename": "show_me_two.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "show_me_two.d"
+                },
+                {
+                    "filename": "show_me_two.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 18,
+                    "code": 201,
+                    "comment": 11,
+                    "filename": "sort_ten_num.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "sort_ten_num.d"
+                },
+                {
+                    "filename": "sort_ten_num.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 24,
+                    "code": 312,
+                    "comment": 0,
+                    "filename": "test.sh"
+                },
+                {
+                    "blank": 5,
+                    "code": 44,
+                    "comment": 11,
+                    "filename": "timsort.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "timsort.d"
+                },
+                {
+                    "filename": "timsort.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 104,
+                    "comment": 11,
+                    "filename": "validation.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 62,
+                    "comment": 0,
+                    "filename": "validation.d"
+                },
+                {
+                    "filename": "validation.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                }
+            ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2020-10-06 17:19:20",
+            "filesum": 142,
+            "codesum": 6081,
+            "commentsum": 1496,
+            "blanksum": 779,
+            "statistics": {
+                ".c": {
+                    "code": 5390,
+                    "comment": 1458,
+                    "blank": 654
+                },
+                "": {
+                    "code": 109,
+                    "comment": 0,
+                    "blank": 39
+                },
+                ".h": {
+                    "code": 230,
+                    "comment": 33,
+                    "blank": 42
+                },
+                ".md": {
+                    "code": 40,
+                    "comment": 5,
+                    "blank": 20
+                },
+                ".sh": {
+                    "code": 312,
+                    "comment": 0,
+                    "blank": 24
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "author"
+                },
+                {
+                    "blank": 9,
+                    "code": 72,
+                    "comment": 11,
+                    "filename": "centering_stack_finish.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 92,
+                    "comment": 11,
+                    "filename": "centering_stack_first.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 94,
+                    "comment": 11,
+                    "filename": "centering_stack_regular.c"
+                },
+                {
+                    "blank": 18,
+                    "code": 140,
+                    "comment": 18,
+                    "filename": "checker.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "count_list.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "count_list_three.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "count_list_two.c"
+                },
+                {
+                    "blank": 19,
+                    "code": 184,
+                    "comment": 23,
+                    "filename": "count_step_in_a.c"
+                },
+                {
+                    "blank": 32,
+                    "code": 271,
+                    "comment": 11,
+                    "filename": "count_step_in_b_first.c"
+                },
+                {
+                    "blank": 31,
+                    "code": 268,
+                    "comment": 11,
+                    "filename": "count_step_in_b_regular.c"
+                },
+                {
+                    "blank": 10,
+                    "code": 61,
+                    "comment": 11,
+                    "filename": "create_stack_a.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "debug_print.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "debug_print_two.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 74,
+                    "comment": 23,
+                    "filename": "find_min_steps_first.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 80,
+                    "comment": 23,
+                    "filename": "find_min_steps_regular.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "free_array.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "ft_printf/author"
+                },
+                {
+                    "blank": 9,
+                    "code": 70,
+                    "comment": 11,
+                    "filename": "ft_printf/double_number.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 39,
+                    "comment": 11,
+                    "filename": "ft_printf/f_with_zero.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "ft_printf/flag_null.c"
+                },
+                {
+                    "blank": 7,
+                    "code": 98,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_analazer_flags.c"
+                },
+                {
+                    "blank": 4,
+                    "code": 24,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_atoi_pres.c"
+                },
+                {
+                    "blank": 11,
+                    "code": 106,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_d_i.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_init_procent.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 53,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_init_spec.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 28,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_itoa_c.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 24,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_itoa_frac.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 24,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_lltoa_base.c"
+                },
+                {
+                    "blank": 11,
+                    "code": 117,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_o_u.c"
+                },
+                {
+                    "blank": 10,
+                    "code": 109,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_print_d_i.c"
+                },
+                {
+                    "blank": 11,
+                    "code": 116,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_print_f_one.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf.c"
+                },
+                {
+                    "blank": 19,
+                    "code": 78,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf.h"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_c.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 56,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_f.c"
+                },
+                {
+                    "blank": 10,
+                    "code": 112,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_o_u.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 90,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_p.c"
+                },
+                {
+                    "blank": 7,
+                    "code": 50,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_percent.c"
+                },
+                {
+                    "blank": 7,
+                    "code": 62,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_s.c"
+                },
+                {
+                    "blank": 7,
+                    "code": 61,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_printf_x_x.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 6,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_write.c"
+                },
+                {
+                    "blank": 11,
+                    "code": 98,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_x_x.c"
+                },
+                {
+                    "blank": 11,
+                    "code": 126,
+                    "comment": 11,
+                    "filename": "ft_printf/ft_x_x_x.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "ft_printf/Makefile"
+                },
+                {
+                    "filename": "ft_printf/printf.a",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "ft_printf/razrad.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 55,
+                    "comment": 11,
+                    "filename": "ft_printf/rounding.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 26,
+                    "comment": 11,
+                    "filename": "insertion_sort_finish.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 69,
+                    "comment": 11,
+                    "filename": "insertsort_first.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 70,
+                    "comment": 11,
+                    "filename": "insertsort_regular.c"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "libft/author"
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 11,
+                    "filename": "libft/ft_atoi.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 73,
+                    "comment": 11,
+                    "filename": "libft/ft_atoi_base.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_bzero.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 11,
+                    "filename": "libft/ft_convert_base.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isalnum.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isalpha.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isascii.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isdigit.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_isprint.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 29,
+                    "comment": 11,
+                    "filename": "libft/ft_itoa.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 38,
+                    "comment": 11,
+                    "filename": "libft/ft_itoa_base.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_memalloc.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "libft/ft_memccpy.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 11,
+                    "filename": "libft/ft_memchr.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_memcmp.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 11,
+                    "filename": "libft/ft_memcpy.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "libft/ft_memdel.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "libft/ft_memmove.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "libft/ft_memset.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 11,
+                    "filename": "libft/ft_putchar.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 11,
+                    "filename": "libft/ft_putchar_fd.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_putendl.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "libft/ft_putendl_fd.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 11,
+                    "filename": "libft/ft_putnbr.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_putnbr_fd.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_putstr.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_putstr_fd.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 11,
+                    "filename": "libft/ft_strcasecmp.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strcat.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 11,
+                    "filename": "libft/ft_strchr.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 11,
+                    "filename": "libft/ft_strclr.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "libft/ft_strcmp.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 11,
+                    "filename": "libft/ft_strcpy.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "libft/ft_strdel.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "libft/ft_strdup.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 16,
+                    "comment": 11,
+                    "filename": "libft/ft_strequ.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_striter.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 14,
+                    "comment": 11,
+                    "filename": "libft/ft_striteri.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "libft/ft_strjoin.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 23,
+                    "comment": 11,
+                    "filename": "libft/ft_strlcat.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_strlen.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 22,
+                    "comment": 11,
+                    "filename": "libft/ft_strmap.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 22,
+                    "comment": 11,
+                    "filename": "libft/ft_strmapi.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_strncat.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 13,
+                    "comment": 11,
+                    "filename": "libft/ft_strncmp.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strncpy.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 11,
+                    "filename": "libft/ft_strnequ.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 11,
+                    "filename": "libft/ft_strnew.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 28,
+                    "comment": 11,
+                    "filename": "libft/ft_strnstr.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strrchr.c"
+                },
+                {
+                    "blank": 11,
+                    "code": 95,
+                    "comment": 11,
+                    "filename": "libft/ft_strsplit.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 11,
+                    "filename": "libft/ft_strstr.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "libft/ft_strsub.c"
+                },
+                {
+                    "blank": 4,
+                    "code": 21,
+                    "comment": 11,
+                    "filename": "libft/ft_strtrim.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_tolower.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 11,
+                    "filename": "libft/ft_toupper.c"
+                },
+                {
+                    "blank": 10,
+                    "code": 92,
+                    "comment": 11,
+                    "filename": "libft/get_next_line.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 81,
+                    "comment": 11,
+                    "filename": "libft/libft.h"
+                },
+                {
+                    "blank": 10,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "libft/Makefile"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "libft/README.md"
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "LICENSE"
+                },
+                {
+                    "blank": 16,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "Makefile"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "mergesort_first.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 51,
+                    "comment": 11,
+                    "filename": "mergesort_regular.c"
+                },
+                {
+                    "filename": "norminette",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 64,
+                    "comment": 11,
+                    "filename": "pa.c"
+                },
+                {
+                    "blank": 10,
+                    "code": 78,
+                    "comment": 14,
+                    "filename": "parser.c"
+                },
+                {
+                    "blank": 5,
+                    "code": 62,
+                    "comment": 11,
+                    "filename": "pb.c"
+                },
+                {
+                    "blank": 9,
+                    "code": 83,
+                    "comment": 11,
+                    "filename": "pb_when_stack_b_null.c"
+                },
+                {
+                    "blank": 18,
+                    "code": 161,
+                    "comment": 26,
+                    "filename": "push_swap.c"
+                },
+                {
+                    "blank": 17,
+                    "code": 71,
+                    "comment": 11,
+                    "filename": "push_swap.h"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "ra.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "rb.c"
+                },
+                {
+                    "blank": 19,
+                    "code": 38,
+                    "comment": 5,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 11,
+                    "filename": "rotation_both_stacks.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "rotation_stack_a.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 11,
+                    "filename": "rotation_stack_b.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "rr.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "rra.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 11,
+                    "filename": "rrb.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 11,
+                    "filename": "rrr.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "sa.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "sa_two.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 26,
+                    "comment": 11,
+                    "filename": "show_me.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 29,
+                    "comment": 11,
+                    "filename": "show_me_three.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 31,
+                    "comment": 11,
+                    "filename": "show_me_two.c"
+                },
+                {
+                    "blank": 18,
+                    "code": 201,
+                    "comment": 11,
+                    "filename": "sort_ten_num.c"
+                },
+                {
+                    "blank": 24,
+                    "code": 312,
+                    "comment": 0,
+                    "filename": "test.sh"
+                },
+                {
+                    "blank": 5,
+                    "code": 44,
+                    "comment": 11,
+                    "filename": "timsort.c"
+                },
+                {
+                    "blank": 10,
+                    "code": 104,
+                    "comment": 11,
+                    "filename": "validation.c"
+                }
+            ]
         }
     ]
 }

@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 17:23:46 by oem               #+#    #+#             */
-/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 16:48:06 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,23 +84,9 @@ static int	find_min_number(t_num **list_a, int *rotation_logic)
 
 void		centering_stack_finish(t_num **list_a, t_num **list_b, t_key *bonus)
 {
-	int step;
 	int rotation_logic;
 
 	rotation_logic = 0;
-	step = find_min_number(list_a, &rotation_logic);
-	while (step)
-	{
-		if (rotation_logic == 0)
-		{
-			ra(&list_a, bonus);
-			debug_print_two(list_a, list_b, bonus);
-		}
-		else
-		{
-			rra(&list_a, bonus);
-			debug_print_two(list_a, list_b, bonus);
-		}
-		step--;
-	}
+	(*list_a)->step_a = find_min_number(list_a, &rotation_logic);
+	rotation_stack_a(list_a, list_b, bonus, rotation_logic);
 }

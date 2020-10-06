@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 12:07:42 by oem               #+#    #+#             */
-/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 17:17:39 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,22 +105,9 @@ void reading_commands(t_num **list_a, t_num **list_b, t_key *bonus)
 	}
 }
 
-static void clear_array(int ac, char **ar)
-{
-	int i;
-
-	i = 0;
-	while (i < ac)
-	{
-		free(ar[i]);
-		i++;
-	}
-	free(ar);
-}
-
 static void	when_one_parameter(int ac, char **ar)
 {
-	clear_array(ac, ar);
+	free_array(ac, ar);
 	exit (0);
 }
 
@@ -168,12 +155,12 @@ int	main(int ac, char *av[])
 	if (validation(ac, ar) == 0)
 	{
 		ft_putstr("Error\n");
-		clear_array(ac, ar);
+		free_array(ac, ar);
 		exit (0);
 	}
 	create_list_bonus(&bonus);
 	list_a = create_stack_a(ac, ar);
-	clear_array(ac, ar);
+	free_array(ac, ar);
 	n = count_list(list_a);
 	min = find_min_number(list_a);
 	if (ac > 1)

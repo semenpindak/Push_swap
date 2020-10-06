@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 11:56:45 by oem               #+#    #+#             */
-/*   Updated: 2020/09/05 23:03:49 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 16:59:31 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 **creating an array for combining arrays of type *av[]
 */
 
-static void clear_array(char ***arg)
+static void clear_array_three(char ***arg)
 {
 	int i;
 
@@ -97,6 +97,6 @@ char		**parser(int ac, char *av[], int *ret)
 		i++;
 	}
 	*ret = a;
-	clear_array(arg);
+	clear_array_three(arg);
 	return (argw);
 }

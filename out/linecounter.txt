@@ -499,3 +499,585 @@ test.sh, code is 312, comment is 0, blank is 24.
 timsort.c, code is 44, comment is 11, blank is 5.
 validation.c, code is 104, comment is 11, blank is 10.
 ===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-10-06 16:53:33
+count workspace : /home/oem/Desktop/Push_swap
+total files : 397
+total code lines : 13225
+total comment lines : 1485
+total blank lines : 779
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |             .c|           5401|           1447|            655|     41|
+   |             .d|           7134|              0|              0|     54|
+   |               |            109|              0|             39|   0.82|
+   |             .h|            229|             33|             41|    1.7|
+   |            .md|             40|              5|             20|   0.30|
+   |            .sh|            312|              0|             24|    2.4|
+   -------------------------------------------------------------------------
+author, code is 1, comment is 0, blank is 0.
+centering_stack_finish.c, code is 72, comment is 11, blank is 9.
+centering_stack_finish.d, code is 62, comment is 0, blank is 0.
+centering_stack_finish.o, it is a binary file.
+centering_stack_first.c, code is 92, comment is 11, blank is 9.
+centering_stack_first.d, code is 62, comment is 0, blank is 0.
+centering_stack_first.o, it is a binary file.
+centering_stack_regular.c, code is 94, comment is 11, blank is 9.
+centering_stack_regular.d, code is 62, comment is 0, blank is 0.
+centering_stack_regular.o, it is a binary file.
+checker, it is a binary file.
+checker.c, code is 151, comment is 18, blank is 20.
+checker.d, code is 62, comment is 0, blank is 0.
+checker.o, it is a binary file.
+count_list.c, code is 21, comment is 11, blank is 3.
+count_list.d, code is 62, comment is 0, blank is 0.
+count_list.o, it is a binary file.
+count_list_three.c, code is 21, comment is 11, blank is 3.
+count_list_three.d, code is 62, comment is 0, blank is 0.
+count_list_three.o, it is a binary file.
+count_list_two.c, code is 21, comment is 11, blank is 3.
+count_list_two.d, code is 62, comment is 0, blank is 0.
+count_list_two.o, it is a binary file.
+count_step_in_a.c, code is 184, comment is 23, blank is 19.
+count_step_in_a.d, code is 62, comment is 0, blank is 0.
+count_step_in_a.o, it is a binary file.
+count_step_in_b_first.c, code is 271, comment is 11, blank is 32.
+count_step_in_b_first.d, code is 62, comment is 0, blank is 0.
+count_step_in_b_first.o, it is a binary file.
+count_step_in_b_regular.c, code is 268, comment is 11, blank is 31.
+count_step_in_b_regular.d, code is 62, comment is 0, blank is 0.
+count_step_in_b_regular.o, it is a binary file.
+create_stack_a.c, code is 61, comment is 11, blank is 10.
+create_stack_a.d, code is 62, comment is 0, blank is 0.
+create_stack_a.o, it is a binary file.
+debug_print.c, code is 21, comment is 11, blank is 5.
+debug_print.d, code is 62, comment is 0, blank is 0.
+debug_print.o, it is a binary file.
+debug_print_two.c, code is 21, comment is 11, blank is 3.
+debug_print_two.d, code is 62, comment is 0, blank is 0.
+debug_print_two.o, it is a binary file.
+find_min_steps_first.c, code is 74, comment is 23, blank is 6.
+find_min_steps_first.d, code is 62, comment is 0, blank is 0.
+find_min_steps_first.o, it is a binary file.
+find_min_steps_regular.c, code is 80, comment is 23, blank is 6.
+find_min_steps_regular.d, code is 62, comment is 0, blank is 0.
+find_min_steps_regular.o, it is a binary file.
+ft_printf/author, code is 1, comment is 0, blank is 0.
+ft_printf/double_number.c, code is 70, comment is 11, blank is 9.
+ft_printf/double_number.d, code is 60, comment is 0, blank is 0.
+ft_printf/double_number.o, it is a binary file.
+ft_printf/f_with_zero.c, code is 39, comment is 11, blank is 5.
+ft_printf/f_with_zero.d, code is 60, comment is 0, blank is 0.
+ft_printf/f_with_zero.o, it is a binary file.
+ft_printf/flag_null.c, code is 8, comment is 11, blank is 2.
+ft_printf/flag_null.d, code is 60, comment is 0, blank is 0.
+ft_printf/flag_null.o, it is a binary file.
+ft_printf/ft_analazer_flags.c, code is 98, comment is 11, blank is 7.
+ft_printf/ft_analazer_flags.d, code is 61, comment is 0, blank is 0.
+ft_printf/ft_analazer_flags.o, it is a binary file.
+ft_printf/ft_atoi_pres.c, code is 24, comment is 11, blank is 4.
+ft_printf/ft_atoi_pres.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_atoi_pres.o, it is a binary file.
+ft_printf/ft_d_i.c, code is 106, comment is 11, blank is 11.
+ft_printf/ft_d_i.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_d_i.o, it is a binary file.
+ft_printf/ft_init_procent.c, code is 10, comment is 11, blank is 3.
+ft_printf/ft_init_procent.d, code is 61, comment is 0, blank is 0.
+ft_printf/ft_init_procent.o, it is a binary file.
+ft_printf/ft_init_spec.c, code is 53, comment is 11, blank is 5.
+ft_printf/ft_init_spec.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_init_spec.o, it is a binary file.
+ft_printf/ft_itoa_c.c, code is 28, comment is 11, blank is 3.
+ft_printf/ft_itoa_c.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_itoa_c.o, it is a binary file.
+ft_printf/ft_itoa_frac.c, code is 24, comment is 11, blank is 3.
+ft_printf/ft_itoa_frac.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_itoa_frac.o, it is a binary file.
+ft_printf/ft_lltoa_base.c, code is 24, comment is 11, blank is 5.
+ft_printf/ft_lltoa_base.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_lltoa_base.o, it is a binary file.
+ft_printf/ft_o_u.c, code is 117, comment is 11, blank is 11.
+ft_printf/ft_o_u.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_o_u.o, it is a binary file.
+ft_printf/ft_print_d_i.c, code is 109, comment is 11, blank is 10.
+ft_printf/ft_print_d_i.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_print_d_i.o, it is a binary file.
+ft_printf/ft_print_f_one.c, code is 116, comment is 11, blank is 11.
+ft_printf/ft_print_f_one.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_print_f_one.o, it is a binary file.
+ft_printf/ft_printf.c, code is 27, comment is 11, blank is 3.
+ft_printf/ft_printf.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf.h, code is 78, comment is 11, blank is 19.
+ft_printf/ft_printf.o, it is a binary file.
+ft_printf/ft_printf_c.c, code is 21, comment is 11, blank is 3.
+ft_printf/ft_printf_c.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf_c.o, it is a binary file.
+ft_printf/ft_printf_f.c, code is 56, comment is 11, blank is 6.
+ft_printf/ft_printf_f.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf_f.o, it is a binary file.
+ft_printf/ft_printf_o_u.c, code is 112, comment is 11, blank is 10.
+ft_printf/ft_printf_o_u.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf_o_u.o, it is a binary file.
+ft_printf/ft_printf_p.c, code is 90, comment is 11, blank is 9.
+ft_printf/ft_printf_p.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf_p.o, it is a binary file.
+ft_printf/ft_printf_percent.c, code is 50, comment is 11, blank is 7.
+ft_printf/ft_printf_percent.d, code is 61, comment is 0, blank is 0.
+ft_printf/ft_printf_percent.o, it is a binary file.
+ft_printf/ft_printf_s.c, code is 62, comment is 11, blank is 7.
+ft_printf/ft_printf_s.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf_s.o, it is a binary file.
+ft_printf/ft_printf_x_x.c, code is 61, comment is 11, blank is 7.
+ft_printf/ft_printf_x_x.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_printf_x_x.o, it is a binary file.
+ft_printf/ft_write.c, code is 6, comment is 11, blank is 2.
+ft_printf/ft_write.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_write.o, it is a binary file.
+ft_printf/ft_x_x.c, code is 98, comment is 11, blank is 11.
+ft_printf/ft_x_x.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_x_x.o, it is a binary file.
+ft_printf/ft_x_x_x.c, code is 126, comment is 11, blank is 11.
+ft_printf/ft_x_x_x.d, code is 60, comment is 0, blank is 0.
+ft_printf/ft_x_x_x.o, it is a binary file.
+ft_printf/libftprintf.a, it is a binary file.
+ft_printf/Makefile, code is 23, comment is 0, blank is 9.
+ft_printf/printf.a, it is a binary file.
+ft_printf/razrad.c, code is 12, comment is 11, blank is 3.
+ft_printf/razrad.d, code is 60, comment is 0, blank is 0.
+ft_printf/razrad.o, it is a binary file.
+ft_printf/rounding.c, code is 55, comment is 11, blank is 9.
+ft_printf/rounding.d, code is 60, comment is 0, blank is 0.
+ft_printf/rounding.o, it is a binary file.
+insertion_sort_finish.c, code is 26, comment is 11, blank is 3.
+insertion_sort_finish.d, code is 62, comment is 0, blank is 0.
+insertion_sort_finish.o, it is a binary file.
+insertsort_first.c, code is 69, comment is 11, blank is 5.
+insertsort_first.d, code is 62, comment is 0, blank is 0.
+insertsort_first.o, it is a binary file.
+insertsort_regular.c, code is 70, comment is 11, blank is 5.
+insertsort_regular.d, code is 62, comment is 0, blank is 0.
+insertsort_regular.o, it is a binary file.
+libft/author, code is 1, comment is 0, blank is 0.
+libft/ft_atoi.c, code is 27, comment is 11, blank is 3.
+libft/ft_atoi.d, code is 51, comment is 0, blank is 0.
+libft/ft_atoi.o, it is a binary file.
+libft/ft_atoi_base.c, code is 73, comment is 11, blank is 9.
+libft/ft_atoi_base.d, code is 51, comment is 0, blank is 0.
+libft/ft_atoi_base.o, it is a binary file.
+libft/ft_bzero.c, code is 8, comment is 11, blank is 3.
+libft/ft_bzero.d, code is 51, comment is 0, blank is 0.
+libft/ft_bzero.o, it is a binary file.
+libft/ft_convert_base.c, code is 25, comment is 11, blank is 3.
+libft/ft_convert_base.d, code is 51, comment is 0, blank is 0.
+libft/ft_convert_base.o, it is a binary file.
+libft/ft_isalnum.c, code is 8, comment is 11, blank is 2.
+libft/ft_isalnum.d, code is 51, comment is 0, blank is 0.
+libft/ft_isalnum.o, it is a binary file.
+libft/ft_isalpha.c, code is 8, comment is 11, blank is 2.
+libft/ft_isalpha.d, code is 51, comment is 0, blank is 0.
+libft/ft_isalpha.o, it is a binary file.
+libft/ft_isascii.c, code is 8, comment is 11, blank is 2.
+libft/ft_isascii.d, code is 51, comment is 0, blank is 0.
+libft/ft_isascii.o, it is a binary file.
+libft/ft_isdigit.c, code is 8, comment is 11, blank is 2.
+libft/ft_isdigit.d, code is 51, comment is 0, blank is 0.
+libft/ft_isdigit.o, it is a binary file.
+libft/ft_isprint.c, code is 8, comment is 11, blank is 2.
+libft/ft_isprint.d, code is 51, comment is 0, blank is 0.
+libft/ft_isprint.o, it is a binary file.
+libft/ft_itoa.c, code is 29, comment is 11, blank is 5.
+libft/ft_itoa.d, code is 51, comment is 0, blank is 0.
+libft/ft_itoa.o, it is a binary file.
+libft/ft_itoa_base.c, code is 38, comment is 11, blank is 5.
+libft/ft_itoa_base.d, code is 60, comment is 0, blank is 0.
+libft/ft_itoa_base.o, it is a binary file.
+libft/ft_memalloc.c, code is 9, comment is 11, blank is 3.
+libft/ft_memalloc.d, code is 51, comment is 0, blank is 0.
+libft/ft_memalloc.o, it is a binary file.
+libft/ft_memccpy.c, code is 20, comment is 11, blank is 3.
+libft/ft_memccpy.d, code is 51, comment is 0, blank is 0.
+libft/ft_memccpy.o, it is a binary file.
+libft/ft_memchr.c, code is 11, comment is 11, blank is 2.
+libft/ft_memchr.d, code is 51, comment is 0, blank is 0.
+libft/ft_memchr.o, it is a binary file.
+libft/ft_memcmp.c, code is 18, comment is 11, blank is 3.
+libft/ft_memcmp.d, code is 51, comment is 0, blank is 0.
+libft/ft_memcmp.o, it is a binary file.
+libft/ft_memcpy.c, code is 13, comment is 11, blank is 3.
+libft/ft_memcpy.d, code is 51, comment is 0, blank is 0.
+libft/ft_memcpy.o, it is a binary file.
+libft/ft_memdel.c, code is 12, comment is 11, blank is 2.
+libft/ft_memdel.d, code is 51, comment is 0, blank is 0.
+libft/ft_memdel.o, it is a binary file.
+libft/ft_memmove.c, code is 21, comment is 11, blank is 3.
+libft/ft_memmove.d, code is 51, comment is 0, blank is 0.
+libft/ft_memmove.o, it is a binary file.
+libft/ft_memset.c, code is 12, comment is 11, blank is 3.
+libft/ft_memset.d, code is 51, comment is 0, blank is 0.
+libft/ft_memset.o, it is a binary file.
+libft/ft_putchar.c, code is 5, comment is 11, blank is 2.
+libft/ft_putchar.d, code is 51, comment is 0, blank is 0.
+libft/ft_putchar.o, it is a binary file.
+libft/ft_putchar_fd.c, code is 5, comment is 11, blank is 2.
+libft/ft_putchar_fd.d, code is 51, comment is 0, blank is 0.
+libft/ft_putchar_fd.o, it is a binary file.
+libft/ft_putendl.c, code is 8, comment is 11, blank is 2.
+libft/ft_putendl.d, code is 51, comment is 0, blank is 0.
+libft/ft_putendl.o, it is a binary file.
+libft/ft_putendl_fd.c, code is 10, comment is 11, blank is 2.
+libft/ft_putendl_fd.d, code is 51, comment is 0, blank is 0.
+libft/ft_putendl_fd.o, it is a binary file.
+libft/ft_putnbr.c, code is 5, comment is 11, blank is 2.
+libft/ft_putnbr.d, code is 51, comment is 0, blank is 0.
+libft/ft_putnbr.o, it is a binary file.
+libft/ft_putnbr_fd.c, code is 18, comment is 11, blank is 2.
+libft/ft_putnbr_fd.d, code is 51, comment is 0, blank is 0.
+libft/ft_putnbr_fd.o, it is a binary file.
+libft/ft_putstr.c, code is 9, comment is 11, blank is 2.
+libft/ft_putstr.d, code is 51, comment is 0, blank is 0.
+libft/ft_putstr.o, it is a binary file.
+libft/ft_putstr_fd.c, code is 9, comment is 11, blank is 2.
+libft/ft_putstr_fd.d, code is 51, comment is 0, blank is 0.
+libft/ft_putstr_fd.o, it is a binary file.
+libft/ft_strcasecmp.c, code is 11, comment is 11, blank is 2.
+libft/ft_strcasecmp.d, code is 51, comment is 0, blank is 0.
+libft/ft_strcasecmp.o, it is a binary file.
+libft/ft_strcat.c, code is 19, comment is 11, blank is 3.
+libft/ft_strcat.d, code is 51, comment is 0, blank is 0.
+libft/ft_strcat.o, it is a binary file.
+libft/ft_strchr.c, code is 11, comment is 11, blank is 2.
+libft/ft_strchr.d, code is 51, comment is 0, blank is 0.
+libft/ft_strchr.o, it is a binary file.
+libft/ft_strclr.c, code is 7, comment is 11, blank is 2.
+libft/ft_strclr.d, code is 51, comment is 0, blank is 0.
+libft/ft_strclr.o, it is a binary file.
+libft/ft_strcmp.c, code is 10, comment is 11, blank is 2.
+libft/ft_strcmp.d, code is 51, comment is 0, blank is 0.
+libft/ft_strcmp.o, it is a binary file.
+libft/ft_strcpy.c, code is 13, comment is 11, blank is 3.
+libft/ft_strcpy.d, code is 51, comment is 0, blank is 0.
+libft/ft_strcpy.o, it is a binary file.
+libft/ft_strdel.c, code is 12, comment is 11, blank is 2.
+libft/ft_strdel.d, code is 51, comment is 0, blank is 0.
+libft/ft_strdel.o, it is a binary file.
+libft/ft_strdup.c, code is 20, comment is 11, blank is 3.
+libft/ft_strdup.d, code is 51, comment is 0, blank is 0.
+libft/ft_strdup.o, it is a binary file.
+libft/ft_strequ.c, code is 16, comment is 11, blank is 2.
+libft/ft_strequ.d, code is 51, comment is 0, blank is 0.
+libft/ft_strequ.o, it is a binary file.
+libft/ft_striter.c, code is 9, comment is 11, blank is 2.
+libft/ft_striter.d, code is 51, comment is 0, blank is 0.
+libft/ft_striter.o, it is a binary file.
+libft/ft_striteri.c, code is 14, comment is 11, blank is 3.
+libft/ft_striteri.d, code is 51, comment is 0, blank is 0.
+libft/ft_striteri.o, it is a binary file.
+libft/ft_strjoin.c, code is 20, comment is 11, blank is 3.
+libft/ft_strjoin.d, code is 51, comment is 0, blank is 0.
+libft/ft_strjoin.o, it is a binary file.
+libft/ft_strlcat.c, code is 23, comment is 11, blank is 3.
+libft/ft_strlcat.d, code is 51, comment is 0, blank is 0.
+libft/ft_strlcat.o, it is a binary file.
+libft/ft_strlen.c, code is 9, comment is 11, blank is 3.
+libft/ft_strlen.d, code is 51, comment is 0, blank is 0.
+libft/ft_strlen.o, it is a binary file.
+libft/ft_strmap.c, code is 22, comment is 11, blank is 3.
+libft/ft_strmap.d, code is 51, comment is 0, blank is 0.
+libft/ft_strmap.o, it is a binary file.
+libft/ft_strmapi.c, code is 22, comment is 11, blank is 3.
+libft/ft_strmapi.d, code is 51, comment is 0, blank is 0.
+libft/ft_strmapi.o, it is a binary file.
+libft/ft_strncat.c, code is 18, comment is 11, blank is 3.
+libft/ft_strncat.d, code is 51, comment is 0, blank is 0.
+libft/ft_strncat.o, it is a binary file.
+libft/ft_strncmp.c, code is 13, comment is 11, blank is 2.
+libft/ft_strncmp.d, code is 51, comment is 0, blank is 0.
+libft/ft_strncmp.o, it is a binary file.
+libft/ft_strncpy.c, code is 19, comment is 11, blank is 3.
+libft/ft_strncpy.d, code is 51, comment is 0, blank is 0.
+libft/ft_strncpy.o, it is a binary file.
+libft/ft_strnequ.c, code is 18, comment is 11, blank is 2.
+libft/ft_strnequ.d, code is 51, comment is 0, blank is 0.
+libft/ft_strnequ.o, it is a binary file.
+libft/ft_strnew.c, code is 9, comment is 11, blank is 3.
+libft/ft_strnew.d, code is 51, comment is 0, blank is 0.
+libft/ft_strnew.o, it is a binary file.
+libft/ft_strnstr.c, code is 28, comment is 11, blank is 3.
+libft/ft_strnstr.d, code is 51, comment is 0, blank is 0.
+libft/ft_strnstr.o, it is a binary file.
+libft/ft_strrchr.c, code is 19, comment is 11, blank is 3.
+libft/ft_strrchr.d, code is 51, comment is 0, blank is 0.
+libft/ft_strrchr.o, it is a binary file.
+libft/ft_strsplit.c, code is 95, comment is 11, blank is 11.
+libft/ft_strsplit.d, code is 51, comment is 0, blank is 0.
+libft/ft_strsplit.o, it is a binary file.
+libft/ft_strstr.c, code is 27, comment is 11, blank is 3.
+libft/ft_strstr.d, code is 51, comment is 0, blank is 0.
+libft/ft_strstr.o, it is a binary file.
+libft/ft_strsub.c, code is 19, comment is 11, blank is 3.
+libft/ft_strsub.d, code is 51, comment is 0, blank is 0.
+libft/ft_strsub.o, it is a binary file.
+libft/ft_strtrim.c, code is 21, comment is 11, blank is 4.
+libft/ft_strtrim.d, code is 51, comment is 0, blank is 0.
+libft/ft_strtrim.o, it is a binary file.
+libft/ft_tolower.c, code is 8, comment is 11, blank is 2.
+libft/ft_tolower.d, code is 51, comment is 0, blank is 0.
+libft/ft_tolower.o, it is a binary file.
+libft/ft_toupper.c, code is 8, comment is 11, blank is 2.
+libft/ft_toupper.d, code is 51, comment is 0, blank is 0.
+libft/ft_toupper.o, it is a binary file.
+libft/get_next_line.c, code is 92, comment is 11, blank is 10.
+libft/get_next_line.d, code is 51, comment is 0, blank is 0.
+libft/get_next_line.o, it is a binary file.
+libft/libft.a, it is a binary file.
+libft/libft.h, code is 81, comment is 11, blank is 6.
+libft/Makefile, code is 28, comment is 0, blank is 10.
+libft/README.md, code is 2, comment is 0, blank is 1.
+LICENSE, code is 17, comment is 0, blank is 4.
+Makefile, code is 38, comment is 0, blank is 16.
+mergesort_first.c, code is 12, comment is 11, blank is 3.
+mergesort_first.d, code is 62, comment is 0, blank is 0.
+mergesort_first.o, it is a binary file.
+mergesort_regular.c, code is 51, comment is 11, blank is 5.
+mergesort_regular.d, code is 62, comment is 0, blank is 0.
+mergesort_regular.o, it is a binary file.
+norminette, it is a binary file.
+pa.c, code is 64, comment is 11, blank is 5.
+pa.d, code is 61, comment is 0, blank is 0.
+pa.o, it is a binary file.
+parser.c, code is 78, comment is 14, blank is 10.
+parser.d, code is 62, comment is 0, blank is 0.
+parser.o, it is a binary file.
+pb.c, code is 62, comment is 11, blank is 5.
+pb.d, code is 61, comment is 0, blank is 0.
+pb.o, it is a binary file.
+pb_when_stack_b_null.c, code is 83, comment is 11, blank is 9.
+pb_when_stack_b_null.d, code is 62, comment is 0, blank is 0.
+pb_when_stack_b_null.o, it is a binary file.
+push_swap, it is a binary file.
+push_swap.c, code is 173, comment is 26, blank is 20.
+push_swap.d, code is 62, comment is 0, blank is 0.
+push_swap.h, code is 70, comment is 11, blank is 16.
+push_swap.o, it is a binary file.
+ra.c, code is 10, comment is 11, blank is 2.
+ra.d, code is 61, comment is 0, blank is 0.
+ra.o, it is a binary file.
+rb.c, code is 10, comment is 11, blank is 2.
+rb.d, code is 61, comment is 0, blank is 0.
+rb.o, it is a binary file.
+README.md, code is 38, comment is 5, blank is 19.
+rotation_both_stacks.c, code is 25, comment is 11, blank is 3.
+rotation_both_stacks.d, code is 62, comment is 0, blank is 0.
+rotation_both_stacks.o, it is a binary file.
+rotation_stack_a.c, code is 20, comment is 11, blank is 3.
+rotation_stack_a.d, code is 62, comment is 0, blank is 0.
+rotation_stack_a.o, it is a binary file.
+rotation_stack_b.c, code is 20, comment is 11, blank is 3.
+rotation_stack_b.d, code is 62, comment is 0, blank is 0.
+rotation_stack_b.o, it is a binary file.
+rr.c, code is 12, comment is 11, blank is 2.
+rr.d, code is 61, comment is 0, blank is 0.
+rr.o, it is a binary file.
+rra.c, code is 10, comment is 11, blank is 2.
+rra.d, code is 61, comment is 0, blank is 0.
+rra.o, it is a binary file.
+rrb.c, code is 10, comment is 11, blank is 2.
+rrb.d, code is 61, comment is 0, blank is 0.
+rrb.o, it is a binary file.
+rrr.c, code is 12, comment is 11, blank is 2.
+rrr.d, code is 61, comment is 0, blank is 0.
+rrr.o, it is a binary file.
+sa.c, code is 19, comment is 11, blank is 3.
+sa.d, code is 61, comment is 0, blank is 0.
+sa.o, it is a binary file.
+sa_two.c, code is 19, comment is 11, blank is 3.
+sa_two.d, code is 62, comment is 0, blank is 0.
+sa_two.o, it is a binary file.
+show_me.c, code is 26, comment is 11, blank is 3.
+show_me.d, code is 62, comment is 0, blank is 0.
+show_me.o, it is a binary file.
+show_me_three.c, code is 29, comment is 11, blank is 3.
+show_me_three.d, code is 62, comment is 0, blank is 0.
+show_me_three.o, it is a binary file.
+show_me_two.c, code is 31, comment is 11, blank is 3.
+show_me_two.d, code is 62, comment is 0, blank is 0.
+show_me_two.o, it is a binary file.
+sort_ten_num.c, code is 201, comment is 11, blank is 18.
+sort_ten_num.d, code is 62, comment is 0, blank is 0.
+sort_ten_num.o, it is a binary file.
+test.sh, code is 312, comment is 0, blank is 24.
+timsort.c, code is 44, comment is 11, blank is 5.
+timsort.d, code is 62, comment is 0, blank is 0.
+timsort.o, it is a binary file.
+validation.c, code is 104, comment is 11, blank is 10.
+validation.d, code is 62, comment is 0, blank is 0.
+validation.o, it is a binary file.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-10-06 17:19:20
+count workspace : /home/oem/Desktop/Push_swap
+total files : 142
+total code lines : 6081
+total comment lines : 1496
+total blank lines : 779
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |             .c|           5390|           1458|            654|     89|
+   |               |            109|              0|             39|    1.8|
+   |             .h|            230|             33|             42|    3.8|
+   |            .md|             40|              5|             20|   0.66|
+   |            .sh|            312|              0|             24|    5.1|
+   -------------------------------------------------------------------------
+author, code is 1, comment is 0, blank is 0.
+centering_stack_finish.c, code is 72, comment is 11, blank is 9.
+centering_stack_first.c, code is 92, comment is 11, blank is 9.
+centering_stack_regular.c, code is 94, comment is 11, blank is 9.
+checker.c, code is 140, comment is 18, blank is 18.
+count_list.c, code is 21, comment is 11, blank is 3.
+count_list_three.c, code is 21, comment is 11, blank is 3.
+count_list_two.c, code is 21, comment is 11, blank is 3.
+count_step_in_a.c, code is 184, comment is 23, blank is 19.
+count_step_in_b_first.c, code is 271, comment is 11, blank is 32.
+count_step_in_b_regular.c, code is 268, comment is 11, blank is 31.
+create_stack_a.c, code is 61, comment is 11, blank is 10.
+debug_print.c, code is 21, comment is 11, blank is 5.
+debug_print_two.c, code is 21, comment is 11, blank is 3.
+find_min_steps_first.c, code is 74, comment is 23, blank is 6.
+find_min_steps_regular.c, code is 80, comment is 23, blank is 6.
+free_array.c, code is 12, comment is 11, blank is 3.
+ft_printf/author, code is 1, comment is 0, blank is 0.
+ft_printf/double_number.c, code is 70, comment is 11, blank is 9.
+ft_printf/f_with_zero.c, code is 39, comment is 11, blank is 5.
+ft_printf/flag_null.c, code is 8, comment is 11, blank is 2.
+ft_printf/ft_analazer_flags.c, code is 98, comment is 11, blank is 7.
+ft_printf/ft_atoi_pres.c, code is 24, comment is 11, blank is 4.
+ft_printf/ft_d_i.c, code is 106, comment is 11, blank is 11.
+ft_printf/ft_init_procent.c, code is 10, comment is 11, blank is 3.
+ft_printf/ft_init_spec.c, code is 53, comment is 11, blank is 5.
+ft_printf/ft_itoa_c.c, code is 28, comment is 11, blank is 3.
+ft_printf/ft_itoa_frac.c, code is 24, comment is 11, blank is 3.
+ft_printf/ft_lltoa_base.c, code is 24, comment is 11, blank is 5.
+ft_printf/ft_o_u.c, code is 117, comment is 11, blank is 11.
+ft_printf/ft_print_d_i.c, code is 109, comment is 11, blank is 10.
+ft_printf/ft_print_f_one.c, code is 116, comment is 11, blank is 11.
+ft_printf/ft_printf.c, code is 27, comment is 11, blank is 3.
+ft_printf/ft_printf.h, code is 78, comment is 11, blank is 19.
+ft_printf/ft_printf_c.c, code is 21, comment is 11, blank is 3.
+ft_printf/ft_printf_f.c, code is 56, comment is 11, blank is 6.
+ft_printf/ft_printf_o_u.c, code is 112, comment is 11, blank is 10.
+ft_printf/ft_printf_p.c, code is 90, comment is 11, blank is 9.
+ft_printf/ft_printf_percent.c, code is 50, comment is 11, blank is 7.
+ft_printf/ft_printf_s.c, code is 62, comment is 11, blank is 7.
+ft_printf/ft_printf_x_x.c, code is 61, comment is 11, blank is 7.
+ft_printf/ft_write.c, code is 6, comment is 11, blank is 2.
+ft_printf/ft_x_x.c, code is 98, comment is 11, blank is 11.
+ft_printf/ft_x_x_x.c, code is 126, comment is 11, blank is 11.
+ft_printf/Makefile, code is 23, comment is 0, blank is 9.
+ft_printf/printf.a, it is a binary file.
+ft_printf/razrad.c, code is 12, comment is 11, blank is 3.
+ft_printf/rounding.c, code is 55, comment is 11, blank is 9.
+insertion_sort_finish.c, code is 26, comment is 11, blank is 3.
+insertsort_first.c, code is 69, comment is 11, blank is 5.
+insertsort_regular.c, code is 70, comment is 11, blank is 5.
+libft/author, code is 1, comment is 0, blank is 0.
+libft/ft_atoi.c, code is 27, comment is 11, blank is 3.
+libft/ft_atoi_base.c, code is 73, comment is 11, blank is 9.
+libft/ft_bzero.c, code is 8, comment is 11, blank is 3.
+libft/ft_convert_base.c, code is 25, comment is 11, blank is 3.
+libft/ft_isalnum.c, code is 8, comment is 11, blank is 2.
+libft/ft_isalpha.c, code is 8, comment is 11, blank is 2.
+libft/ft_isascii.c, code is 8, comment is 11, blank is 2.
+libft/ft_isdigit.c, code is 8, comment is 11, blank is 2.
+libft/ft_isprint.c, code is 8, comment is 11, blank is 2.
+libft/ft_itoa.c, code is 29, comment is 11, blank is 5.
+libft/ft_itoa_base.c, code is 38, comment is 11, blank is 5.
+libft/ft_memalloc.c, code is 9, comment is 11, blank is 3.
+libft/ft_memccpy.c, code is 20, comment is 11, blank is 3.
+libft/ft_memchr.c, code is 11, comment is 11, blank is 2.
+libft/ft_memcmp.c, code is 18, comment is 11, blank is 3.
+libft/ft_memcpy.c, code is 13, comment is 11, blank is 3.
+libft/ft_memdel.c, code is 12, comment is 11, blank is 2.
+libft/ft_memmove.c, code is 21, comment is 11, blank is 3.
+libft/ft_memset.c, code is 12, comment is 11, blank is 3.
+libft/ft_putchar.c, code is 5, comment is 11, blank is 2.
+libft/ft_putchar_fd.c, code is 5, comment is 11, blank is 2.
+libft/ft_putendl.c, code is 8, comment is 11, blank is 2.
+libft/ft_putendl_fd.c, code is 10, comment is 11, blank is 2.
+libft/ft_putnbr.c, code is 5, comment is 11, blank is 2.
+libft/ft_putnbr_fd.c, code is 18, comment is 11, blank is 2.
+libft/ft_putstr.c, code is 9, comment is 11, blank is 2.
+libft/ft_putstr_fd.c, code is 9, comment is 11, blank is 2.
+libft/ft_strcasecmp.c, code is 11, comment is 11, blank is 2.
+libft/ft_strcat.c, code is 19, comment is 11, blank is 3.
+libft/ft_strchr.c, code is 11, comment is 11, blank is 2.
+libft/ft_strclr.c, code is 7, comment is 11, blank is 2.
+libft/ft_strcmp.c, code is 10, comment is 11, blank is 2.
+libft/ft_strcpy.c, code is 13, comment is 11, blank is 3.
+libft/ft_strdel.c, code is 12, comment is 11, blank is 2.
+libft/ft_strdup.c, code is 20, comment is 11, blank is 3.
+libft/ft_strequ.c, code is 16, comment is 11, blank is 2.
+libft/ft_striter.c, code is 9, comment is 11, blank is 2.
+libft/ft_striteri.c, code is 14, comment is 11, blank is 3.
+libft/ft_strjoin.c, code is 20, comment is 11, blank is 3.
+libft/ft_strlcat.c, code is 23, comment is 11, blank is 3.
+libft/ft_strlen.c, code is 9, comment is 11, blank is 3.
+libft/ft_strmap.c, code is 22, comment is 11, blank is 3.
+libft/ft_strmapi.c, code is 22, comment is 11, blank is 3.
+libft/ft_strncat.c, code is 18, comment is 11, blank is 3.
+libft/ft_strncmp.c, code is 13, comment is 11, blank is 2.
+libft/ft_strncpy.c, code is 19, comment is 11, blank is 3.
+libft/ft_strnequ.c, code is 18, comment is 11, blank is 2.
+libft/ft_strnew.c, code is 9, comment is 11, blank is 3.
+libft/ft_strnstr.c, code is 28, comment is 11, blank is 3.
+libft/ft_strrchr.c, code is 19, comment is 11, blank is 3.
+libft/ft_strsplit.c, code is 95, comment is 11, blank is 11.
+libft/ft_strstr.c, code is 27, comment is 11, blank is 3.
+libft/ft_strsub.c, code is 19, comment is 11, blank is 3.
+libft/ft_strtrim.c, code is 21, comment is 11, blank is 4.
+libft/ft_tolower.c, code is 8, comment is 11, blank is 2.
+libft/ft_toupper.c, code is 8, comment is 11, blank is 2.
+libft/get_next_line.c, code is 92, comment is 11, blank is 10.
+libft/libft.h, code is 81, comment is 11, blank is 6.
+libft/Makefile, code is 28, comment is 0, blank is 10.
+libft/README.md, code is 2, comment is 0, blank is 1.
+LICENSE, code is 17, comment is 0, blank is 4.
+Makefile, code is 38, comment is 0, blank is 16.
+mergesort_first.c, code is 12, comment is 11, blank is 3.
+mergesort_regular.c, code is 51, comment is 11, blank is 5.
+norminette, it is a binary file.
+pa.c, code is 64, comment is 11, blank is 5.
+parser.c, code is 78, comment is 14, blank is 10.
+pb.c, code is 62, comment is 11, blank is 5.
+pb_when_stack_b_null.c, code is 83, comment is 11, blank is 9.
+push_swap.c, code is 161, comment is 26, blank is 18.
+push_swap.h, code is 71, comment is 11, blank is 17.
+ra.c, code is 10, comment is 11, blank is 2.
+rb.c, code is 10, comment is 11, blank is 2.
+README.md, code is 38, comment is 5, blank is 19.
+rotation_both_stacks.c, code is 25, comment is 11, blank is 3.
+rotation_stack_a.c, code is 20, comment is 11, blank is 3.
+rotation_stack_b.c, code is 20, comment is 11, blank is 3.
+rr.c, code is 12, comment is 11, blank is 2.
+rra.c, code is 10, comment is 11, blank is 2.
+rrb.c, code is 10, comment is 11, blank is 2.
+rrr.c, code is 12, comment is 11, blank is 2.
+sa.c, code is 19, comment is 11, blank is 3.
+sa_two.c, code is 19, comment is 11, blank is 3.
+show_me.c, code is 26, comment is 11, blank is 3.
+show_me_three.c, code is 29, comment is 11, blank is 3.
+show_me_two.c, code is 31, comment is 11, blank is 3.
+sort_ten_num.c, code is 201, comment is 11, blank is 18.
+test.sh, code is 312, comment is 0, blank is 24.
+timsort.c, code is 44, comment is 11, blank is 5.
+validation.c, code is 104, comment is 11, blank is 10.
+===============================================================================

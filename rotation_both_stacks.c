@@ -6,13 +6,13 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 01:05:08 by oem               #+#    #+#             */
-/*   Updated: 2020/10/06 15:10:43 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 16:23:09 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	joint_rotation(t_num **list_a, t_num **list_b, t_key *bonus, int spin)
+void	rotation_both_stacks(t_num **list_a, t_num **list_b, t_key *bonus, int spin)
 {
 	int step;
 

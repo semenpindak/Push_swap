@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 20:38:32 by oem               #+#    #+#             */
-/*   Updated: 2020/09/07 12:18:41 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/06 16:23:09 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,13 +95,13 @@ void		centering_stack_regular(t_num **list_a, t_num **list_b, t_key *bonus)
 	{
 		if (step_a >= step_b)
 		{
-			joint_rotation(list_a, list_b, bonus, logic_a);
+			rotation_both_stacks(list_a, list_b, bonus, logic_a);
 			(*list_a)->step_a = step_a - step_b;
 			rotation_stack_a(list_a, list_b, bonus, logic_a);
 		}
 		else
 		{
-			joint_rotation(list_a, list_b, bonus, logic_a);
+			rotation_both_stacks(list_a, list_b, bonus, logic_a);
 			(*list_b)->step_b = step_b - step_a;
 			rotation_stack_b(list_a, list_b, bonus, logic_b);
 		}
