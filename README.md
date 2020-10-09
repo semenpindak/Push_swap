@@ -22,8 +22,8 @@ Using 2 stacks to sort an array of integers with special commands. My push_swap 
 - for `500 integers` - no more than `5500 operations (5/5 points)`.
 
 ### Average number of operations of my algorithm:
-- `630 operations` for `100 integers` - `5 points`;
-- `4700 operations` for `500 integers` - `5 points`.
+- `630 operations` for `100 integers` O(nlog(n)) - `5 points`;
+- `4700 operations` for `500 integers` O(nlog(n)) - `5 points`.
 
 ### Operations:
 - `sa sb ss` swap the first 2 elements at the top of stack A/B/both;

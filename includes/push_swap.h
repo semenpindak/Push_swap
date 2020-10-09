@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 20:09:00 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/06 17:20:36 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/09 20:51:15 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
+# include "../Libft/includes/libft.h"
 
 typedef struct		s_num
 {

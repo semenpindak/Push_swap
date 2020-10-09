@@ -1,8 +1,14 @@
-LIBFT		= libft/libft.a
-PRINTF		= ft_printf/libftprintf.a
+LIBFT		= Libft/libft.a
 
 PUSH_SWAP	= push_swap
 CHECKER		= checker
+
+CC			= gcc
+CFLAGS		= -Wall -Wextra -Werror -g
+
+INC_DIR := includes
+SRC_DIR := sources
+OBJ_DIR := objects
 
 SRC_PS		= push_swap.c parser.c validation.c create_stack_a.c\
 			  debug_print.c debug_print_two.c show_me.c show_me_two.c show_me_three.c\
@@ -19,36 +25,33 @@ SRC_PS		= push_swap.c parser.c validation.c create_stack_a.c\
 SRC_CH		= checker.c parser.c validation.c create_stack_a.c count_list.c count_list_two.c\
 			  sa_two.c pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c free_array.c
 
-OBJ_PS		= $(SRC_PS:c=o)
-OBJ_CH		= $(SRC_CH:c=o)
+OBJ_PS		= $(addprefix $(OBJ_DIR)/,$(SRC_PS:%.c=%.o))
+OBJ_CH		= $(addprefix $(OBJ_DIR)/,$(SRC_CH:%.c=%.o))
 
-CFLAGS		= -Wall -Wextra -Werror
+all:	$(OBJ_DIR) $(PUSH_SWAP) $(CHECKER)
 
-.PHONY: all clean fclean re
+$(OBJ_DIR):
+	mkdir $(OBJ_DIR)
 
-all: $(PUSH_SWAP) $(CHECKER)
+$(PUSH_SWAP): $(OBJ_PS) $(LIBFT)
+	${CC} $(CFLAGS) ${OBJ_PS} $(SRC_PUSHSWAP) -L Libft/ -l ft -o ${PUSH_SWAP}
 
-$(PUSH_SWAP): $(OBJ_PS) $(LIBFT) $(PRINTF)
-	${CC} $(CFLAGS) ${OBJ_PS} -L libft/ -l ft -L ft_printf/ -l ftprintf -o ${PUSH_SWAP}
-
-
-$(CHECKER): $(OBJ_CH) $(LIBFT) $(PRINTF)
-	${CC} $(CFLAGS) ${OBJ_CH} -L libft/ -l ft -L ft_printf/ -l ftprintf -o ${CHECKER}
+$(CHECKER): $(OBJ_CH) $(LIBFT)
+	${CC} $(CFLAGS) ${OBJ_CH} $(SRC_CHECKER) -L Libft/ -l ft -o ${CHECKER}
 
 $(LIBFT):
-	make -C libft/
+	make -C Libft/
 
-$(PRINTF):
-	make -C ft_printf/
-
-%.o: %.c
-	${CC} ${CFLAGS} -g -MD -c $<
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	${CC} ${CFLAGS} -I ./$(INC_DIR) -MD -c $< -o $@
 include $(wildcard *.d)
 
 clean:
-	rm -f $(OBJ_PS) $(OBJ_CH) *.d .DS_Store && make clean -C libft/ && make clean -C ft_printf/
+	rm -rf $(OBJ_DIR) && make clean -C Libft/
 
 fclean: clean
-	rm -f $(PUSH_SWAP) $(CHECKER) && make fclean -C libft/ && make fclean -C ft_printf/
+	rm -f $(PUSH_SWAP) $(CHECKER) && make fclean -C Libft
 
 re: fclean all
+
+.PHONY: all clean fclean re
