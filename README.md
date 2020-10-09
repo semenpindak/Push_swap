@@ -37,7 +37,7 @@ Using 2 stacks to sort an array of integers with special commands. My push_swap 
 
 ## Compiling <a name="Compiling"></a>
 
-Run `git clone --recursive https://github.com/semenpindak/Libft.git`
+Run `git clone --recursive https://github.com/semenpindak/libft.git`
 
 Run `make`, an executable called `push_swap` and `checker` and should compile directly. Please submit an issue if you run into any problems.
 
